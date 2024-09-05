@@ -126,34 +126,38 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($orders as $order)
+                    
                     <tr>
                       <td class="text-center fs-sm">
                         <a class="fw-semibold" href="be_pages_ecom_order.html">
-                          <strong>ORD.00965</strong>
+                          <strong>{{$order['id']}}</strong>
                         </a>
                       </td>
-                      <td class="d-none d-sm-table-cell text-center fs-sm">07/04/2020</td>
+                      <td class="d-none d-sm-table-cell text-center fs-sm">{{$order['created_at']}}</td>
                       <td>
-                        <span class="badge bg-danger">Canceled</span>
+                        <span class="badge bg-danger">{{ucfirst($order['status'])}}</span>
                       </td>
                       <td class="d-none d-xl-table-cell fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_customer.html">Judy Ford</a>
+                        <a class="fw-semibold" href="be_pages_ecom_customer.html">{{$order['customer_id']}}</a>
                       </td>
                       <td class="d-none d-xl-table-cell text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">9</a>
+                        <a class="fw-semibold" href="be_pages_ecom_order.html">{{$order['total']}}</a>
                       </td>
                       <td class="d-none d-sm-table-cell text-end fs-sm">
-                        <strong>$1799,59</strong>
+                        <strong>{{$order['total']}}</strong>
                       </td>
                       <td class="text-center">
                         <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
                           <i class="fa fa-fw fa-eye"></i>
                         </a>
                         <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
-                          <i class="fa fa-fw fa-times"></i>
+                          <i class="fa fa-fw fa-times text-danger"></i>
                         </a>
                       </td>
                     </tr>
+                    @endforeach
+                    
                     <tr>
                       <td class="text-center fs-sm">
                         <a class="fw-semibold" href="be_pages_ecom_order.html">

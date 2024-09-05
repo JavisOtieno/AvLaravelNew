@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('customer_id');
-            $table->string('total');
+            $table->unsignedBigInteger('quantity');
+            $table->unsignedBigInteger('value');
             $table->string('cart_id');
             $table->string('notes');
             $table->string('status');

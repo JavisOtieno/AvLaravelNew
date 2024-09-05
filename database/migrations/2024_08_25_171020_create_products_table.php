@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('price');
-            $table->unsignedBigInteger('profit');
+            $table->unsignedBigInteger('commission');
             $table->unsignedBigInteger('cost');
             $table->string('highlights');
             $table->string('image')->nullable();
