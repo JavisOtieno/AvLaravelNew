@@ -15,10 +15,10 @@ class HomePageController extends Controller
     // request()->get('user');
     return view('index');
     }
-    public function shop(Request $request){
+    public function shop(){
         // $websiteName = $request->get('websiteName');
-        $user = User::find(1);
-        $products = Product::all();
+        // $user = User::find(1);
+        // $products = Product::all();
 
         // ,'websiteName'
         return view('shop',compact('user','products'));
