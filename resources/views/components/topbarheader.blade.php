@@ -22,7 +22,7 @@
         <link rel="shortcut icon" href="assets/images/fav-icon.png">
     </head>
 
-    <body class="left-sidebar">
+    <body class="{{str_contains(request()->path(),'product')?'single-product full-width':'left-sidebar'}}">
         <div id="page" class="hfeed site">
             <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
             <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -31,7 +31,7 @@
                 <div class="container">
                     <nav>
                         <ul id="menu-top-bar-left" class="nav nav-inline pull-left animate-dropdown flip">
-                            <li class="menu-item animate-dropdown"><a title="Welcome to {{ucfirst(request()->get('user')['websitename'])}} Electronics Store" href="#">Welcome to {{ucfirst(request()->get('user')['websitename'])}} Electronics Store</a></li>
+                            <li class="menu-item animate-dropdown"><a title="Welcome to {{ucfirst(request()->get('user')['websitename'])}} Electronics Store" href="/">Welcome to {{ucfirst(request()->get('user')['websitename'])}} Electronics Store</a></li>
                         </ul>
                     </nav>
 

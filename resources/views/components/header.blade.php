@@ -60,22 +60,13 @@
                             <div class="collapse navbar-toggleable-xs" id="default-header">
                                 <nav>
                                     <ul id="menu-main-menu" class="nav nav-inline yamm">
-                                        <li class="menu-item menu-item-has-children animate-dropdown dropdown"><a title="Home" href="shop.html" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Home</a>
-                                            <ul role="menu" class=" dropdown-menu">
-                                                <li class="menu-item animate-dropdown  "><a title="Home v1" href="home.html">Home v1</a></li>
-                                                <li class="menu-item current-menu-item current_page_item animate-dropdown active"><a title="Home v2" href="home-v2.html">Home v2</a></li>
-                                                <li class="menu-item animate-dropdown  "><a title="Home v3" href="home-v3.html">Home v3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item animate-dropdown"><a title="About Us" href="about.html">About Us</a></li>
+                                        <li class="menu-item"><a title="Home" href="/">Home</a></li>     
+                                        <li class="menu-item"><a title="Shop" href="/shop">Shop</a></li> 
+                                        <li class="menu-item"><a title="About" href="/about">About Us</a></li>
+                                        <li class="menu-item"><a title="Contact" href="#">Contact Us</a></li>                                     
 
-                                        <li class="menu-item menu-item-has-children animate-dropdown dropdown"><a title="Blog" href="blog.html" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Blog</a>
-                                            <ul role="menu" class=" dropdown-menu">
-                                                <li class="menu-item animate-dropdown"><a title="Blog v1" href="blog-v1.html">Blog v1</a></li>
-                                                <li class="menu-item animate-dropdown"><a title="Blog v2" href="blog-v2.html">Blog v2</a></li>
-                                                <li class="menu-item animate-dropdown"><a title="Blog v3" href="blog-v3.html">Blog v3</a></li>
-                                            </ul>
-                                        </li>
+                                        
+                                        
                                         <li class="yamm-fw menu-item menu-item-has-children animate-dropdown dropdown">
                                             <a title="Pages" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Pages</a>
                                             <ul role="menu" class=" dropdown-menu">
@@ -174,10 +165,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item"><a title="Features" href="#">Features</a></li>
-                                        <li class="menu-item"><a title="Contact Us" href="#">Contact Us</a></li>
-                                    </ul>
-                                </nav>
+                                   </nav>
                             </div>
                         </div>
 

@@ -1,4 +1,5 @@
-@include('components/productheader')
+@extends('layout')
+@section('content')
 
             <div id="content" class="site-content" tabindex="-1">
                 <div class="container">
@@ -821,4 +822,4 @@
                 </div><!-- /.container -->
             </div><!-- /.site-content -->
 
-           @include('components/footer')
+@endsection

@@ -34,8 +34,12 @@ class ExtractWebsiteName
             // If it's just domain + TLD, return the first part as the website name
             $websiteName = $hostParts[0];
         }
+        
 
-        // $websiteName='test';
+        if(str_contains($fullUrl,'127.0.0.1')){
+            $websiteName='test';
+        }
+        
 
         $user = User::where('websitename',$websiteName)->first();
 
