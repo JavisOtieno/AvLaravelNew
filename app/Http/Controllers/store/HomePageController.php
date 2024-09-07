@@ -23,4 +23,5 @@ class HomePageController extends Controller
         // ,'websiteName'
         return view('shop');
         }
+        
 }

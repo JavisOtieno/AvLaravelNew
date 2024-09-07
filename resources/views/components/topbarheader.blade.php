@@ -22,7 +22,7 @@
         <link rel="shortcut icon" href="assets/images/fav-icon.png">
     </head>
 
-    <body class="{{str_contains(request()->path(),'product')?'single-product full-width':'left-sidebar'}}">
+    <body class="{{str_contains(request()->path(),'product')?'single-product full-width':(request()->path()=='/'?'page home page-template-default':'left-sidebar')}}">
         <div id="page" class="hfeed site">
             <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
             <a class="skip-link screen-reader-text" href="#content">Skip to content</a>

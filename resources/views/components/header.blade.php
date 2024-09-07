@@ -45,7 +45,7 @@
                                     c-1.293,2.365-1.951,5.158-1.729,8.408c0.209,3.053,1.191,5.496,2.619,7.508c2.842,4.004,7.385,6.973,13.656,6.377
                                     c5.976-0.568,9.574-3.936,11.816-8.354c-0.141-0.271-0.221-0.604-0.336-0.902C92.929,31.364,90.843,30.485,88.812,29.55z"/>
                                 </svg> --}}
-                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst(request()->get('user')['username'])}}</strong><span style="color: #FED700">.</span></h1>
+                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst(request()->get('user')['websitename'])}}</strong><span style="color: #FED700">.</span></h1>
                             </a>
                         </div>
                         <!-- ============================================================= Header Logo : End============================================================= -->
@@ -190,9 +190,9 @@
 
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="departments-menu-toggle" >Shop by Department</a>
                             <ul id="menu-vertical-menu" class="dropdown-menu yamm departments-menu-dropdown">
-                                <li class="highlight menu-item animate-dropdown active"><a title="Value of the Day" href="product-category.html">Value of the Day</a></li>
+                                {{-- <li class="highlight menu-item animate-dropdown active"><a title="Value of the Day" href="product-category.html">Value of the Day</a></li>
                                 <li class="highlight menu-item animate-dropdown"><a title="Top 100 Offers" href="home-v3.html">Top 100 Offers</a></li>
-                                <li class="highlight menu-item animate-dropdown"><a title="New Arrivals" href="home-v3-full-color-background.html">New Arrivals</a></li>
+                                <li class="highlight menu-item animate-dropdown"><a title="New Arrivals" href="home-v3-full-color-background.html">New Arrivals</a></li> --}}
 
                                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown menu-item-2584 dropdown">
                                     <a title="Computers &amp; Accessories" href="product-category.html" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Computers &#038; Accessories</a>
