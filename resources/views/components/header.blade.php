@@ -1,54 +1,5 @@
-
-
-
-<!DOCTYPE html>
-<html lang="en-US" itemscope="itemscope" itemtype="http://schema.org/WebPage">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Electro &#8211; Electronics Ecommerce Theme</title>
-
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="assets/css/font-electro.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
-        <link rel="stylesheet" type="text/css" href="assets/css/colors/yellow.css" media="all" />
-
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,700italic,800,800italic,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
-
-        <link rel="shortcut icon" href="assets/images/fav-icon.png">
-    </head>
-
-    <body class="left-sidebar">
-        <div id="page" class="hfeed site">
-            <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
-            <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
-            <div class="top-bar">
-                <div class="container">
-                    <nav>
-                        <ul id="menu-top-bar-left" class="nav nav-inline pull-left animate-dropdown flip">
-                            <li class="menu-item animate-dropdown"><a title="Welcome to {{ucfirst(request()->get('user')['websitename'])}} Electronics Store" href="#">Welcome to {{request()->get('user')['websitename']}} Electronics Store</a></li>
-                        </ul>
-                    </nav>
-
-                    <nav>
-                        <ul id="menu-top-bar-right" class="nav nav-inline pull-right animate-dropdown flip">
-                            {{-- <li class="menu-item animate-dropdown"><a title="Store Locator" href="#"><i class="ec ec-map-pointer"></i>Store Locator</a></li> --}}
-                            {{ request()->get('websiteName') }}
-                            {{-- {{ $websiteName}} --}}
-                            <li class="menu-item animate-dropdown"><a title="Track Your Order" href="/trackyourorder"><i class="ec ec-transport"></i>Track Your Order</a></li>
-                            <li class="menu-item animate-dropdown"><a title="Shop" href="/shop"><i class="ec ec-shopping-bag"></i>Shop</a></li>
-                            <li class="menu-item animate-dropdown"><a title="My Account" href="/account"><i class="ec ec-user"></i>My Account</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div><!-- /.top-bar -->
-
-            <header id="masthead" class="site-header header-v2">
+@include('components.topbarheader')
+<header id="masthead" class="site-header header-v2">
                 <div class="container">
                     <div class="row">
 
@@ -94,7 +45,7 @@
                                     c-1.293,2.365-1.951,5.158-1.729,8.408c0.209,3.053,1.191,5.496,2.619,7.508c2.842,4.004,7.385,6.973,13.656,6.377
                                     c5.976-0.568,9.574-3.936,11.816-8.354c-0.141-0.271-0.221-0.604-0.336-0.902C92.929,31.364,90.843,30.485,88.812,29.55z"/>
                                 </svg> --}}
-                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst($request()->get('user')['username'])}}</strong><span style="color: #FED700">.</span></h1>
+                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst(request()->get('user')['username'])}}</strong><span style="color: #FED700">.</span></h1>
                             </a>
                         </div>
                         <!-- ============================================================= Header Logo : End============================================================= -->
