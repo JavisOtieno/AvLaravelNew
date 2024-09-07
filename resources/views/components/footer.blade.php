@@ -457,7 +457,7 @@
                             <span class="media-left call-us-icon media-middle"><i class="ec ec-support"></i></span>
                             <div class="media-body">
                                 <span class="call-us-text">Got Questions ? Call us 24/7!</span>
-                                <span class="call-us-number">{{ ucfirst(request()->get('user')['websitename']) }}</span>
+                                <span class="call-us-number">{{ ucfirst(request()->get('user')['phone']) }}</span>
                             </div>
                         </div>
                     </div><!-- /.footer-call-us -->
