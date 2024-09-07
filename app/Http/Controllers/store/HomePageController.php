@@ -21,6 +21,6 @@ class HomePageController extends Controller
         // $products = Product::all();
 
         // ,'websiteName'
-        return view('shop',compact('user','products'));
+        return view('shop');
         }
 }
