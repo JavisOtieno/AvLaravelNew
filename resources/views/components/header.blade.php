@@ -31,7 +31,7 @@
                 <div class="container">
                     <nav>
                         <ul id="menu-top-bar-left" class="nav nav-inline pull-left animate-dropdown flip">
-                            <li class="menu-item animate-dropdown"><a title="Welcome to {{ucfirst($user['username'])}} Electronics Store" href="#">Welcome to {{ucfirst($user['username'])}} Electronics Store</a></li>
+                            <li class="menu-item animate-dropdown"><a title="Welcome to {{ucfirst(request()->get('user')['websitename'])}} Electronics Store" href="#">Welcome to {{request()->get('user')['websitename']}} Electronics Store</a></li>
                         </ul>
                     </nav>
 
@@ -94,7 +94,7 @@
                                     c-1.293,2.365-1.951,5.158-1.729,8.408c0.209,3.053,1.191,5.496,2.619,7.508c2.842,4.004,7.385,6.973,13.656,6.377
                                     c5.976-0.568,9.574-3.936,11.816-8.354c-0.141-0.271-0.221-0.604-0.336-0.902C92.929,31.364,90.843,30.485,88.812,29.55z"/>
                                 </svg> --}}
-                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst($user['username'])}}</strong><span style="color: #FED700">.</span></h1>
+                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst($request()->get('user')['username'])}}</strong><span style="color: #FED700">.</span></h1>
                             </a>
                         </div>
                         <!-- ============================================================= Header Logo : End============================================================= -->

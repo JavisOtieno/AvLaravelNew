@@ -90,7 +90,7 @@
                         			c5.976-0.568,9.574-3.936,11.816-8.354c-0.141-0.271-0.221-0.604-0.336-0.902C92.929,31.364,90.843,30.485,88.812,29.55z"/>
                         		</svg> --}}
             
-                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst($user['username'])}}</strong><span style="color: #FED700">.</span></h1>
+                                <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst(request()->get('user')['websitename'])}}</strong><span style="color: #FED700">.</span></h1>
                         	</a>
                         </div>
                         <!-- ============================================================= Header Logo : End============================================================= -->

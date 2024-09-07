@@ -410,7 +410,7 @@
 
                 <div class="footer-contact col-xs-12 col-sm-12 col-md-5 col-md-pull-7">
                     <div class="footer-logo">
-                        <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst($user['username'])}}</strong><span style="color: #FED700">.</span></h1>
+                        <h1 style="color: #333E48;font-weight:900;"><strong>{{ucfirst(request()->get('user')['websitename'])}}</strong><span style="color: #FED700">.</span></h1>
                         {{-- <svg version="1.1" x="0px" y="0px" width="156px"
                         height="37px" viewBox="0 0 175.748 42.52" enable-background="new 0 0 175.748 42.52">
                         <ellipse fill-rule="evenodd" clip-rule="evenodd" fill="#FDD700" cx="170.05" cy="36.341" rx="5.32" ry="5.367"/>
@@ -457,7 +457,7 @@
                             <span class="media-left call-us-icon media-middle"><i class="ec ec-support"></i></span>
                             <div class="media-body">
                                 <span class="call-us-text">Got Questions ? Call us 24/7!</span>
-                                <span class="call-us-number">{{ request()->get('user')['websitename'] }}</span>
+                                <span class="call-us-number">{{ ucfirst(request()->get('user')['websitename']) }}</span>
                             </div>
                         </div>
                     </div><!-- /.footer-call-us -->
@@ -489,7 +489,7 @@
 
     <div class="copyright-bar">
         <div class="container">
-            <div class="pull-left flip copyright">&copy; <a href="http://demo2.transvelo.in/html/electro/">{{ucfirst($user['username'])}}</a> - All Rights Reserved</div>
+            <div class="pull-left flip copyright">&copy; <a href="http://demo2.transvelo.in/html/electro/">{{ucfirst(request()->get('user')['websitename'])}}</a> - All Rights Reserved</div>
             <div class="pull-right flip payment">
                 <div class="footer-payment-logo">
                     <ul class="cash-card card-inline">

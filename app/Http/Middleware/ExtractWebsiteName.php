@@ -35,7 +35,9 @@ class ExtractWebsiteName
             $websiteName = $hostParts[0];
         }
 
-        $user = User::where('websitename',$websiteName)->get();
+        // $websiteName='test';
+
+        $user = User::where('websitename',$websiteName)->first();
 
         // Optionally, store the website name in the request for later use
         $request->attributes->set('websiteName', $websiteName);
