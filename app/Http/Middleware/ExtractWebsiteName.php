@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ExtractWebsiteName
@@ -34,8 +35,11 @@ class ExtractWebsiteName
             $websiteName = $hostParts[0];
         }
 
+        $user = User::where('websitename',$websiteName)->get();
+
         // Optionally, store the website name in the request for later use
         $request->attributes->set('websiteName', $websiteName);
+        $request->attributes->set('user', $user);
 
         return $next($request);
     }

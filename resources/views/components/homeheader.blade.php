@@ -28,7 +28,7 @@
                 <div class="container">
                     <nav>
                         <ul id="menu-top-bar-left" class="nav nav-inline pull-left animate-dropdown flip">
-                            <li class="menu-item animate-dropdown"><a title="Welcome to {{ucfirst($user['username'])}} Electronics Store" href="#">Welcome to {{ucfirst($user['username'])}} Electronics Store</a></li>
+                            <li class="menu-item animate-dropdown"><a title="Welcome to {{ request()->get('websiteName') }} Electronics Store" href="#">Welcome to {{ request()->get('websiteName') }} Electronics Store</a></li>
                         </ul>
                     </nav>
 

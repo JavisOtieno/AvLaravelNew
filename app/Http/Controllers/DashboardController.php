@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     //
     public function index(){
-        $user = User::find(1);
-        return view('dashboard',compact('user'));
+        // $user = User::find(1);
+        return view('dashboard');
     }
 }
