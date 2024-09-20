@@ -27,6 +27,7 @@ Route::get('/product', [ProductController::class,'showProduct']);
 
 });
 
+Route::middleware(['authCustomCheck'])->group(function(){
 
 Route::get('/admindashboard', [ProductController::class,'dashboardtest']);
 Route::get('/adminorders', [OrderController::class,'index']);
@@ -35,8 +36,14 @@ Route::get('/admincustomers', [UserController::class,'showUserCustomers']);
 Route::get('/adminpayments', [PaymentController::class,'showUserPayments']);
 
 Route::get('/adminprofile', [UserController::class,'showProfile']);
-Route::get('/adminlogin', [UserController::class,'showLogin']);
-Route::get('/adminsignup', [UserController::class,'showSignup']);
+
 Route::get('/logout', [UserController::class,'logout']);
 
+});
+
+Route::post('/attemptlogin', [UserController::class,'doLogin']);
+Route::post('/attemptsignup', [UserController::class,'doSignup']);
+
+Route::get('/adminsignup', [UserController::class,'showSignup']);
+Route::get('/adminlogin', [UserController::class,'showLogin'])->name('login');
 

@@ -94,7 +94,7 @@
 
           <!-- User Info -->
           <div class="ms-2">
-            <a class="text-dark fw-semibold fs-sm" href="javascript:void(0)">John Smith</a>
+            <a class="text-dark fw-semibold fs-sm" href="javascript:void(0)">{{auth()->user()->name}}</a>
           </div>
           <!-- END User Info -->
 
@@ -721,7 +721,7 @@
               <div class="dropdown-menu dropdown-menu-md dropdown-menu-end p-0 border-0" aria-labelledby="page-header-user-dropdown">
                 <div class="p-3 text-center bg-body-light border-bottom rounded-top">
                   <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{asset('adminassets/media/avatars/avatar10.jpg')}}" alt="">
-                  <p class="mt-2 mb-0 fw-medium">John Smith</p>
+                  <p class="mt-2 mb-0 fw-medium">{{auth()->user()->name}}</p>
                   <p class="mb-0 text-muted fs-sm fw-medium">Store Admin</p>
                 </div>
                 <div class="p-2">

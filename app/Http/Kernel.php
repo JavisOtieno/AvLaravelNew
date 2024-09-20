@@ -28,7 +28,9 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         // Other middleware...
         'extract.website.name' => \App\Http\Middleware\ExtractWebsiteName::class,
+        'authCustomCheck' => \App\Http\Middleware\CheckIfUserLoggedIn::class,
     ];
+
 
     /**
      * The application's route middleware groups.

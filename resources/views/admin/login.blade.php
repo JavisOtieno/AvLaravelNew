@@ -96,7 +96,7 @@
                     <h3 class="block-title">Sign In</h3>
                     <div class="block-options">
                       <a class="btn-block-option fs-sm" href="op_auth_reminder.html">Forgot Password?</a>
-                      <a class="btn-block-option" href="op_auth_signup.html" data-bs-toggle="tooltip" data-bs-placement="left" title="New Account">
+                      <a class="btn-block-option" href="/adminsignup" data-bs-toggle="tooltip" data-bs-placement="left" title="New Account">
                         <i class="fa fa-user-plus"></i>
                       </a>
                     </div>
@@ -111,13 +111,26 @@
                       <!-- Sign In Form -->
                       <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
                       <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                      <form class="js-validation-signin" action="be_pages_auth_all.html" method="POST">
+                      <form class="js-validation-signin" action="/attemptlogin" method="POST">
+                        @if ($errors->any())
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>
+                                        {{ $error }}
+                                        </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        @csrf
                         <div class="py-3">
                           <div class="mb-4">
-                            <input type="text" class="form-control form-control-alt form-control-lg" id="login-username" name="login-username" placeholder="Username">
+                            <input type="text" value="{{old('email')}}" class="form-control form-control-alt form-control-lg" id="login-username" name="email" placeholder="Username">
                           </div>
                           <div class="mb-4">
-                            <input type="password" class="form-control form-control-alt form-control-lg" id="login-password" name="login-password" placeholder="Password">
+                            <input type="password" class="form-control form-control-alt form-control-lg" id="login-password" name="password" placeholder="Password">
                           </div>
                           <div class="mb-4">
                             <div class="form-check">
@@ -127,7 +140,7 @@
                           </div>
                         </div>
                         <div class="row mb-4">
-                          <div class="col-md-6 col-xl-5">
+                          <div class="col-md-12 col-xl-12">
                             <button type="submit" class="btn w-100 btn-alt-primary">
                               <i class="fa fa-fw fa-sign-in-alt me-1 opacity-50"></i> Sign In
                             </button>

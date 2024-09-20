@@ -111,25 +111,38 @@
                       <!-- Sign Up Form -->
                       <!-- jQuery Validation (.js-validation-signup class is initialized in js/pages/op_auth_signup.min.js which was auto compiled from _js/pages/op_auth_signup.js) -->
                       <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
-                      <form class="js-validation-signup" action="be_pages_auth_all.html" method="POST">
+                      <form class="js-validation-signup" action="/attemptsignup" method="POST">
+                        @if ($errors->any())
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>
+                                        {{ $error }}
+                                        </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        @csrf
                         <div class="py-3">
                         <div class="mb-4">
-                            <input type="text" class="form-control form-control-lg form-control-alt" id="signup-name" name="signup-name" placeholder="Name">
+                            <input type="text" class="form-control form-control-lg form-control-alt" id="signup-name" name="name" placeholder="Name">
                             </div>
                           <div class="mb-4">
-                            <input type="text" class="form-control form-control-lg form-control-alt" id="signup-username" name="signup-username" placeholder="Username">
+                            <input type="text" class="form-control form-control-lg form-control-alt" id="signup-websitename" name="websitename" placeholder="Website Name">
                           </div>
                           <div class="mb-4">
-                            <input type="email" class="form-control form-control-lg form-control-alt" id="signup-email" name="signup-email" placeholder="Email">
+                            <input type="email" class="form-control form-control-lg form-control-alt" id="signup-email" name="email" placeholder="Email">
                           </div>
                           <div class="mb-4">
-                            <input type="phone" class="form-control form-control-lg form-control-alt" id="signup-phon" name="signup-phone" placeholder="Phone">
+                            <input type="phone" class="form-control form-control-lg form-control-alt" id="signup-phone" name="phone" placeholder="Phone">
                           </div>
                           <div class="mb-4">
-                            <input type="password" class="form-control form-control-lg form-control-alt" id="signup-password" name="signup-password" placeholder="Password">
+                            <input type="password" class="form-control form-control-lg form-control-alt" id="signup-password" name="password" placeholder="Password">
                           </div>
                           <div class="mb-4">
-                            <input type="password" class="form-control form-control-lg form-control-alt" id="signup-password-confirm" name="signup-password-confirm" placeholder="Confirm Password">
+                            <input type="password" class="form-control form-control-lg form-control-alt" id="signup-password-confirm" name="password_confirmation" placeholder="Confirm Password">
                           </div>
                           <div class="mb-4">
                             <div class="form-check">
