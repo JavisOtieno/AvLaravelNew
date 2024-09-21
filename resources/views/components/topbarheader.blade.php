@@ -22,7 +22,7 @@
         <link rel="shortcut icon" href="assets/images/fav-icon.png">
     </head>
 
-    <body class="{{str_contains(request()->path(),'product')?'single-product full-width':(request()->path()=='/contact' || request()->path()=='/account'?'page page-template-default contact-v1':'left-sidebar')}}">
+    <body class="{{str_contains(request()->path(),'product')?'single-product full-width':((request()->path()=='/contact' || request()->path()=='/account)'?'page page-template-default contact-v1':'left-sidebar')}}">
         {{-- (request()->path()=='/contact'?'page page-template-default contact-v1':'left-sidebar') --}}
         <div id="page" class="hfeed site">
             <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
