@@ -15,7 +15,7 @@
                                     </div>
                                     <div class="vc_row-full-width vc_clearfix"></div>
                                     <div class="vc_row wpb_row vc_row-fluid">
-                                        <div class="contact-form wpb_column vc_column_container vc_col-sm-9 col-sm-9">
+                                        {{-- <div class="contact-form wpb_column vc_column_container vc_col-sm-9 col-sm-9">
                                             <div class="vc_column-inner ">
                                                 <div class="wpb_wrapper">
                                                     <div class="wpb_text_column wpb_content_element ">
@@ -62,8 +62,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="store-info wpb_column vc_column_container vc_col-sm-3 col-sm-3">
+                                        </div> --}}
+                                        <div class="store-info wpb_column vc_column_container vc_col-sm-6 col-sm-6">
                                             <div class="vc_column-inner ">
                                                 <div class="wpb_wrapper">
                                                     <div class="wpb_text_column wpb_content_element ">
