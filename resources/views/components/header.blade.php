@@ -205,7 +205,7 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                     <figure class="wpb_wrapper vc_figure">
-                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
+                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="/assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -268,7 +268,7 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                     <figure class="wpb_wrapper vc_figure">
-                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
+                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="/assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -331,7 +331,7 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                     <figure class="wpb_wrapper vc_figure">
-                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
+                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="/assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -395,7 +395,7 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                     <figure class="wpb_wrapper vc_figure">
-                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
+                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="/assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -459,7 +459,7 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                     <figure class="wpb_wrapper vc_figure">
-                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
+                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="/assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -524,7 +524,7 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                     <figure class="wpb_wrapper vc_figure">
-                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
+                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="/assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -589,7 +589,7 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                     <figure class="wpb_wrapper vc_figure">
-                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
+                                                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="540" height="460" src="/assets/images/megamenu-2.png" class="vc_single_image-img attachment-full" alt="megamenu-2"/></div>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -710,7 +710,7 @@
                                             <li class="mini_cart_item">
                                                 <a title="Remove this item" class="remove" href="#">×</a>
                                                 <a href="single-product.html">
-                                                    <img class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" src="assets/images/products/mini-cart1.jpg" alt="">White lumia 9001&nbsp;
+                                                    <img class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" src="/assets/images/products/mini-cart1.jpg" alt="">White lumia 9001&nbsp;
                                                 </a>
 
                                                 <span class="quantity">2 × <span class="amount">£150.00</span></span>
@@ -720,7 +720,7 @@
                                             <li class="mini_cart_item">
                                                 <a title="Remove this item" class="remove" href="#">×</a>
                                                 <a href="single-product.html">
-                                                    <img class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" src="assets/images/products/mini-cart2.jpg" alt="">PlayStation 4&nbsp;
+                                                    <img class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" src="/assets/images/products/mini-cart2.jpg" alt="">PlayStation 4&nbsp;
                                                 </a>
 
                                                 <span class="quantity">1 × <span class="amount">£399.99</span></span>
@@ -729,7 +729,7 @@
                                             <li class="mini_cart_item">
                                                 <a data-product_sku="" data-product_id="34" title="Remove this item" class="remove" href="#">×</a>
                                                 <a href="single-product.html">
-                                                <img class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" src="assets/images/products/mini-cart3.jpg" alt="">POV Action Cam HDR-AS100V&nbsp;
+                                                <img class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" src="/assets/images/products/mini-cart3.jpg" alt="">POV Action Cam HDR-AS100V&nbsp;
 
                                                 </a>
 

@@ -30,7 +30,6 @@ Route::get('/product/{id}', [HomePageController::class,'showProduct']);
 Route::get('/buynow', [ProductController::class,'buyProduct']);
 Route::post('/submitbuynow', [ProductController::class,'submitBuyProduct']);
 
-
 });
 
 Route::middleware(['authCustomCheck'])->group(function(){
