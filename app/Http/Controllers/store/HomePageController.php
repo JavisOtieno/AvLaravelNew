@@ -36,5 +36,9 @@ class HomePageController extends Controller
             return view('account',compact('user'));
         }
 
+        public function contact(){
+        return view('contact');
+        }
+
         
 }
