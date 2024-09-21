@@ -30,5 +30,11 @@ class HomePageController extends Controller
         return view('product',compact('user'));
     }
 
+        //
+        public function showCustomerAccount(){
+            $user = User::find(1);
+            return view('account',compact('user'));
+        }
+
         
 }

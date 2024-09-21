@@ -12,11 +12,7 @@ use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
-    //
-    public function showCustomerAccount(){
-        $user = User::find(1);
-        return view('account',compact('user'));
-    }
+
     public function showUserCustomers(){
         $customers = Customer::all();
         return view('admin.customers',compact('customers'));

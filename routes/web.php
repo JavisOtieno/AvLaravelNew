@@ -23,7 +23,7 @@ Route::middleware(['extract.website.name'])->group(function () {
 // Route::get('/shop', [HomePageController::class,'shop']);
 
 Route::get('/', [HomePageController::class,'shop']);
-// Route::get('/account', [UserController::class,'showCustomerAccount']);
+Route::get('/account', [HomePageController::class,'showCustomerAccount']);
 // Route::get('/trackyourorder', [OrderController::class,'trackOrder']);
 Route::get('/product', [ProductController::class,'showProduct']);
 Route::get('/buynow', [ProductController::class,'buyProduct']);
