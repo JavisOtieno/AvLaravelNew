@@ -67,7 +67,7 @@
 
                                         
                                         
-                                        <li class="yamm-fw menu-item menu-item-has-children animate-dropdown dropdown">
+                                        {{-- <li class="yamm-fw menu-item menu-item-has-children animate-dropdown dropdown">
                                             <a title="Pages" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Pages</a>
                                             <ul role="menu" class=" dropdown-menu">
                                                 <li class="menu-item animate-dropdown">
@@ -164,7 +164,7 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
                                    </nav>
                             </div>
                         </div>
