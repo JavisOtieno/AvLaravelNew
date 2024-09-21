@@ -25,9 +25,9 @@ class HomePageController extends Controller
     }
 
     //store functions
-    public function showProduct(){
-        $user = User::find(1);
-        return view('product',compact('user'));
+    public function showProduct($id){
+        $product = Product::find($id);
+        return view('product',compact('product'));
     }
 
         //

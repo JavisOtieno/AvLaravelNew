@@ -338,7 +338,7 @@
                                             <div class="product-outer">
                                                 <div class="product-inner">
                                                     <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span>
-                                                    <a href="single-product.html">
+                                                    <a href="product/1">
                                                         <h3>Notebook Black Spire V Nitro  VN7-591G</h3>
                                                         <div class="product-thumbnail">
 
@@ -800,7 +800,7 @@
                                             <div class="product-outer">
                                                 <div class="product-inner">
                                                     <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span>
-                                                    <a href="single-product.html">
+                                                    <a href="/product/1">
                                                         <h3>Notebook Black Spire V Nitro  VN7-591G</h3>
                                                         <div class="product-thumbnail">
 
