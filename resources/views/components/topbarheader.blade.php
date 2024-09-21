@@ -22,7 +22,8 @@
         <link rel="shortcut icon" href="assets/images/fav-icon.png">
     </head>
 
-    <body class="{{str_contains(request()->path(),'product')?'single-product full-width':(request()->path()=='/'?'page home page-template-default':'left-sidebar')}}">
+    <body class="{{str_contains(request()->path(),'product')?'single-product full-width':'left-sidebar'}}">
+        {{-- (request()->path()=='/'?'page home page-template-default':'left-sidebar') --}}
         <div id="page" class="hfeed site">
             <a class="skip-link screen-reader-text" href="#site-navigation">Skip to navigation</a>
             <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -40,7 +41,7 @@
                             {{-- <li class="menu-item animate-dropdown"><a title="Store Locator" href="#"><i class="ec ec-map-pointer"></i>Store Locator</a></li> --}}
                             {{-- {{ request()->get('websiteName') }} --}}
                             {{-- {{ $websiteName}} --}}
-                            <li class="menu-item animate-dropdown"><a title="Track Your Order" href="/trackyourorder"><i class="ec ec-transport"></i>Track Your Order</a></li>
+                            {{-- <li class="menu-item animate-dropdown"><a title="Track Your Order" href="/trackyourorder"><i class="ec ec-transport"></i>Track Your Order</a></li> --}}
                             <li class="menu-item animate-dropdown"><a title="Shop" href="/shop"><i class="ec ec-shopping-bag"></i>Shop</a></li>
                             <li class="menu-item animate-dropdown"><a title="My Account" href="/account"><i class="ec ec-user"></i>My Account</a></li>
                         </ul>

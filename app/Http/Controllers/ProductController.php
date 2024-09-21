@@ -27,9 +27,5 @@ class ProductController extends Controller
     }
 
 
-    //store functions
-    public function showProduct(){
-        $user = User::find(1);
-        return view('product',compact('user'));
-    }
+
 }

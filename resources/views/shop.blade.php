@@ -10,7 +10,7 @@
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main">
 
-                            <section class="section-product-cards-carousel" >
+                            {{-- <section class="section-product-cards-carousel" >
                                 <header>
                                     <h2 class="h1">Recommended Products</h2>
                                     <div class="owl-nav">
@@ -288,7 +288,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </section>
+                            </section> --}}
 
                             <header class="page-header">
                                 <h1 class="page-title">Smart Phones &amp; Tablets</h1>
@@ -3096,7 +3096,7 @@
                                 </li>
                             </ul>
                         </aside>
-                        <aside class="widget widget_electro_products_filter">
+                        {{-- <aside class="widget widget_electro_products_filter">
                             <h3 class="widget-title">Filters</h3>
                             <aside class="widget woocommerce widget_layered_nav">
                                 <h3 class="widget-title">Brands</h3>
@@ -3174,7 +3174,7 @@
                                     <span class="electro-price"><span class="amount">&#36;2,780.00</span></span>
                                 </li>
                             </ul>
-                        </aside>
+                        </aside> --}}
                     </div>
 
                 </div><!-- .container -->

@@ -19,11 +19,16 @@ use App\Http\Controllers\store\HomePageController;
 */
 Route::middleware(['extract.website.name'])->group(function () {
 
-Route::get('/', [HomePageController::class,'index']);
-Route::get('/shop', [HomePageController::class,'shop']);
-Route::get('/account', [UserController::class,'showCustomerAccount']);
-Route::get('/trackyourorder', [OrderController::class,'trackOrder']);
+// Route::get('/', [HomePageController::class,'index']);
+// Route::get('/shop', [HomePageController::class,'shop']);
+
+Route::get('/', [HomePageController::class,'shop']);
+// Route::get('/account', [UserController::class,'showCustomerAccount']);
+// Route::get('/trackyourorder', [OrderController::class,'trackOrder']);
 Route::get('/product', [ProductController::class,'showProduct']);
+Route::get('/buynow', [ProductController::class,'buyProduct']);
+Route::post('/submitbuynow', [ProductController::class,'submitBuyProduct']);
+
 
 });
 
