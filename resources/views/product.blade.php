@@ -59,7 +59,7 @@
                                             <a href="product-category.html" rel="tag">Headphones</a>
                                         </span><!-- /.loop-product-categories -->
 
-                                        <h1 itemprop="name" class="product_title entry-title">Ultra Wireless S50 Headphones S50 with Bluetooth</h1>
+                                        <h1 itemprop="name" class="product_title entry-title">{{$product['name']}}</h1>
 
                                         <div class="woocommerce-product-rating">
                                             <div class="star-rating" title="Rated 4.33 out of 5">
