@@ -24,11 +24,11 @@
     {{"pathhere".request()->path()}}
 
     
-    @if(request()->path()=='product')
+    @if(Str::contains(request()->path(),'product'))
     <body class="single-product full-width">
-    @elseif (request()->path()=='contact')
+    @elseif (Str::contains(request()->path(),'contact'))
     <body class="page page-template-default contact-v1">
-    @elseif (request()->path()=='account')
+    @elseif (Str::contains(request()->path(),'account'))
     <body class="page home page-template-default">
     @else
     <body class="left-sidebar">
