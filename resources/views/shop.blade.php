@@ -353,7 +353,7 @@
                                                                 $imageName = end($pathParts); // This will be 'image.img'
                                                             @endphp
 
-                                                            <img data-echo="assets/images/products/1.jpg" 
+                                                            <img data-echo="{{ url('flask-uploads/'.$imageName) }}" 
                                                             src="{{ url('flask-uploads/'.$imageName) }}" alt="">
 
                                                         </div>
