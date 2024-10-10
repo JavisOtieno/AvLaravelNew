@@ -101,6 +101,7 @@
                                                 <li>1.4 GHz Quad Core™ Processor</li>
                                                 <li>20 MP front and 28 megapixel CMOS rear camera</li>
                                             </ul>
+                                            <p>{{$product['highlights']}}</p>
 
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
                                             <p><strong>SKU</strong>: FW511948218</p>
