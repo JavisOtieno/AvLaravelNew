@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('highlights');
             $table->string('image')->nullable();
             $table->string('status');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->longText('description');
             $table->timestamps();
         });
