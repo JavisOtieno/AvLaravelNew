@@ -1,202 +1,74 @@
 @extends('admin/layouts/layout')
 @section('content') `
 
-      <!-- Main Container -->
+
+
+        
       <main id="main-container">
-        <!-- Page Content -->
-        <div class="content">
-          <!-- Quick Overview -->
-          {{-- <div class="row">
-            <div class="col-6 col-lg-3">
-              <a class="block block-rounded block-link-shadow text-center" href="be_pages_ecom_orders.html">
-                <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-primary">35</div>
-                </div>
-                <div class="block-content py-2 bg-body-light">
-                  <p class="fw-medium fs-sm text-muted mb-0">
-                    Pending
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
-                <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">120</div>
-                </div>
-                <div class="block-content py-2 bg-body-light">
-                  <p class="fw-medium fs-sm text-muted mb-0">
-                    Today
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
-                <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">260</div>
-                </div>
-                <div class="block-content py-2 bg-body-light">
-                  <p class="fw-medium fs-sm text-muted mb-0">
-                    Yesterday
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="col-6 col-lg-3">
-              <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
-                <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">69,841</div>
-                </div>
-                <div class="block-content py-2 bg-body-light">
-                  <p class="fw-medium fs-sm text-muted mb-0">
-                    This Month
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div> --}}
-          <!-- END Quick Overview -->
-
-          <!-- All Orders -->
-          <div class="block block-rounded">
-            <div class="block-header block-header-default">
-              <h3 class="block-title">All Customers</h3>
-              <div class="block-options">
-                <div class="dropdown">
-                  <button type="button" class="btn-block-option" id="dropdown-ecom-filters" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Filters <i class="fa fa-angle-down ms-1"></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-ecom-filters">
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      Pending..
-                      <span class="badge bg-black-50 rounded-pill">35</span>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      Processing
-                      <span class="badge bg-warning rounded-pill">15</span>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      For Delivery
-                      <span class="badge bg-info rounded-pill">20</span>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      Canceled
-                      <span class="badge bg-danger rounded-pill">72</span>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      Delivered
-                      <span class="badge bg-success rounded-pill">890</span>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      All
-                      <span class="badge bg-primary rounded-pill">997</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="block-content">
-              <!-- Search Form -->
-              <form action="be_pages_ecom_orders.html" method="POST" onsubmit="return false;">
-                <div class="mb-4">
-                  <div class="input-group">
-                    <input type="text" class="form-control form-control-alt" id="one-ecom-orders-search" name="one-ecom-orders-search" placeholder="Search all customers..">
-                    <span class="input-group-text bg-body border-0">
-                      <i class="fa fa-search"></i>
-                    </span>
-                  </div>
-                </div>
-              </form>
-              <!-- END Search Form -->
-
-              <!-- All Orders Table -->
-              <div class="table-responsive">
-                <table class="table table-borderless table-striped table-vcenter">
-                  <thead>
-                    <tr>
-                      <th class="text-center" style="width: 100px;">ID</th>
-                      <th class="d-none d-sm-table-cell text-center">Created</th>
-                      {{-- <th>Status</th> --}}
-                      <th class="d-none d-xl-table-cell">Customer</th>
-                      <th class="d-none d-xl-table-cell text-center">Phone</th>
-                      <th class="d-none d-sm-table-cell text-end">Email</th>
-                      <th class="text-center">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @foreach ($customers as $customer)
-                    
-                    <tr>
-                      <td class="text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">
-                          <strong>{{$customer['id']}}</strong>
-                        </a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-center fs-sm">{{$customer['created_at']}}</td>
-                      {{-- <td>
-                        <span class="badge bg-success">{{ucfirst($customer['status'])}}</span>
-                      </td> --}}
-                      <td class="d-none d-xl-table-cell fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_customer.html">{{$customer['name']}}</a>
-                      </td>
-                      <td class="d-none d-xl-table-cell text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">{{$customer['phone']}}</a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-end fs-sm">
-                        <strong>{{$customer['email']}}</strong>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
-                          <i class="fa fa-fw fa-eye"></i>
-                        </a>
-                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
-                          <i class="fa fa-fw fa-times text-danger"></i>
-                        </a>
-                      </td>
-                    </tr>
-                    @endforeach
-                   
-                    
-                  </tbody>
-                </table>
-              </div>
-              <!-- END All Orders Table -->
-
-              <!-- Pagination -->
-              <nav aria-label="Photos Search Navigation">
-                <ul class="pagination pagination-sm justify-content-end mt-2">
-                  <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-label="Previous">
-                      Prev
-                    </a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="javascript:void(0)">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)">2</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)">3</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)">4</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="javascript:void(0)" aria-label="Next">
-                      Next
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <!-- END Pagination -->
-            </div>
-          </div>
-          <!-- END All Orders -->
-        </div>
-        <!-- END Page Content -->
-      </main>
       <!-- END Main Container -->
+
+      <div class="content">
+        <!-- Dynamic Table Full -->
+        <div class="block block-rounded">
+          <div class="block-header block-header-default">
+            <h3 class="block-title">All Customers
+               {{-- <small>Full</small> --}}
+            </h3>
+          </div>
+          <div class="block-content block-content-full">
+            <!-- DataTables init on table by adding .js-dataTable-full class, functionality is initialized in js/pages/be_tables_datatables.min.js which was auto compiled from _js/pages/be_tables_datatables.js -->
+            <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+              <thead>
+                <tr>
+                  <th class="text-center" style="width: 80px;">ID</th>
+                  <th>Name</th>
+                  {{-- <th class="d-none d-sm-table-cell" style="width: 30%;">Email</th> --}}
+                  <th class="d-none d-sm-table-cell" style="width: 15%;">Phone</th>
+                  <th >Created</th>
+                  <th
+                   style="width: 15%;"
+                   >Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($customers as $customer)
+                <tr>
+                  <td class="text-center fs-sm">{{$customer['id']}}</td>
+                  <td class="fw-semibold fs-sm">{{$customer['name']}}</td>
+                  {{-- <td class="d-none d-sm-table-cell fs-sm">
+                    {{$customer['email']}}</span>
+                  </td> --}}
+                  <td class="d-none d-sm-table-cell fs-sm">
+                    {{$customer['phone']}}</span>
+                  </td>
+                  
+                  <td>
+                    <span class="text-muted fs-sm">{{$customer['created_at']}}</span>
+                  </td>
+                  <td class="text-center">
+                    <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
+                      <i class="fa fa-fw fa-eye"></i>
+                    </a>
+                    <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
+                      <i class="fa fa-fw fa-times text-danger"></i>
+                    </a>
+                  </td>
+                </tr>
+                @endforeach
+              
+   
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- END Dynamic Table Full -->
+      </main>
+
+   
+      
+
+      
+  
 
       @endsection

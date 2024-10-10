@@ -32,6 +32,11 @@
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="{{asset('adminassets/css/themes/amethyst.min.css')}}"> -->
     <!-- END Stylesheets -->
+
+    <link rel="stylesheet" href="{{asset('adminassets/js/plugins/datatables-bs5/css/dataTables.bootstrap5.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminassets/js/plugins/datatables-buttons-bs5/css/buttons.bootstrap5.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminassets/js/plugins/datatables-responsive-bs5/css/responsive.bootstrap5.min.css')}}">
+
   </head>
 
   <body>
