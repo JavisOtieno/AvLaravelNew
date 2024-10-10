@@ -21,6 +21,7 @@
 
         <link rel="shortcut icon" href="/assets/images/fav-icon.png">
     </head>
+    {{"pathhere".request()->path()}}
 
     
     @if(request()->path()=='product')
