@@ -346,7 +346,7 @@
                                                         <h3>{{$product['name']}}</h3>
                                                         <div class="product-thumbnail">
                                                             @php
-                                                                explode() $product['image'];
+                                                            
                                                                 $pathParts = explode('/', $product['image']);
 
                                                                 // Get the last part (the image filename)
