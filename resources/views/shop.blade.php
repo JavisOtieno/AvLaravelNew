@@ -334,6 +334,55 @@
                                 <div role="tabpanel" class="tab-pane active" id="grid" aria-expanded="true">
 
                                     <ul class="products columns-3">
+
+                                        @foreach ( $products as $product)
+                                            
+                                       
+                                        <li class="product first">
+                                            <div class="product-outer">
+                                                <div class="product-inner">
+                                                    <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span>
+                                                    <a href="product/1">
+                                                        <h3>{{$product['name']}}</h3>
+                                                        <div class="product-thumbnail">
+                                                            @php
+                                                                explode() $product['image'];
+                                                                $pathParts = explode('/', $product['image']);
+
+                                                                // Get the last part (the image filename)
+                                                                $imageName = end($pathParts); // This will be 'image.img'
+                                                            @endphp
+
+                                                            <img data-echo="assets/images/products/1.jpg" 
+                                                            src="{{ url('flask-uploads/'.$imageName) }}" alt="">
+
+                                                        </div>
+                                                    </a>
+
+                                                    <div class="price-add-to-cart">
+                                                        <span class="price">
+                                                            <span class="electro-price">
+                                                                <ins><span class="amount">{{"KSh ".number_format($product['price'])}}</span></ins>
+                                                                {{-- <del><span class="amount">&#036;2,299.00</span></del> --}}
+                                                            </span>
+                                                        </span>
+                                                        <a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+                                                    </div><!-- /.price-add-to-cart -->
+
+                                                    <div class="hover-area">
+                                                        <div class="action-buttons">
+                                                            <a href="#" rel="nofollow" class="add_to_wishlist">Wishlist</a>
+                                                            <a href="#" class="add-to-compare-link">Compare</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.product-inner -->
+                                            </div><!-- /.product-outer -->
+                                        </li>
+                                        @endforeach
+
+
+
                                         <li class="product first">
                                             <div class="product-outer">
                                                 <div class="product-inner">
@@ -3079,8 +3128,14 @@
                                         </li>
                                     </ul>
                                     <ul>
-                                        <li class="cat-item current-cat"><a href="product-category.html">Laptops &amp; Computers</a> <span class="count">(13)</span>
+                                        <li class="cat-item current-cat"><a href="product-category.html">Laptops &amp; Computers</a> 
+                                            {{-- <span class="count">(13)</span> --}}
                                             <ul class='children'>
+                                                @foreach ($categories as $category)
+                                                <li class="cat-item"><a href="/{{$category['name']}}">{{$category['name']}}</a> 
+                                                    {{-- <span class="count">(6)</span> --}}
+                                                </li>
+                                                @endforeach
                                                 <li class="cat-item"><a href="product-category.html">Laptops</a> <span class="count">(6)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Ultrabooks</a> <span class="count">(1)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Computers</a> <span class="count">(0)</span></li>

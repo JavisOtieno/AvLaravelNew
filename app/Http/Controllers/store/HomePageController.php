@@ -4,6 +4,7 @@ namespace App\Http\Controllers\store;
 
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -21,7 +22,9 @@ class HomePageController extends Controller
         // $products = Product::all();
 
         // ,'websiteName'
-    return view('shop');
+    $products = Product::all();
+    $categories = Category::all();
+    return view('shop', compact('products','categories'));
     }
 
     //store functions
