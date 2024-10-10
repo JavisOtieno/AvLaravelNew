@@ -15,7 +15,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Pending
+                    All
                   </p>
                 </div>
               </a>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Today
+                    Pending
                   </p>
                 </div>
               </a>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Yesterday
+                    Complete
                   </p>
                 </div>
               </a>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    This Month
+                    Cancelled
                   </p>
                 </div>
               </a>
@@ -62,7 +62,7 @@
           <!-- All Orders -->
           <div class="block block-rounded">
             <div class="block-header block-header-default">
-              <h3 class="block-title">All Orders</h3>
+              <h3 class="block-title">All Payments</h3>
               <div class="block-options">
                 <div class="dropdown">
                   <button type="button" class="btn-block-option" id="dropdown-ecom-filters" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -73,20 +73,13 @@
                       Pending..
                       <span class="badge bg-black-50 rounded-pill">35</span>
                     </a>
+                    
                     <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      Processing
-                      <span class="badge bg-warning rounded-pill">15</span>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      For Delivery
-                      <span class="badge bg-info rounded-pill">20</span>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      Canceled
+                      Cancelled
                       <span class="badge bg-danger rounded-pill">72</span>
                     </a>
                     <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                      Delivered
+                      Complete
                       <span class="badge bg-success rounded-pill">890</span>
                     </a>
                     <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
@@ -102,7 +95,7 @@
               <form action="be_pages_ecom_orders.html" method="POST" onsubmit="return false;">
                 <div class="mb-4">
                   <div class="input-group">
-                    <input type="text" class="form-control form-control-alt" id="one-ecom-orders-search" name="one-ecom-orders-search" placeholder="Search all orders..">
+                    <input type="text" class="form-control form-control-alt" id="one-ecom-orders-search" name="one-ecom-orders-search" placeholder="Search all payments..">
                     <span class="input-group-text bg-body border-0">
                       <i class="fa fa-search"></i>
                     </span>
@@ -117,10 +110,8 @@
                   <thead>
                     <tr>
                       <th class="text-center" style="width: 100px;">ID</th>
-                      <th class="d-none d-sm-table-cell text-center">Submitted</th>
+                      <th class="d-none d-sm-table-cell text-center">Created</th>
                       <th>Status</th>
-                      <th class="d-none d-xl-table-cell">Customer</th>
-                      <th class="d-none d-xl-table-cell text-center">Products</th>
                       <th class="d-none d-sm-table-cell text-end">Value</th>
                       <th class="text-center">Action</th>
                     </tr>
@@ -138,12 +129,12 @@
                       <td>
                         <span class="badge bg-success">{{ucfirst($payment['status'])}}</span>
                       </td>
-                      <td class="d-none d-xl-table-cell fs-sm">
+                      {{-- <td class="d-none d-xl-table-cell fs-sm">
                         <a class="fw-semibold" href="be_pages_ecom_customer.html">{{$payment['customer_id']}}</a>
                       </td>
                       <td class="d-none d-xl-table-cell text-center fs-sm">
                         <a class="fw-semibold" href="be_pages_ecom_order.html">{{$payment['total']}}</a>
-                      </td>
+                      </td> --}}
                       <td class="d-none d-sm-table-cell text-end fs-sm">
                         <strong>{{$payment['total']}}</strong>
                       </td>
@@ -157,7 +148,7 @@
                       </td>
                     </tr>
                     @endforeach
-                    <tr>
+                    {{-- <tr>
                       <td class="text-center fs-sm">
                         <a class="fw-semibold" href="be_pages_ecom_order.html">
                           <strong>ORD.00965</strong>
@@ -184,7 +175,7 @@
                           <i class="fa fa-fw fa-times"></i>
                         </a>
                       </td>
-                    </tr>
+                    </tr> --}}
                    
                     
                     

@@ -8,7 +8,7 @@
           <!-- Quick Overview -->
           <div class="row">
             <div class="col-6 col-lg-3">
-              <a class="block block-rounded block-link-shadow text-center" href="be_pages_ecom_orders.html">
+              <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
                   <div class="fs-2 fw-semibold text-primary">35</div>
                 </div>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Profit
+                    Pending Earnings
                   </p>
                 </div>
               </a>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Orders Today
+                    Total Orders
                   </p>
                 </div>
               </a>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Earnings Today
+                    Total Earnings
                   </p>
                 </div>
               </a>
@@ -58,23 +58,7 @@
           </div>
           <!-- END Quick Overview -->
 
-          <!-- Orders Overview -->
-          <div class="block block-rounded">
-            <div class="block-header block-header-default">
-              <h3 class="block-title">Orders Overview</h3>
-              <div class="block-options">
-                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                  <i class="si si-refresh"></i>
-                </button>
-              </div>
-            </div>
-            <div class="block-content block-content-full">
-              <!-- Chart.js is initialized in js/pages/be_pages_ecom_dashboard.min.js which was auto compiled from _js/pages/be_pages_ecom_dashboard.js) -->
-              <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
-              <div style="height: 400px;"><canvas id="js-chartjs-overview"></canvas></div>
-            </div>
-          </div>
-          <!-- END Orders Overview -->
+
 
           <!-- Top Products and Latest Orders -->
           <div class="row items-push">
@@ -82,7 +66,7 @@
               <!-- Top Products -->
               <div class="block block-rounded h-100 mb-0">
                 <div class="block-header block-header-default">
-                  <h3 class="block-title">Top Products</h3>
+                  <h3 class="block-title">Latest Products</h3>
                   <div class="block-options">
                     <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                       <i class="si si-refresh"></i>
@@ -92,193 +76,27 @@
                 <div class="block-content">
                   <table class="table table-borderless table-striped table-vcenter fs-sm">
                     <tbody>
+
+                      @foreach ($products as $product)
+                    
+                     
                       <tr>
                         <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.965</a>
+                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">{{$product['id']}}</a>
                         </td>
                         <td>
-                          <a href="be_pages_ecom_product_edit.html">Diablo III</a>
+                          <a href="be_pages_ecom_product_edit.html">{{$product['name']}}</a>
                         </td>
                         <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
+                          {{$product['price']}}
                         </td>
                       </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.154</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Control</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.523</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Minecraft</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.423</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Hollow Knight</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.391</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Sekiro: Shadows Die Twice</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.218</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">NBA 2K20</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.995</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Forza Motorsport 7</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.761</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Minecraft</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.860</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Dark Souls III</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.952</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Age of Mythology</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="text-center" style="width: 100px;">
-                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">PID.952</a>
-                        </td>
-                        <td>
-                          <a href="be_pages_ecom_product_edit.html">Age of Empires IV</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell text-center">
-                          <div class="text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </div>
-                        </td>
-                      </tr>
+                      @endforeach
+
+
+                   
+                   
+                   
                     </tbody>
                   </table>
                 </div>
@@ -299,126 +117,27 @@
                 <div class="block-content">
                   <table class="table table-borderless table-striped table-vcenter">
                     <tbody>
+                      @foreach ($orders as $order)
+                    
+                     
                       <tr>
-                        <td class="fw-semibold text-center fs-sm" style="width: 100px;">
-                          <a href="be_pages_ecom_order.html">ORD.7116</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Judy Ford</a>
+                        <td class="text-center" style="width: 100px;">
+                          <a class="fw-semibold" href="be_pages_ecom_product_edit.html">{{$order['id']}}</a>
                         </td>
                         <td>
-                          <span class="badge bg-success">Delivered</span>
+                          <a href="be_pages_ecom_product_edit.html">{{$order['name']}}</a>
                         </td>
-                        <td class="fw-medium fs-sm text-end">$572,00</td>
+                        <td class="d-none d-sm-table-cell text-center">
+                          {{$order['customer']['name']}}
+                        </td>
+                        <td class="d-none d-sm-table-cell text-center">
+                          {{$order['value']}}
+                        </td>
                       </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7115</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Andrea Gardner</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-danger">Canceled</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$761,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7114</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Jose Wagner</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-success">Delivered</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$441,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7113</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Wayne Garcia</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-warning">Processing</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$139,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7112</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Helen Jacobs</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-success">Delivered</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$615,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7111</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Brian Stevens</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-warning">Processing</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$134,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7110</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Jesse Fisher</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-success">Delivered</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$134,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7109</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Carol White</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-warning">Processing</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$498,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7108</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Jesse Fisher</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-success">Delivered</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$469,00</td>
-                      </tr>
-                      <tr>
-                        <td class="fw-semibold text-center fs-sm">
-                          <a href="be_pages_ecom_order.html">ORD.7107</a>
-                        </td>
-                        <td class="d-none d-sm-table-cell fs-sm">
-                          <a href="be_pages_ecom_customer.html">Laura Carr</a>
-                        </td>
-                        <td>
-                          <span class="badge bg-danger">Canceled</span>
-                        </td>
-                        <td class="fw-medium fs-sm text-end">$384,00</td>
-                      </tr>
+
+                      @endforeach
+  
+                      
                     </tbody>
                   </table>
                 </div>
@@ -427,6 +146,24 @@
             </div>
           </div>
           <!-- END Top Products and Latest Orders -->
+
+                    <!-- Orders Overview -->
+                    <div class="block block-rounded">
+                      <div class="block-header block-header-default">
+                        <h3 class="block-title">Orders Overview</h3>
+                        <div class="block-options">
+                          <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                            <i class="si si-refresh"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="block-content block-content-full">
+                        <!-- Chart.js is initialized in js/pages/be_pages_ecom_dashboard.min.js which was auto compiled from _js/pages/be_pages_ecom_dashboard.js) -->
+                        <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
+                        <div style="height: 400px;"><canvas id="js-chartjs-overview"></canvas></div>
+                      </div>
+                    </div>
+                    <!-- END Orders Overview -->
         </div>
         <!-- END Page Content -->
       </main>

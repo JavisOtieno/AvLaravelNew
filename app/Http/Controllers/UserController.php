@@ -29,7 +29,8 @@ class UserController extends Controller
         return view('admin.signup');
     }
     public function showProfile(){
-        return view('admin.profile');
+        $user= User::find(auth()->user()->id);
+        return view('admin.profile', compact('user'));
     }
 
 

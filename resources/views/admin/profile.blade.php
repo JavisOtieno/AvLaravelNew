@@ -11,11 +11,11 @@
               </div>
               <h1 class="h2 text-white mb-0">Edit Account</h1>
               <h2 class="h4 fw-normal text-white-75">
-                John Parker
+                {{$user['name']}}
               </h2>
-              <a class="btn btn-alt-secondary" href="be_pages_generic_profile.html">
+              {{-- <a class="btn btn-alt-secondary" href="be_pages_generic_profile.html">
                 <i class="fa fa-fw fa-arrow-left text-danger"></i> Back to Profile
-              </a>
+              </a> --}}
             </div>
           </div>
         </div>
@@ -38,16 +38,16 @@
                   </div>
                   <div class="col-lg-8 col-xl-5">
                     <div class="mb-4">
-                      <label class="form-label" for="one-profile-edit-username">Username</label>
-                      <input type="text" class="form-control" id="one-profile-edit-username" name="one-profile-edit-username" placeholder="Enter your username.." value="john.parker">
+                      <label class="form-label" for="one-profile-edit-username">Website name</label>
+                      <input type="text" class="form-control" id="one-profile-edit-username" name="one-profile-edit-username" placeholder="Enter your username.." value="{{$user['websitename']}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-name">Name</label>
-                      <input type="text" class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Enter your name.." value="John Parker">
+                      <input type="text" class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Enter your name.." value="{{$user['name']}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-email">Email Address</label>
-                      <input type="email" class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Enter your email.." value="john.parker@example.com">
+                      <input type="email" class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Enter your email.." value="{{$user['email']}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label">Your Avatar</label>
@@ -114,7 +114,7 @@
           <!-- END Change Password -->
 
           <!-- Billing Information -->
-          <div class="block block-rounded">
+          {{-- <div class="block block-rounded">
             <div class="block-header block-header-default">
               <h3 class="block-title">Billing Information</h3>
             </div>
@@ -170,11 +170,11 @@
                 </div>
               </form>
             </div>
-          </div>
+          </div> --}}
           <!-- END Billing Information -->
 
           <!-- Connections -->
-          <div class="block block-rounded">
+          {{-- <div class="block block-rounded">
             <div class="block-header block-header-default">
               <h3 class="block-title">Connections</h3>
             </div>
@@ -233,7 +233,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <!-- END Connections -->
         </div>
         <!-- END Page Content -->

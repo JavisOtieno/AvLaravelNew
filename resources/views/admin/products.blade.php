@@ -7,7 +7,7 @@
         <!-- Page Content -->
         <div class="content">
           <!-- Quick Overview -->
-          <div class="row">
+          {{-- <div class="row">
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="be_pages_ecom_orders.html">
                 <div class="block-content block-content-full">
@@ -56,13 +56,13 @@
                 </div>
               </a>
             </div>
-          </div>
+          </div> --}}
           <!-- END Quick Overview -->
 
           <!-- All Orders -->
           <div class="block block-rounded">
             <div class="block-header block-header-default">
-              <h3 class="block-title">All Orders</h3>
+              <h3 class="block-title">All Products</h3>
               <div class="block-options">
                 <div class="dropdown">
                   <button type="button" class="btn-block-option" id="dropdown-ecom-filters" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -102,7 +102,7 @@
               <form action="be_pages_ecom_orders.html" method="POST" onsubmit="return false;">
                 <div class="mb-4">
                   <div class="input-group">
-                    <input type="text" class="form-control form-control-alt" id="one-ecom-orders-search" name="one-ecom-orders-search" placeholder="Search all orders..">
+                    <input type="text" class="form-control form-control-alt" id="one-ecom-orders-search" name="one-ecom-orders-search" placeholder="Search all products..">
                     <span class="input-group-text bg-body border-0">
                       <i class="fa fa-search"></i>
                     </span>
@@ -117,11 +117,11 @@
                   <thead>
                     <tr>
                       <th class="text-center" style="width: 100px;">ID</th>
-                      <th class="d-none d-sm-table-cell text-center">Submitted</th>
+                      <th class="d-none d-sm-table-cell text-center">Created</th>
+                      <th class="d-none d-xl-table-cell">Name</th>
+                      <th class="d-none d-xl-table-cell text-center">Price</th>
+                      <th class="d-none d-sm-table-cell text-end">Commission</th>
                       <th>Status</th>
-                      <th class="d-none d-xl-table-cell">Customer</th>
-                      <th class="d-none d-xl-table-cell text-center">Products</th>
-                      <th class="d-none d-sm-table-cell text-end">Value</th>
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
@@ -135,9 +135,7 @@
                         </a>
                       </td>
                       <td class="d-none d-sm-table-cell text-center fs-sm">{{$product['created_at']}}</td>
-                      <td>
-                        <span class="badge bg-success">{{ucfirst($product['status'])}}</span>
-                      </td>
+                      
                       <td class="d-none d-xl-table-cell fs-sm">
                         <a class="fw-semibold" href="be_pages_ecom_customer.html">{{$product['name']}}</a>
                       </td>
@@ -145,7 +143,10 @@
                         <a class="fw-semibold" href="be_pages_ecom_order.html">{{$product['price']}}</a>
                       </td>
                       <td class="d-none d-sm-table-cell text-end fs-sm">
-                        <strong>{{$product['profit']}}</strong>
+                        <strong>{{$product['commission']}}</strong>
+                      </td>
+                      <td>
+                        <span class="badge bg-success">{{ucfirst($product['status'])}}</span>
                       </td>
                       <td class="text-center">
                         <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
@@ -157,91 +158,10 @@
                       </td>
                     </tr>
                     @endforeach
-                    <tr>
-                      <td class="text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">
-                          <strong>ORD.00965</strong>
-                        </a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-center fs-sm">07/04/2020</td>
-                      <td>
-                        <span class="badge bg-danger">Canceled</span>
-                      </td>
-                      <td class="d-none d-xl-table-cell fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_customer.html">Judy Ford</a>
-                      </td>
-                      <td class="d-none d-xl-table-cell text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">9</a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-end fs-sm">
-                        <strong>$1799,59</strong>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
-                          <i class="fa fa-fw fa-eye"></i>
-                        </a>
-                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
-                          <i class="fa fa-fw fa-times"></i>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">
-                          <strong>ORD.00964</strong>
-                        </a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-center fs-sm">20/05/2020</td>
-                      <td>
-                        <span class="badge bg-success">Delivered</span>
-                      </td>
-                      <td class="d-none d-xl-table-cell fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_customer.html">Jack Greene</a>
-                      </td>
-                      <td class="d-none d-xl-table-cell text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">1</a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-end fs-sm">
-                        <strong>$607,74</strong>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
-                          <i class="fa fa-fw fa-eye"></i>
-                        </a>
-                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
-                          <i class="fa fa-fw fa-times"></i>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">
-                          <strong>ORD.00963</strong>
-                        </a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-center fs-sm">15/08/2020</td>
-                      <td>
-                        <span class="badge bg-info">For delivery</span>
-                      </td>
-                      <td class="d-none d-xl-table-cell fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_customer.html">Ryan Flores</a>
-                      </td>
-                      <td class="d-none d-xl-table-cell text-center fs-sm">
-                        <a class="fw-semibold" href="be_pages_ecom_order.html">9</a>
-                      </td>
-                      <td class="d-none d-sm-table-cell text-end fs-sm">
-                        <strong>$1070,33</strong>
-                      </td>
-                      <td class="text-center">
-                        <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
-                          <i class="fa fa-fw fa-eye"></i>
-                        </a>
-                        <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
-                          <i class="fa fa-fw fa-times"></i>
-                        </a>
-                      </td>
-                    </tr>
-                    
+
+                  </tbody>
+                </table>
+              </div>
                   
 
               <!-- Pagination -->
