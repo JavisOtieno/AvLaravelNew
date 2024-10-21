@@ -166,21 +166,21 @@
 
                                 <div class="woocommerce-tabs wc-tabs-wrapper">
                                     <ul class="nav nav-tabs electro-nav-tabs tabs wc-tabs" role="tablist">
-                                        <li class="nav-item accessories_tab">
+                                        {{-- <li class="nav-item accessories_tab">
                                             <a href="#tab-accessories" data-toggle="tab">Accessories</a>
-                                        </li>
+                                        </li> --}}
 
                                         <li class="nav-item description_tab">
                                             <a href="#tab-description" class="active" data-toggle="tab">Description</a>
                                         </li>
 
-                                        <li class="nav-item specification_tab">
+                                        {{-- <li class="nav-item specification_tab">
                                             <a href="#tab-specification" data-toggle="tab">Specification</a>
                                         </li>
 
                                         <li class="nav-item reviews_tab">
                                             <a href="#tab-reviews" data-toggle="tab">Reviews</a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
 
                                     <div class="tab-content">
