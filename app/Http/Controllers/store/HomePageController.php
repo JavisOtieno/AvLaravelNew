@@ -23,8 +23,10 @@ class HomePageController extends Controller
 
         // ,'websiteName'
     $products = Product::all();
-    $categories = Category::all();
-    return view('shop', compact('products','categories'));
+    $firstcategories = Category::where('parent_category_id', '1')->get();
+    $maincategories = Category::where('type', 'main')->get();
+    // return $firstcategories[0]['mame'];
+    return view('shop', compact('products','firstcategories','maincategories'));
     }
 
     //store functions

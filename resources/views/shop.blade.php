@@ -5,7 +5,7 @@
             <div id="content" class="site-content" tabindex="-1">
                 <div class="container">
 
-                    <nav class="woocommerce-breadcrumb" ><a href="home.html">Home</a><span class="delimiter"><i class="fa fa-angle-right"></i></span>Smart Phones &amp; Tablets</nav>
+                    <nav class="woocommerce-breadcrumb" ><a href="home.html">Home</a><span class="delimiter"><i class="fa fa-angle-right"></i></span>Phones</nav>
 
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main">
@@ -291,7 +291,8 @@
                             </section> --}}
 
                             <header class="page-header">
-                                <h1 class="page-title">Smart Phones &amp; Tablets</h1>
+                                <h1 class="page-title">Phones</h1>
+                                {{-- Smart Phones &amp; Tablets --}}
                                 <p class="woocommerce-result-count">Showing 1&ndash;15 of 20 results</p>
                             </header>
 
@@ -334,11 +335,17 @@
                                 <div role="tabpanel" class="tab-pane active" id="grid" aria-expanded="true">
 
                                     <ul class="products columns-3">
-
+                                        @php
+                                            $count=1
+                                        @endphp
                                         @foreach ( $products as $product)
+                                        
                                             
                                        
-                                        <li class="product first">
+                                        <li class="product {{$count%3?'last':($count%2?'':'first')}}">
+                                            @php
+                                                $count++;
+                                            @endphp
                                             <div class="product-outer">
                                                 <div class="product-inner">
                                                     <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span>
@@ -3111,6 +3118,14 @@
                                     <ul class="show-all-cat">
                                         <li class="product_cat"><span class="show-all-cat-dropdown">Show All Categories</span>
                                             <ul>
+                                                @foreach ($maincategories as $category)
+                                                <li class="cat-item"><a href="category/{{$category['name']}}">{{$category['name']}}</a> </li>
+                                                {{-- <span class="count">(0)</span> --}}
+
+                                                
+                                                   
+                                                
+                                                @endforeach
                                                 <li class="cat-item"><a href="product-category.html">GPS &amp; Navi</a> <span class="count">(0)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Home Entertainment</a> <span class="count">(1)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Cameras &amp; Photography</a> <span class="count">(5)</span></li>
@@ -3128,11 +3143,12 @@
                                         </li>
                                     </ul>
                                     <ul>
-                                        <li class="cat-item current-cat"><a href="product-category.html">Laptops &amp; Computers</a> 
+                                        <li class="cat-item current-cat"><a href="product-category.html">Phones</a> 
+                                            {{-- Laptops &amp; Computers --}}
                                             {{-- <span class="count">(13)</span> --}}
                                             <ul class='children'>
-                                                @foreach ($categories as $category)
-                                                <li class="cat-item"><a href="/{{$category['name']}}">{{$category['name']}}</a> 
+                                                @foreach ($firstcategories as $category)
+                                                <li class="cat-item"><a href="category/{{$category['name']}}">{{$category['name']}}</a> 
                                                     {{-- <span class="count">(6)</span> --}}
                                                 </li>
                                                 @endforeach

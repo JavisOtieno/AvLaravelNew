@@ -21,7 +21,7 @@
 
         <link rel="shortcut icon" href="/assets/images/fav-icon.png">
     </head>
-    {{"pathhere".request()->path()}}
+    {{-- {{"pathhere".request()->path()}} --}}
 
     
     @if(Str::contains(request()->path(),'product'))
