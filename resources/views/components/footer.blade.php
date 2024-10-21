@@ -395,7 +395,7 @@
                                         @endforeach
                                         {{-- <li class="menu-item "><a href="single-product.html">Software</a></li> --}}
                                         {{-- <li  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2742"><a href="single-product.html">Office Supplies</a></li> --}}
-                                        {{-- <li  class="menu-item "><a href="single-product.html">Computer Components</a></li> --}}
+                                        <li  class="menu-item "><a href="single-product.html">Computer Components</a></li>
                                     </ul>
                                 </div>
                             </div>
