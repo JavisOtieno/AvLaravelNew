@@ -32,7 +32,7 @@
                                                 $imageName = end($pathParts); // This will be 'image.img'
                                                 @endphp
 
-                                                <a href="{{ url('flask-uploads/'.$imageName) }}" class="zoom" title="" data-rel="prettyPhoto[product-gallery]"><img src="assets/images/blank.gif" data-echo="assets/images/single-product/s1-1.jpg" class="wp-post-image" alt=""></a>
+                                                <a href="{{ url('flask-uploads/'.$imageName) }}" class="zoom" title="" data-rel="prettyPhoto[product-gallery]"><img src="{{ url('flask-uploads/'.$imageName) }}" data-echo="{{ url('flask-uploads/'.$imageName) }}" class="wp-post-image" alt=""></a>
 
                                                 <a href="images/single-product/s1.jpg" class="zoom" title="" data-rel="prettyPhoto[product-gallery]"><img src="assets/images/blank.gif" data-echo="assets/images/single-product/s1.jpg" class="wp-post-image" alt=""></a>
 
