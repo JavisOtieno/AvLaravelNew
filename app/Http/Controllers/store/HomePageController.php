@@ -32,17 +32,23 @@ class HomePageController extends Controller
     //store functions
     public function showProduct($id){
         $product = Product::find($id);
-        return view('product',compact('product'));
+        $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
+        $maincategories = Category::where('type', 'main')->get();
+        return view('product',compact('product','firstcategories','maincategories'));
     }
 
         //
         public function showCustomerAccount(){
             $user = User::find(1);
-            return view('account',compact('user'));
+            $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
+        $maincategories = Category::where('type', 'main')->get();
+            return view('account',compact('user','firstcategories','maincategories'));
         }
 
         public function contact(){
-        return view('contact');
+            $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
+        $maincategories = Category::where('type', 'main')->get();
+        return view('contact','firstcategories','maincategories');
         }
 
         
