@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('price');
             $table->unsignedBigInteger('commission');
             $table->unsignedBigInteger('cost');
-            $table->string('highlights');
+            $table->longText('highlights');
             $table->string('image')->nullable();
             $table->string('status');
             $table->unsignedBigInteger('category_id');
