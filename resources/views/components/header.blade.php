@@ -195,7 +195,7 @@
                                 <li class="highlight menu-item animate-dropdown"><a title="New Arrivals" href="home-v3-full-color-background.html">New Arrivals</a></li> --}}
 
                                 @foreach ($maincategories as $category)
-                                <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li>
+                                {{-- <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li> --}}
                                 {{-- <span class="count">(0)</span> --}}
                                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown menu-item-2584 dropdown">
                                     <a title="{{ucfirst($category['name'])}}" href="category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['name'])}}</a>
