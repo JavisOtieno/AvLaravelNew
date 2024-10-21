@@ -127,7 +127,7 @@
 
                                         <form class="variations_form cart" method="post">
 
-                                            <table class="variations">
+                                            {{-- <table class="variations">
                                                 <tbody>
                                                     <tr>
                                                         <td class="label"><label>Color</label></td>
@@ -141,7 +141,7 @@
                                                         </td>
                                                     </tr>
                                                 </tbody>
-                                            </table>
+                                            </table> --}}
 
 
                                             <div class="single_variation_wrap">
