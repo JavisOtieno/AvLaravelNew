@@ -330,19 +330,20 @@
     <div class="footer-newsletter">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-7">
-                    <h5 class="newsletter-title">Sign up to Newsletter</h5>
-                    <span class="newsletter-marketing-text">...and receive <strong>$20 coupon for first shopping</strong></span>
+                <div class="col-xs-12 col-sm-6">
+                    <h5 class="newsletter-title">Free Delivery Within Nairobi CBD</h5>
+                    {{-- <span class="newsletter-marketing-text">...and receive <strong>$20 coupon for first shopping</strong></span> --}}
                 </div>
-                <div class="col-xs-12 col-sm-5">
-                    <form>
+                <div class="col-xs-12 col-sm-6">
+                    <h5 class="newsletter-title">Countrywide Delivery at Affordable Rates</h5>
+                    {{-- <form>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Enter your email address">
                             <span class="input-group-btn">
                                 <button class="btn btn-secondary" type="button">Sign Up</button>
                             </span>
                         </div>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </div>
@@ -383,7 +384,7 @@
                                         $count=0;
                                         @endphp
                                         @foreach ($firstcategories as $category)
-                                        <li class="menu-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
+                                        <li class="menu-item "><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
                                         @php
                                         $count++;
                                         if ($count==4)
@@ -392,9 +393,9 @@
                                         }
                                         @endphp
                                         @endforeach
-                                        {{-- <li class="menu-item "><a href="single-product.html">Software</a></li>
-                                        <li  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2742"><a href="single-product.html">Office Supplies</a></li>
-                                        <li  class="menu-item "><a href="single-product.html">Computer Components</a></li> --}}
+                                        <li class="menu-item "><a href="single-product.html">Software</a></li>
+                                        {{-- <li  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2742"><a href="single-product.html">Office Supplies</a></li> --}}
+                                        <li  class="menu-item "><a href="single-product.html">Computer Components</a></li>
                                     </ul>
                                 </div>
                             </div>
