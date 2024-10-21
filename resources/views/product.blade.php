@@ -82,11 +82,11 @@
                                             <a href="#reviews" class="woocommerce-review-link">(<span itemprop="reviewCount" class="count">3</span> customer reviews)</a>
                                         </div><!-- .woocommerce-product-rating -->
 
-                                        <div class="brand">
+                                        {{-- <div class="brand">
                                             <a href="product-category.html">
                                                 <img src="assets/images/single-product/brand.png" alt="Gionee" />
                                             </a>
-                                        </div><!-- .brand -->
+                                        </div><!-- .brand --> --}}
 
                                         <div class="availability in-stock">Availablity: <span>In stock</span></div><!-- .availability -->
 
@@ -147,11 +147,12 @@
                                             <div class="single_variation_wrap">
                                                 <div class="woocommerce-variation single_variation"></div>
                                                 <div class="woocommerce-variation-add-to-cart variations_button">
-                                                    <div class="quantity">
+                                                    {{-- <div class="quantity">
                                                         <label>Quantity:</label>
                                                         <input type="number" name="quantity" value="1" title="Qty" class="input-text qty text"/>
-                                                    </div>
-                                                    <button type="submit" class="single_add_to_cart_button button">Add to cart</button>
+                                                    </div> --}}
+                                                    {{-- <button type="submit" class="single_add_to_cart_button button">Add to cart</button> --}}
+                                                    <a href="/buynow" class="single_add_to_cart_button button">Buy Now</a>
                                                     <input type="hidden" name="add-to-cart" value="2452" />
                                                     <input type="hidden" name="product_id" value="2452" />
                                                     <input type="hidden" name="variation_id" class="variation_id" value="0" />
