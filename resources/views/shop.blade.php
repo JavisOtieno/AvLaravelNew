@@ -3126,7 +3126,7 @@
                                                    
                                                 
                                                 @endforeach
-                                                <li class="cat-item"><a href="product-category.html">GPS &amp; Navi</a> <span class="count">(0)</span></li>
+                                                {{-- <li class="cat-item"><a href="product-category.html">GPS &amp; Navi</a> <span class="count">(0)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Home Entertainment</a> <span class="count">(1)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Cameras &amp; Photography</a> <span class="count">(5)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Smart Phones &amp; Tablets</a> <span class="count">(20)</span></li>
@@ -3138,7 +3138,7 @@
                                                 <li class="cat-item"><a href="product-category.html">Printers &amp; Ink</a> <span class="count">(1)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Software</a> <span class="count">(0)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Office Supplies</a> <span class="count">(0)</span></li>
-                                                <li class="cat-item"><a href="product-category.html">Computer Components</a> <span class="count">(1)</span></li>
+                                                <li class="cat-item"><a href="product-category.html">Computer Components</a> <span class="count">(1)</span></li> --}}
                                             </ul>
                                         </li>
                                     </ul>
@@ -3152,7 +3152,7 @@
                                                     {{-- <span class="count">(6)</span> --}}
                                                 </li>
                                                 @endforeach
-                                                <li class="cat-item"><a href="product-category.html">Laptops</a> <span class="count">(6)</span></li>
+                                                {{-- <li class="cat-item"><a href="product-category.html">Laptops</a> <span class="count">(6)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Ultrabooks</a> <span class="count">(1)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Computers</a> <span class="count">(0)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Mac Computers</a> <span class="count">(1)</span></li>
@@ -3160,7 +3160,7 @@
                                                 <li class="cat-item"><a href="product-category.html">Servers</a> <span class="count">(1)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Peripherals</a> <span class="count">(1)</span></li>
                                                 <li class="cat-item"><a href="product-category.html">Gaming</a> <span class="count">(1)</span></li>
-                                                <li class="cat-item"><a href="product-category.html">Accessories</a> <span class="count">(2)</span></li>
+                                                <li class="cat-item"><a href="product-category.html">Accessories</a> <span class="count">(2)</span></li> --}}
                                             </ul>
                                         </li>
                                     </ul>
