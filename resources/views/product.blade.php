@@ -24,7 +24,15 @@
                                         <span class="onsale">Sale!</span>
                                         <div class="images electro-gallery">
                                             <div class="thumbnails-single owl-carousel">
-                                                <a href="images/single-product/s1-1.jpg" class="zoom" title="" data-rel="prettyPhoto[product-gallery]"><img src="assets/images/blank.gif" data-echo="assets/images/single-product/s1-1.jpg" class="wp-post-image" alt=""></a>
+                                                @php
+                                                            
+                                                $pathParts = explode('/', $product['image']);
+
+                                                // Get the last part (the image filename)
+                                                $imageName = end($pathParts); // This will be 'image.img'
+                                                @endphp
+
+                                                <a href="{{ url('flask-uploads/'.$imageName) }}" class="zoom" title="" data-rel="prettyPhoto[product-gallery]"><img src="assets/images/blank.gif" data-echo="assets/images/single-product/s1-1.jpg" class="wp-post-image" alt=""></a>
 
                                                 <a href="images/single-product/s1.jpg" class="zoom" title="" data-rel="prettyPhoto[product-gallery]"><img src="assets/images/blank.gif" data-echo="assets/images/single-product/s1.jpg" class="wp-post-image" alt=""></a>
 
@@ -338,6 +346,7 @@
 
                                         <div class="tab-pane active in panel entry-content wc-tab" id="tab-description">
                                             <div class="electro-description">
+                                                <p>{{$product['description']}}</p>
 
                                                 <h3>Perfectly Done</h3>
                                                 <p>Praesent ornare, ex a interdum consectetur, lectus diam sodales elit, vitae egestas est enim ornare nisl. Nullam in lectus nec sem semper viverra. In lobortis egestas massa. Nam nec massa nisi. Suspendisse potenti. Quisque suscipit vulputate dui quis volutpat. Ut id elit facilisis, feugiat est in, tempus lacus. Ut ultrices dictum metus, a ultricies ex vulputate ac. Ut id cursus tellus, non tempor quam. Morbi porta diam nisi, id finibus nunc tincidunt eu.</p>
