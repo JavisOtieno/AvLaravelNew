@@ -358,13 +358,15 @@
                                 <h4 class="widget-title">Find It Fast</h4>
                                 <div class="menu-footer-menu-1-container">
                                     <ul id="menu-footer-menu-1" class="menu">
-                                        <li class="menu-item"><a href="single-product.html">Laptops &#038; Computers</a></li>
-                                        <li class="menu-item"><a href="single-product.html">Cameras &#038; Photography</a></li>
+                                        @foreach ($maincategories as $category)
+                                        <li class="menu-item"><a href="/category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
+                                        @endforeach
+                                        {{-- <li class="menu-item"><a href="single-product.html">Cameras &#038; Photography</a></li>
                                         <li class="menu-item"><a href="single-product.html">Smart Phones &#038; Tablets</a></li>
                                         <li class="menu-item"><a href="single-product.html">Video Games &#038; Consoles</a></li>
                                         <li class="menu-item"><a href="single-product.html">TV &#038; Audio</a></li>
                                         <li class="menu-item"><a href="single-product.html">Gadgets</a></li>
-                                        <li class="menu-item "><a href="single-product.html">Car Electronic &#038; GPS</a></li>
+                                        <li class="menu-item "><a href="single-product.html">Car Electronic &#038; GPS</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -377,7 +379,19 @@
                                 <h4 class="widget-title">&nbsp;</h4>
                                 <div class="menu-footer-menu-2-container">
                                     <ul id="menu-footer-menu-2" class="menu">
-                                        <li class="menu-item"><a href="single-product.html">Printers &#038; Ink</a></li>
+                                        @php
+                                        $count=0;
+                                        @endphp
+                                        @foreach ($firstcategories as $category)
+                                        <li class="menu-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
+                                        @php
+                                        $count++;
+                                        if ($count==4)
+                                        {
+                                            break;
+                                        }
+                                        @endphp
+                                        @endforeach
                                         <li class="menu-item "><a href="single-product.html">Software</a></li>
                                         <li  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2742"><a href="single-product.html">Office Supplies</a></li>
                                         <li  class="menu-item "><a href="single-product.html">Computer Components</a></li>
