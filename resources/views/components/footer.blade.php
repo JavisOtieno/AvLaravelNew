@@ -392,9 +392,9 @@
                                         }
                                         @endphp
                                         @endforeach
-                                        <li class="menu-item "><a href="single-product.html">Software</a></li>
+                                        {{-- <li class="menu-item "><a href="single-product.html">Software</a></li>
                                         <li  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2742"><a href="single-product.html">Office Supplies</a></li>
-                                        <li  class="menu-item "><a href="single-product.html">Computer Components</a></li>
+                                        <li  class="menu-item "><a href="single-product.html">Computer Components</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -409,11 +409,11 @@
                                     <ul id="menu-footer-menu-3" class="menu">
                                         <li class="menu-item"><a href="single-product.html">My Account</a></li>
                                         <li class="menu-item"><a href="single-product.html">Track your Order</a></li>
-                                        <li class="menu-item"><a href="single-product.html">Wishlist</a></li>
+                                        {{-- <li class="menu-item"><a href="single-product.html">Wishlist</a></li>
                                         <li class="menu-item"><a href="single-product.html">Customer Service</a></li>
                                         <li class="menu-item"><a href="single-product.html">Returns/Exchange</a></li>
                                         <li class="menu-item"><a href="single-product.html">FAQs</a></li>
-                                        <li class="menu-item"><a href="hsingle-product.html">Product Support</a></li>
+                                        <li class="menu-item"><a href="hsingle-product.html">Product Support</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
