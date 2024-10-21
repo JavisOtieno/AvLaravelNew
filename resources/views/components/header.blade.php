@@ -223,18 +223,18 @@
                                                                     <div class="wpb_wrapper">
                                                                         <ul>
                                                                             <li class="nav-title">{{ucfirst($category['name'])}}</li>
-                                                                            <li><a href="#">All {{ucfirst($category['name'])}}</a></li>
+                                                                            <li><a href="category/{{$category['name']}}">All {{ucfirst($category['name'])}}</a></li>
                                                                             @foreach ($firstcategories as $category)
                                                                             <li><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
                                                                             @endforeach
                                                                             
-                                                                            <li><a href="#">Pen Drives, Hard Drives &amp; Memory Cards</a></li>
+                                                                            {{-- <li><a href="#">Pen Drives, Hard Drives &amp; Memory Cards</a></li>
                                                                             <li><a href="#">Printers &amp; Ink</a></li>
                                                                             <li><a href="#">Networking &amp; Internet Devices</a></li>
                                                                             <li><a href="#">Computer Accessories</a></li>
                                                                             <li><a href="#">Software</a></li>
                                                                             <li class="nav-divider"></li>
-                                                                            <li><a href="#"><span class="nav-text">All Electronics</span><span class="nav-subtext">Discover more products</span></a></li>
+                                                                            <li><a href="#"><span class="nav-text">All Electronics</span><span class="nav-subtext">Discover more products</span></a></li> --}}
                                                                         </ul>
 
                                                                     </div>
