@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\store;
 
 use App\Models\User;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Customer;
 use App\Rules\PhoneNumber;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -77,14 +79,38 @@ class HomePageController extends Controller
             $incomingFields['address']=strip_tags($credentials['address']);
             $incomingFields['product_id']=strip_tags($credentials['product_id']);
 
+            $incomingFieldsCustomer['name']=$incomingFields['name'];
+            $incomingFieldsCustomer['phone']=$incomingFields['phone'];
+            $incomingFieldsCustomer['email']='';
     
-            Product::create($incomingFields);
+            $customer = Customer::create($incomingFieldsCustomer);
+            $customer_id = $customer->id;
+            
 
-            $productStatus=array(
-                "message" => "Product Added Successfully",
+            $incomingFieldsOrder['customer_id']=$customer_id;
+            $incomingFieldsOrder['user_id']=request()->get('user')->id;
+            $incomingFieldsOrder['quantity']=1;
+            $incomingFieldsOrder['notes']=$incomingFields['notes'];
+            $incomingFieldsOrder['status']='pending';
+
+            $product = Product::find($incomingFields['product_id']);
+            $incomingFieldsOrder['value']=$product['price'];
+
+            
+
+            $order = Order::create($incomingFieldsOrder);
+
+            $incomingFieldsOrderItem['product_id']=$incomingFields['product_id'];
+            $incomingFieldsOrderItem['order_id']=$order->id;
+            $incomingFieldsOrderItem['product_price']=$product['price'];
+            $incomingFieldsOrderItem['product_profit']=$product['profit'];
+            $incomingFieldsOrderItem['product_cost']=$product['cost'];
+
+            $orderStatus=array(
+                "message" => "Order Added Successfully",
                 "status" => "success");
     
-            return response()->json($productStatus);
+            return response()->json($orderStatus);
           
     }
 
