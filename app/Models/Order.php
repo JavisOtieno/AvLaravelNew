@@ -13,6 +13,16 @@ class Order extends Model
     //     //return $this->belongsTo(User::class);
     //     return $this->belongsTo(User::class,'user_id');
     // }
+    protected $fillable = [
+        'customer_id',
+        'user_id',
+        'quantity',
+        'value',
+        'notes',
+        'status',
+    
+    ];
+
 
     public function customer(){
         //return $this->belongsTo(User::class);
