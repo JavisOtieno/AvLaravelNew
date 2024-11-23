@@ -23,6 +23,19 @@
                                                     <h2>Buy Now</h2>
 
                                                     <form method="post" class="login" action="/submitbuynow">
+                                                        @if ($errors->any())
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>
+                                        {{ $error }}
+                                        </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                                                        @csrf
 
                                                         <p class="before-login-text">Welcome back! Sign in to your account</p>
 
