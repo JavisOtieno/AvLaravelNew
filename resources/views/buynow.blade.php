@@ -44,7 +44,7 @@
 
                                                         <p class="form-row form-row-wide">
                                                             <label for="username">Name<span class="required">*</span></label>
-                                                            <input type="text" class="input-text" name="username" id="username" value="" />
+                                                            <input type="text" class="input-text" name="name" id="name" value="" />
                                                         </p>
 
                                                         <p class="form-row form-row-wide">
