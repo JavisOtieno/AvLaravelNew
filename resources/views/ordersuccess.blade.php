@@ -29,7 +29,7 @@
 
                                                 <div class="col-2">
 
-                                                    <h2>KSh {{number_format($order->value)}}</h2>
+                                                    <h2>Total : KSh {{number_format($order->value)}}</h2>
 
                                                     {{-- <form method="post" class="register">
 
