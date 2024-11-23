@@ -152,7 +152,7 @@
                                                         <input type="number" name="quantity" value="1" title="Qty" class="input-text qty text"/>
                                                     </div> --}}
                                                     {{-- <button type="submit" class="single_add_to_cart_button button">Add to cart</button> --}}
-                                                    <a href="/buynow" class="single_add_to_cart_button button">Buy Now</a>
+                                                    <a href="/buynow/{{$product['id']}}" class="single_add_to_cart_button button">Buy Now</a>
                                                     <input type="hidden" name="add-to-cart" value="2452" />
                                                     <input type="hidden" name="product_id" value="2452" />
                                                     <input type="hidden" name="variation_id" class="variation_id" value="0" />
