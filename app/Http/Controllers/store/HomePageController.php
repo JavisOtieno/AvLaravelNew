@@ -47,6 +47,13 @@ class HomePageController extends Controller
         return view('buynow',compact('product','firstcategories','maincategories'));
     }
 
+    public function orderSuccess($id){
+        $order = Order::find($id);
+        $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
+        $maincategories = Category::where('type', 'main')->get();
+        return view('ordersuccess',compact('order','firstcategories','maincategories'));
+    }
+
         //
         public function showCustomerAccount(){
             $user = User::find(1);

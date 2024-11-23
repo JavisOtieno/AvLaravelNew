@@ -20,52 +20,9 @@
                                                 <div class="col-1">
 
 
-                                                    <h2>Buy Now</h2>
+                                                    <h2>Order Successfully Placed! Order #{{$order->id}} </h2>
 
-                                                    <form method="post" class="login" action="/submitbuynow">
-                                                        
-                                                        @if ($errors->any())
-                        <div class="alert alert-danger alert-dismissible">
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>
-                                        {{ $error }}
-                                        </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                                                        @csrf
-
-                                                        <p class="before-login-text">Welcome back! Sign in to your account</p>
-
-                                                        <input class="input-text" type="hidden" name="product_id" id="product_id" value="{{$product['id']}}" />
-
-
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="username">Name<span class="required">*</span></label>
-                                                            <input type="text" class="input-text" name="name" id="name" value="" />
-                                                        </p>
-
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="phone">Phone<span class="required">*</span></label>
-                                                            <input class="input-text" type="text" name="phone" id="phone" />
-                                                        </p>
-
-                                                        <p class="form-row form-row-wide">
-                                                            <label for="address">Address<span class="required">*</span></label>
-                                                            <input class="input-text" type="text" name="address" id="addresss" />
-                                                        </p>
-
-                                                        <p class="form-row">
-                                                            <input class="button" type="submit" value="Buy Now" name="buynow">
-                                                            {{-- <label for="rememberme" class="inline"><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember me</label> --}}
-                                                        </p>
-
-                                                        {{-- <p class="lost_password"><a href="login-and-register.html">Lost your password?</a></p> --}}
-
-                                                    </form>
+                                                    
 
 
                                                 </div><!-- .col-1 -->

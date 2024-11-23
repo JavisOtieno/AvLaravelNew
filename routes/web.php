@@ -28,6 +28,7 @@ Route::get('/contact', [HomePageController::class,'contact']);
 // Route::get('/trackyourorder', [OrderController::class,'trackOrder']);
 Route::get('/product/{id}', [HomePageController::class,'showProduct']);
 Route::get('/buynow/{id}', [HomePageController::class,'buyProduct']);
+Route::get('/ordersuccess/{id}', [HomePageController::class,'orderSuccess']);
 Route::post('/submitbuynow', [HomePageController::class,'submitBuyProduct']);
 
 });
