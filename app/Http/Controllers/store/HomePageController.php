@@ -66,7 +66,7 @@ class HomePageController extends Controller
             $credentials = $request->validate([
                 'name'=>'required|string|max:255',
                 'phone'=>['required','min:10','string','max:255', new PhoneNumber],
-                'address'=>'required|string|1500',
+                'address'=>'required|string|max:1500',
                 'product_id'=>'required|numeric|digits_between:1,20', 
                 //'password'=>'required|string|max:255|min:8|confirmed',
             ]);
