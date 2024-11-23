@@ -90,7 +90,7 @@ class HomePageController extends Controller
             $incomingFieldsOrder['customer_id']=$customer_id;
             $incomingFieldsOrder['user_id']=request()->get('user')->id;
             $incomingFieldsOrder['quantity']=1;
-            $incomingFieldsOrder['notes']=$incomingFields['notes'];
+            $incomingFieldsOrder['notes']=$incomingFields['address'];
             $incomingFieldsOrder['status']='pending';
 
             $product = Product::find($incomingFields['product_id']);
