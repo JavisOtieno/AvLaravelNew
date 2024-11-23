@@ -23,6 +23,15 @@
                                                     <h2>Buy Now</h2>
 
                                                     <form method="post" class="login" action="/submitbuynow">
+                                                        @if (session('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <ul>
+            <li>{{ session('error') }}</li>
+        </ul>
+    </div>
+@endif
+
                                                         @if ($errors->any())
                         <div class="alert alert-danger alert-dismissible">
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
