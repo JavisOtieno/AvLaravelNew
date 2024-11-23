@@ -111,7 +111,7 @@ class HomePageController extends Controller
                 "status" => "success");
     
             // return response()->json($orderStatus);
-            return redirect('/submitbuynow')->with('error', 'Order Added Successfully');
+            return redirect('/buynow')->with('error', 'Order Added Successfully');
           
     }
 
