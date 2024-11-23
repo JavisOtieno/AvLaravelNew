@@ -27,11 +27,11 @@
 
                                                 </div><!-- .col-1 -->
 
-                                                {{-- <div class="col-2">
+                                                <div class="col-2">
 
-                                                    <h2>Register</h2>
+                                                    <h2>KSh {{number_format($order->value)}}</h2>
 
-                                                    <form method="post" class="register">
+                                                    {{-- <form method="post" class="register">
 
                                                         <p class="before-register-text">Create your very own account</p>
 
@@ -51,9 +51,9 @@
                                                             </ul>
                                                         </div>
 
-                                                    </form>
+                                                    </form> --}}
 
-                                                </div><!-- .col-2 --> --}}
+                                                </div><!-- .col-2 -->
 
                                             </div><!-- .col2-set -->
 
