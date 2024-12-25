@@ -20,7 +20,6 @@ return new class extends Migration
             $table->unsignedBigInteger('quantity');
             $table->unsignedBigInteger('value');
             // $table->string('cart_id');
-            $table->string('order_details');
             $table->string('notes');
             $table->string('status');
             $table->timestamps();
