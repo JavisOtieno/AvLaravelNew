@@ -18,6 +18,7 @@ class Order extends Model
         'user_id',
         'quantity',
         'value',
+        'order_details',
         'notes',
         'status',
     

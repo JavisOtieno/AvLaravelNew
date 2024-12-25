@@ -99,9 +99,11 @@ class HomePageController extends Controller
             $incomingFieldsOrder['quantity']=1;
             $incomingFieldsOrder['notes']=$incomingFields['address'];
             $incomingFieldsOrder['status']='pending';
+            
 
             $product = Product::find($incomingFields['product_id']);
             $incomingFieldsOrder['value']=$product['price'];
+            $incomingFieldsOrder['order_details']=$product['name'];
 
             
 
