@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('orders', function (Blueprint $table) {
             //
-            $table->string('status')->nullable()->after('value'); 
+            $table->string('order_details')->nullable()->after('value'); 
         });
     }
 
