@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
-            $table->unsignedBigInteger('sub_category_id')->nullable();
+            $table->unsignedBigInteger('sub_category_id');
             $table->foreign('sub_category_id')->references('id')->on('categories');
-            $table->unsignedBigInteger('sub_sub_category_id')->nullable();
+            $table->unsignedBigInteger('sub_sub_category_id');
             $table->foreign('sub_sub_category_id')->references('id')->on('categories');
         });
     }
@@ -27,8 +27,7 @@ return new class extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
-            $table->dropColumn('sub_category_id');
-            $table->dropColumn('sub_sub_category_id');
+            $table->dropColumn('sub_category_');
         });
     }
 };
