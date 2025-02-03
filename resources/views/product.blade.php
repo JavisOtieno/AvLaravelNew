@@ -111,8 +111,8 @@
                                             </ul> --}}
                                             <p>{!! $product['highlights'] !!}</p>
 
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                                            <p><strong>SKU</strong>: FW511948218</p>
+                                            {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> --}}
+                                            {{-- <p><strong>SKU</strong>: FW511948218</p> --}}
                                         </div><!-- .description -->
 
                                         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
