@@ -227,13 +227,14 @@
                                                                             {{-- @foreach ($firstcategories as $category)
                                                                             <li><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
                                                                             @endforeach --}}
-                                                                            @if($category->children->isNotEmpty())
+                                                                            <p> test</p>
+                                                                            {{-- @if($category->children->isNotEmpty())
                                                                             @foreach($category->children as $child)
                                                                             <li><a href="category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                             @endforeach
                                                                             @else
                                                                             <p>No sub-categories available.</p>
-                                                                            @endif
+                                                                            @endif --}}
                                                                             
                                                                             {{-- <li><a href="#">Pen Drives, Hard Drives &amp; Memory Cards</a></li>
                                                                             <li><a href="#">Printers &amp; Ink</a></li>
