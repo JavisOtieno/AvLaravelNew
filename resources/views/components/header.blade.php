@@ -237,6 +237,7 @@
                                                                                         <li><a href="category/{{$child['name']}}">{{ $grandChild->title }}</a></li>
                                                                                     @endforeach
                                                                                 </ul>
+                                                                                <br/>
                                                                             @else
                                                                             <li><a href="category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                             @endif
