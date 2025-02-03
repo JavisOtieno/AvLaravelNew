@@ -348,7 +348,7 @@
                                             @endphp
                                             <div class="product-outer">
                                                 <div class="product-inner">
-                                                    <span class="loop-product-categories"><a href="product-category.html" rel="tag">{{$product['category']['name']}}</a></span>
+                                                    <span class="loop-product-categories"><a href="product-category.html" rel="tag">{{$product['category']['title']}}</a></span>
                                                     <a href="product/{{$product['id']}}">
                                                         <h3>{{$product['name']}}</h3>
                                                         <div class="product-thumbnail">
