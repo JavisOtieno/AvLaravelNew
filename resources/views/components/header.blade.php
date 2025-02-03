@@ -229,7 +229,17 @@
                                                                             @endforeach --}}
                                                                             @if($category->children->isNotEmpty())
                                                                             @foreach($category->children as $child)
+                                                                            
+                                                                            @if($child->children->isNotEmpty())
+                                                                            <li><a class="nav-title" href="category/{{$child['name']}}">{{$child['title']}}</a></li>
+                                                                                <ul>
+                                                                                    @foreach($child->children as $grandChild)
+                                                                                        <li><a href="category/{{$child['name']}}">{{ $grandChild->title }}</a></li>
+                                                                                    @endforeach
+                                                                                </ul>
+                                                                            @else
                                                                             <li><a href="category/{{$child['name']}}">{{$child['title']}}</a></li>
+                                                                            @endif
                                                                             @endforeach
                                                                             {{-- @else --}}
                                                                             {{-- <p>No sub-categories available.</p> --}}
