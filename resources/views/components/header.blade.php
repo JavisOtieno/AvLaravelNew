@@ -194,7 +194,7 @@
                                 <li class="highlight menu-item animate-dropdown"><a title="Top 100 Offers" href="home-v3.html">Top 100 Offers</a></li>
                                 <li class="highlight menu-item animate-dropdown"><a title="New Arrivals" href="home-v3-full-color-background.html">New Arrivals</a></li> --}}
 
-                                @foreach ($maincategories as $category)
+                                @foreach ($categories as $category)
                                 {{-- <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li> --}}
                                 {{-- <span class="count">(0)</span> --}}
                                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown menu-item-2584 dropdown">
@@ -227,14 +227,13 @@
                                                                             {{-- @foreach ($firstcategories as $category)
                                                                             <li><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
                                                                             @endforeach --}}
-                                                                            <p> test</p>
-                                                                            {{-- @if($category->children->isNotEmpty())
+                                                                            @if($category->children->isNotEmpty())
                                                                             @foreach($category->children as $child)
                                                                             <li><a href="category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                             @endforeach
                                                                             @else
                                                                             <p>No sub-categories available.</p>
-                                                                            @endif --}}
+                                                                            @endif
                                                                             
                                                                             {{-- <li><a href="#">Pen Drives, Hard Drives &amp; Memory Cards</a></li>
                                                                             <li><a href="#">Printers &amp; Ink</a></li>

@@ -28,7 +28,7 @@ class HomePageController extends Controller
     $products = Product::all();
     $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
     $maincategories = Category::where('type', 'main')->get();
-    $categories = Category::whereNull('parent_category_id')
+    $categories = Category::where('type', 'main')
     ->with('children')
     ->get();
     // return $firstcategories[0]['mame'];
@@ -40,7 +40,7 @@ class HomePageController extends Controller
         $product = Product::with('category')->find($id);
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-        $categories = Category::whereNull('parent_category_id')
+        $categories = Category::where('type', 'main')
         ->with('children')
         ->get();
         return view('product',compact('product','firstcategories','maincategories','categories'));
@@ -48,7 +48,7 @@ class HomePageController extends Controller
 
     public function buyProduct($id){
         $product = Product::find($id);
-        $categories = Category::whereNull('parent_category_id')
+        $categories = Category::where('type', 'main')
         ->with('children')
         ->get();
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
@@ -60,7 +60,7 @@ class HomePageController extends Controller
         $order = Order::find($id);
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-        $categories = Category::whereNull('parent_category_id')
+        $categories = Category::where('type', 'main')
         ->with('children')
         ->get();
         return view('ordersuccess',compact('order','firstcategories','maincategories','categories'));
@@ -69,7 +69,7 @@ class HomePageController extends Controller
         //
         public function showCustomerAccount(){
             $user = User::find(1);
-            $categories = Category::whereNull('parent_category_id')
+            $categories = Category::where('type', 'main')
             ->with('children')
             ->get();
             $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
@@ -80,7 +80,7 @@ class HomePageController extends Controller
         public function contact(){
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-        $categories = Category::whereNull('parent_category_id')
+        $categories = Category::where('type', 'main')
         ->with('children')
         ->get();
         return view('contact','firstcategories','maincategories','categories');
