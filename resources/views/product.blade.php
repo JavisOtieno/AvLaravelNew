@@ -7,11 +7,11 @@
                     <nav class="woocommerce-breadcrumb">
                         <a href="home.html">Home</a>
                         <span class="delimiter"><i class="fa fa-angle-right"></i></span>
-                        <a href="product-category.html">Accessories</a>
+                        <a href="product-category.html">{{$product['category']['name']}}</a>
                         <span class="delimiter"><i class="fa fa-angle-right"></i></span>
-                        <a href="product-category.html">Headphones</a>
-                        <span class="delimiter"><i class="fa fa-angle-right"></i>
-                        </span>Ultra Wireless S50 Headphones S50 with Bluetooth
+                        {{-- <a href="product-category.html">Headphones</a>
+                        <span class="delimiter"><i class="fa fa-angle-right"></i> --}}
+                        </span>{{$product['name']}}
                     </nav><!-- /.woocommerce-breadcrumb -->
 
                     <div id="primary" class="content-area">

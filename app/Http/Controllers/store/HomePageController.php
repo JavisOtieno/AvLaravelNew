@@ -34,7 +34,7 @@ class HomePageController extends Controller
 
     //store functions
     public function showProduct($id){
-        $product = Product::find($id);
+        $product = Product::with('category')->find($id);
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
         return view('product',compact('product','firstcategories','maincategories'));
