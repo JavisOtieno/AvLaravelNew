@@ -117,7 +117,9 @@
 
                                         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
-                                            <p class="price"><span class="electro-price"><ins><span class="amount">{{"KSh ".number_format($product['price'])}}</span></ins> <del><span class="amount">&#36;2,299.00</span></del></span></p>
+                                            <p class="price"><span class="electro-price"><ins><span class="amount">{{"KSh ".number_format($product['price'])}}</span></ins>
+                                                 {{-- <del><span class="amount">&#36;2,299.00</span></del> --}}
+                                                </span></p>
 
                                             <meta itemprop="price" content="1215" />
                                             <meta itemprop="priceCurrency" content="USD" />
