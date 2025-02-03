@@ -64,7 +64,7 @@
                                     <div class="summary entry-summary">
 
                                         <span class="loop-product-categories">
-                                            <a href="product-category.html" rel="tag">{{$product['category']['name']}}</a>
+                                            <a href="product-category.html" rel="tag">{{$product['category']['title']}}</a>
                                         </span><!-- /.loop-product-categories -->
 
                                         <h1 itemprop="name" class="product_title entry-title">{{$product['name']}}</h1>
