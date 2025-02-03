@@ -231,8 +231,8 @@
                                                                             @foreach($category->children as $child)
                                                                             <li><a href="category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                             @endforeach
-                                                                            @else
-                                                                            <p>No sub-categories available.</p>
+                                                                            {{-- @else --}}
+                                                                            {{-- <p>No sub-categories available.</p> --}}
                                                                             @endif
                                                                             
                                                                             {{-- <li><a href="#">Pen Drives, Hard Drives &amp; Memory Cards</a></li>
