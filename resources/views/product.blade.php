@@ -7,7 +7,7 @@
                     <nav class="woocommerce-breadcrumb">
                         <a href="home.html">Home</a>
                         <span class="delimiter"><i class="fa fa-angle-right"></i></span>
-                        <a href="product-category.html">{{$product['category']['name']}}</a>
+                        <a href="product-category.html">{{ucwords($product['category']['name'])}}</a>
                         <span class="delimiter"><i class="fa fa-angle-right"></i></span>
                         {{-- <a href="product-category.html">Headphones</a>
                         <span class="delimiter"><i class="fa fa-angle-right"></i> --}}
