@@ -222,8 +222,8 @@
                                                                 <div class="wpb_text_column wpb_content_element ">
                                                                     <div class="wpb_wrapper">
                                                                         <ul>
-                                                                            <li class="nav-title">{{ucfirst($category['name'])}}</li>
-                                                                            <li><a href="category/{{$category['name']}}">All {{ucfirst($category['name'])}}</a></li>
+                                                                            <li class="nav-title">{{$category['title']}}</li>
+                                                                            <li><a href="category/{{$category['name']}}">All {{$category['title']}}</a></li>
                                                                             {{-- @foreach ($firstcategories as $category)
                                                                             <li><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
                                                                             @endforeach --}}
