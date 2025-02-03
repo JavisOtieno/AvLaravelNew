@@ -103,12 +103,12 @@
                                         </div><!-- .action-buttons -->
 
                                         <div itemprop="description">
-                                            <ul>
+                                            {{-- <ul>
                                                 <li>4.5 inch HD Touch Screen (1280 x 720)</li>
                                                 <li>Android 4.4 KitKat OS</li>
                                                 <li>1.4 GHz Quad Core™ Processor</li>
                                                 <li>20 MP front and 28 megapixel CMOS rear camera</li>
-                                            </ul>
+                                            </ul> --}}
                                             <p>{!! $product['highlights'] !!}</p>
 
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
@@ -347,9 +347,9 @@
 
                                         <div class="tab-pane active in panel entry-content wc-tab" id="tab-description">
                                             <div class="electro-description">
-                                                <p> {!! $product['description'] !!}</p>
+                                                {!! $product['description'] !!}
 
-                                                <h3>Perfectly Done</h3>
+                                                {{-- <h3>Perfectly Done</h3>
                                                 <p>Praesent ornare, ex a interdum consectetur, lectus diam sodales elit, vitae egestas est enim ornare nisl. Nullam in lectus nec sem semper viverra. In lobortis egestas massa. Nam nec massa nisi. Suspendisse potenti. Quisque suscipit vulputate dui quis volutpat. Ut id elit facilisis, feugiat est in, tempus lacus. Ut ultrices dictum metus, a ultricies ex vulputate ac. Ut id cursus tellus, non tempor quam. Morbi porta diam nisi, id finibus nunc tincidunt eu.</p>
                                                 <table class="layout">
                                                     <tbody>
@@ -386,7 +386,7 @@
                                                             </td>
                                                         </tr>
                                                     </tbody>
-                                                </table>
+                                                </table> --}}
                                             </div><!-- /.electro-description -->
 
                                             <div class="product_meta">
