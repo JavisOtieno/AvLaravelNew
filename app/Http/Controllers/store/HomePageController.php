@@ -28,8 +28,11 @@ class HomePageController extends Controller
     $products = Product::all();
     $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
     $maincategories = Category::where('type', 'main')->get();
+    $categories = Category::whereNull('parent_category_id')
+    ->with('children')
+    ->get();
     // return $firstcategories[0]['mame'];
-    return view('shop', compact('products','firstcategories','maincategories'));
+    return view('shop', compact('products','firstcategories','maincategories','categories'));
     }
 
     //store functions
@@ -37,35 +40,50 @@ class HomePageController extends Controller
         $product = Product::with('category')->find($id);
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-        return view('product',compact('product','firstcategories','maincategories'));
+        $categories = Category::whereNull('parent_category_id')
+        ->with('children')
+        ->get();
+        return view('product',compact('product','firstcategories','maincategories','categories'));
     }
 
     public function buyProduct($id){
         $product = Product::find($id);
+        $categories = Category::whereNull('parent_category_id')
+        ->with('children')
+        ->get();
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-        return view('buynow',compact('product','firstcategories','maincategories'));
+        return view('buynow',compact('product','firstcategories','maincategories','categories'));
     }
 
     public function orderSuccess($id){
         $order = Order::find($id);
         $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-        return view('ordersuccess',compact('order','firstcategories','maincategories'));
+        $categories = Category::whereNull('parent_category_id')
+        ->with('children')
+        ->get();
+        return view('ordersuccess',compact('order','firstcategories','maincategories','categories'));
     }
 
         //
         public function showCustomerAccount(){
             $user = User::find(1);
+            $categories = Category::whereNull('parent_category_id')
+            ->with('children')
+            ->get();
             $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-            return view('account',compact('user','firstcategories','maincategories'));
+            return view('account',compact('user','firstcategories','maincategories','categories'));
         }
 
         public function contact(){
-            $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
+        $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
         $maincategories = Category::where('type', 'main')->get();
-        return view('contact','firstcategories','maincategories');
+        $categories = Category::whereNull('parent_category_id')
+        ->with('children')
+        ->get();
+        return view('contact','firstcategories','maincategories','categories');
         }
 
 
