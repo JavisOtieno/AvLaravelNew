@@ -198,7 +198,7 @@
                                 {{-- <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li> --}}
                                 {{-- <span class="count">(0)</span> --}}
                                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown menu-item-2584 dropdown">
-                                    <a title="{{ucfirst($category['name'])}}" href="category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['name'])}}</a>
+                                    <a title="{{ucfirst($category['name'])}}" href="category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['title'])}}</a>
                                     <ul role="menu" class=" dropdown-menu">
                                         <li class="menu-item animate-dropdown menu-item-object-static_block">
                                             <div class="yamm-content">
@@ -224,9 +224,16 @@
                                                                         <ul>
                                                                             <li class="nav-title">{{ucfirst($category['name'])}}</li>
                                                                             <li><a href="category/{{$category['name']}}">All {{ucfirst($category['name'])}}</a></li>
-                                                                            @foreach ($firstcategories as $category)
+                                                                            {{-- @foreach ($firstcategories as $category)
                                                                             <li><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
+                                                                            @endforeach --}}
+                                                                            @if($category->children->isNotEmpty())
+                                                                            @foreach($category->children as $child)
+                                                                            <li><a href="category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                             @endforeach
+                                                                            @else
+                                                                            <p>No sub-categories available.</p>
+                                                                            @endif
                                                                             
                                                                             {{-- <li><a href="#">Pen Drives, Hard Drives &amp; Memory Cards</a></li>
                                                                             <li><a href="#">Printers &amp; Ink</a></li>
