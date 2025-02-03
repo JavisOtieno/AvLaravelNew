@@ -392,17 +392,17 @@
                                             </div><!-- /.electro-description -->
 
                                             <div class="product_meta">
-                                                <span class="sku_wrapper">SKU: <span class="sku" itemprop="sku">FW511948218</span></span>
+                                                {{-- <span class="sku_wrapper">SKU: <span class="sku" itemprop="sku">FW511948218</span></span> --}}
 
 
                                                 <span class="posted_in">Category:
-                                                    <a href="product-category.html" rel="tag">Headphones</a>
+                                                    <a href="product-category.html" rel="tag">{{$product['category']['title']}}</a>
                                                 </span>
 
-                                                <span class="tagged_as">Tags:
+                                                {{-- <span class="tagged_as">Tags:
                                                     <a href="product-category.html" rel="tag">Fast</a>,
                                                     <a href="product-category.html" rel="tag">Gaming</a>, <a href="product-category.html" rel="tag">Strong</a>
-                                                </span>
+                                                </span> --}}
 
                                             </div><!-- /.product_meta -->
                                         </div>
