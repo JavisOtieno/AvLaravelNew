@@ -342,7 +342,7 @@
                                         
                                             
                                        
-                                        <li class="product {{$count%3?'last':($count%2?'':'first')}}">
+                                        <li class="product {{$count%3==0?'last':($count%2==0?'':'first')}}">
                                             @php
                                                 $count++;
                                             @endphp
