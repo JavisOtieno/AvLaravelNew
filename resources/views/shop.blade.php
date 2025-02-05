@@ -336,7 +336,7 @@
 
                                     <ul class="products columns-3">
                                         @php
-                                            $count=0
+                                            $count=1
                                         @endphp
                                         @foreach ( $products as $product)
                                         
