@@ -336,13 +336,14 @@
 
                                     <ul class="products columns-3">
                                         @php
-                                            $count=1
+                                            $count=0
                                         @endphp
                                         @foreach ( $products as $product)
                                         
                                             
                                        
-                                        <li class="product {{$count%3==0?'last':($count%2==0?'':'first')}}">
+                                        <li class="product {{$count % 3 == 1 ? 'first' : ($count % 3 == 2 ? '' : 'last')}}">
+
                                             @php
                                                 $count++;
                                             @endphp
