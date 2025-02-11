@@ -389,9 +389,8 @@
                                         </li>
                                         @endforeach
 
-                                        <!-- Pagination Links -->
-                                        <div class="d-flex justify-content-center">
-                                            {{ $products->links('vendor.pagination.bootstrap-5') }}
+                                        <div class="custom-pagination">
+                                            {{ $products->links() }}
                                         </div>
 
 
