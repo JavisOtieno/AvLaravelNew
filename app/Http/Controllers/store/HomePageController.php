@@ -26,7 +26,8 @@ class HomePageController extends Controller
 
         // ,'websiteName'
     // $products = Product::all();
-    $products = Product::orderBy('created_at', 'desc')->take(30)->get();
+    $products = Product::orderBy('created_at', 'desc')->paginate(30); 
+
     $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
     $maincategories = Category::where('type', 'main')->get();
     $categories = Category::where('type', 'main')

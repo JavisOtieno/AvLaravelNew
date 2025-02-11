@@ -389,6 +389,11 @@
                                         </li>
                                         @endforeach
 
+                                        <!-- Pagination Links -->
+                                        <div>
+                                            {{ $products->links() }}
+                                        </div>
+
 
 
                                         {{-- <li class="product first">
