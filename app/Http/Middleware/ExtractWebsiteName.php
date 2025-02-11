@@ -24,7 +24,14 @@ class ExtractWebsiteName
         $host = parse_url($fullUrl, PHP_URL_HOST);
 
         // Explode the host to get parts (subdomain, domain, TLD)
-        $hostParts = explode('.av.ke', $host);
+        // $hostParts = explode('.av.ke', $host);
+        if (strpos($host, '.av.ke') !== false) {
+            $hostParts = explode('.av.ke', $host);
+        } elseif (strpos($host, '.co.ke') !== false) {
+            $hostParts = explode('.co.ke', $host);
+        } else {
+            $hostParts = [$host]; // Default case if neither found
+        }
 
         // Check if it's a subdomain or just domain + TLD
         if (count($hostParts) > 2) {
