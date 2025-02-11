@@ -391,7 +391,7 @@
 
 
 
-                                        <li class="product first">
+                                        {{-- <li class="product first">
                                             <div class="product-outer">
                                                 <div class="product-inner">
                                                     <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span>
@@ -885,7 +885,7 @@
                                                 </div>
                                                 <!-- /.product-inner -->
                                             </div><!-- /.product-outer -->
-                                        </li>
+                                        </li> --}}
 
                                     </ul>
                                 </div>
