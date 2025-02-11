@@ -389,7 +389,7 @@
                                         </li>
                                         @endforeach
 
-                                        <div class="custom-pagination">
+                                        <div>
                                             {{ $products->links() }}
                                         </div>
 
