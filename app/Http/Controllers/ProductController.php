@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     //admin functions
     public function index(){
-        $products = Product::all();
+        $products = Product::orderBy('created_at', 'desc')->get();
         $categories = Category::all();
         return view('index',compact('products','categories'));
     }

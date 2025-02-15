@@ -10,7 +10,7 @@ class CustomerController extends Controller
     //
     public function index(){
         
-        $customers = Customer::all();
+        $customers = Customer::orderBy('created_at', 'desc')->get();
         return view('admin.customers',compact('customers','orders'));
     }
 }

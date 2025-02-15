@@ -12,7 +12,7 @@ class OrderController extends Controller
     public function index(){
         // $orders = Order::all();
         $user_id = auth()->user()->id;
-        $orders = Order::where('user_id', $user_id)->get();
+        $orders = Order::where('user_id', $user_id)->orderBy('created_at', 'desc')->get();
         $allorders = Order::where('user_id', $user_id)->count(); 
         $completeorders = Order::where('user_id', $user_id)->where('status','complete')->count();
         $processingorders = Order::where('user_id', $user_id)->where('status','processing')->count();

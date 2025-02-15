@@ -14,7 +14,7 @@ class PaymentController extends Controller
         
             // $payments = Payment::all();
             $user_id = auth()->user()->id;
-            $payments = Payment::where('user_id', $user_id)->get();
+            $payments = Payment::where('user_id', $user_id)->orderBy('created_at', 'desc')->get();
             $allpayments = Payment::where('user_id', $user_id)->count(); 
             $completepayments = Payment::where('user_id', $user_id)->where('status','complete')->count();
             $processingpayments = Payment::where('user_id', $user_id)->where('status','processing')->count();
