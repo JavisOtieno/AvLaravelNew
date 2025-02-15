@@ -69,7 +69,7 @@
                             </div><!-- /.info -->
                         </figcaption>
 
-                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/4.png')}}" class="img-responsive" alt="">
+                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/sony.png')}}" class="img-responsive" alt="">
 
                     </figure>
                 </a>
@@ -87,7 +87,7 @@
                             </div><!-- /.info -->
                         </figcaption>
 
-                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/5.png')}}" class="img-responsive" alt="">
+                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/nikon.png')}}" class="img-responsive" alt="">
 
                     </figure>
                 </a>
@@ -123,7 +123,7 @@
                             </div><!-- /.info -->
                         </figcaption>
 
-                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/3.png')}}" class="img-responsive" alt="">
+                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/mi.png')}}" class="img-responsive" alt="">
 
                     </figure>
                 </a>
