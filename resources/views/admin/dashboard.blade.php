@@ -14,7 +14,7 @@
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                     Orders Prdcessing
+                     Orders Processing
                   </p>
                 </div>
               </a>
