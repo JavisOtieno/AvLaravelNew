@@ -507,13 +507,13 @@
             <div class="pull-left flip copyright">&copy; <a href="http://demo2.transvelo.in/html/electro/">{{ucfirst(request()->get('user')['websitename'])}}</a> - All Rights Reserved</div>
             <div class="pull-right flip payment">
                 <div class="footer-payment-logo">
-                    <ul class="cash-card card-inline">
+                    {{-- <ul class="cash-card card-inline">
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/apple.jpg')}}" alt="" width="52"></li>
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/2.png')}}" alt="" width="52"></li>
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/3.png')}}" alt="" width="52"></li>
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/4.png')}}" alt="" width="52"></li>
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/5.png')}}" alt="" width="52"></li>
-                    </ul>
+                    </ul> --}}
                 </div><!-- /.payment-methods -->
             </div>
         </div><!-- /.container -->
