@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\store\HomePageController;
 
 /*
@@ -39,7 +40,7 @@ Route::middleware(['authCustomCheck'])->group(function(){
 Route::get('/admindashboard', [DashboardController::class,'dashboard']);
 Route::get('/adminorders', [OrderController::class,'index']);
 Route::get('/adminproducts', [ProductController::class,'showUserProducts']);
-Route::get('/admincustomers', [UserController::class,'showUserCustomers']);
+Route::get('/admincustomers', [CustomerController::class,'index']);
 Route::get('/adminpayments', [PaymentController::class,'showUserPayments']);
 
 Route::get('/adminprofile', [UserController::class,'showProfile']);

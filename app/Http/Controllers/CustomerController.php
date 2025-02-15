@@ -11,6 +11,6 @@ class CustomerController extends Controller
     public function index(){
         $user_id = auth()->user()->id;
         $customers = Customer::where('user_id', $user_id)->orderBy('created_at', 'desc')->get();
-        return view('admin.customers',compact('customers','orders'));
+        return view('admin.customers',compact('customers'));
     }
 }
