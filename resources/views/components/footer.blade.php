@@ -105,7 +105,7 @@
                             </div><!-- /.info -->
                         </figcaption>
 
-                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/6.png')}}" class="img-responsive" alt="">
+                        <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/jbl.png')}}" class="img-responsive" alt="">
 
                     </figure>
                 </a>
