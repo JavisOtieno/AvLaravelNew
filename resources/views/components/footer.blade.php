@@ -508,7 +508,7 @@
             <div class="pull-right flip payment">
                 <div class="footer-payment-logo">
                     <ul class="cash-card card-inline">
-                        <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/1.png')}}" alt="" width="52"></li>
+                        <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/apple.jpg')}}" alt="" width="52"></li>
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/2.png')}}" alt="" width="52"></li>
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/3.png')}}" alt="" width="52"></li>
                         <li class="card-item"><img src="{{asset('assets/images/footer/payment-icon/4.png')}}" alt="" width="52"></li>
