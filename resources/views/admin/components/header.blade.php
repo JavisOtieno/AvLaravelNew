@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <title>Fave Admin &amp; </title>
+    <title>Fave Admin | Manage your website</title>
 
     <meta name="description" content="Fave Admin &amp; Manage your website">
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Fave Admin &amp; UI Framework">
-    <meta property="og:site_name" content="OneUI">
+    <meta property="og:title" content="Fave Admin | Manage your website">
+    <meta property="og:site_name" content="Fave">
     <meta property="og:description" content="Fave Admin &amp; Manage your website">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
