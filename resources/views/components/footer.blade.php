@@ -360,7 +360,7 @@
                                 <div class="menu-footer-menu-1-container">
                                     <ul id="menu-footer-menu-1" class="menu">
                                         @foreach ($maincategories as $category)
-                                        <li class="menu-item"><a href="/category/{{$category['title']}}">{{ucfirst($category['name'])}}</a></li>
+                                        <li class="menu-item"><a href="/category/{{$category['name']}}">{{ucfirst($category['title'])}}</a></li>
                                         @endforeach
                                         {{-- <li class="menu-item"><a href="single-product.html">Cameras &#038; Photography</a></li>
                                         <li class="menu-item"><a href="single-product.html">Smart Phones &#038; Tablets</a></li>
