@@ -389,9 +389,8 @@
                                         </li>
                                         @endforeach
 
-                                        <div>
-                                            {{ $products->links() }}
-                                        </div>
+                                       
+                                        
 
 
 
@@ -3100,16 +3099,33 @@
                                 </div>
                             </div>
                             <div class="shop-control-bar-bottom">
-                                <form class="form-electro-wc-ppp">
-                                    <select class="electro-wc-wppp-select c-select" onchange="this.form.submit()" name="ppp"><option selected="selected" value="15">Show 15</option><option value="-1">Show All</option></select>
+                                <form class="form-electro-wc-ppp" method="GET">
+                                    <select class="electro-wc-wppp-select c-select" name="ppp" onchange="this.form.submit()">
+                                        <option value="30" {{ request('ppp', 30) == 30 ? 'selected' : '' }}>Show 30</option>
+                                        <option value="-1" {{ request('ppp') == '-1' ? 'selected' : '' }}>Show All</option>
+                                    </select>
                                 </form>
-                                <p class="woocommerce-result-count">Showing 1&ndash;15 of 20 results</p>
+                                {{-- <p class="woocommerce-result-count">Showing 1&ndash;15 of 20 results</p> --}}
+                                @php
+    $from = ($products->currentPage() - 1) * $products->perPage() + 1;
+    $to   = ($products->currentPage() * $products->perPage() > $products->total())
+            ? $products->total()
+            : $products->currentPage() * $products->perPage();
+@endphp
+
+<p class="woocommerce-result-count">
+    Showing {{ $from }}&ndash;{{ $to }} of {{ $products->total() }} results
+</p>
                                 <nav class="woocommerce-pagination">
-                                    <ul class="page-numbers">
+                                    {{-- <ul class="page-numbers">
                                         <li><span class="page-numbers current">1</span></li>
                                         <li><a href="#" class="page-numbers">2</a></li>
                                         <li><a href="#" class="next page-numbers">→</a></li>
-                                    </ul>
+                                    </ul> --}}
+                                    <div>
+                                        {{-- {{ $products->links() }} --}}
+                                        {{ $products->links('vendor.pagination.woocommerce') }}
+                                    </div>
                                 </nav>
                             </div>
 

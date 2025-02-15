@@ -19,7 +19,7 @@ class HomePageController extends Controller
     // request()->get('user');
     return view('index');
     }
-    public function shop(){
+    public function shop(Request $request){
         // $websiteName = $request->get('websiteName');
         // $user = User::find(1);
         // $products = Product::all();
@@ -27,6 +27,17 @@ class HomePageController extends Controller
         // ,'websiteName'
     // $products = Product::all();
     $products = Product::orderBy('created_at', 'desc')->paginate(30); 
+
+        // Get the per-page value from the request, default to 30 if not provided.
+        $perPage = $request->get('ppp', 30);
+
+        if ($perPage == -1) {
+            // If "Show All" is selected, paginate with the total count so that links() still works
+            $totalProducts = Product::count();
+            $products = Product::paginate($totalProducts);
+        } else {
+            $products = Product::paginate($perPage);
+        }
 
     $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
     $maincategories = Category::where('type', 'main')->get();
