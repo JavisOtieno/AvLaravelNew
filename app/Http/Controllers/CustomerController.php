@@ -9,6 +9,7 @@ class CustomerController extends Controller
 {
     //
     public function index(){
+        
         $customers = Customer::all();
         return view('admin.customers',compact('customers','orders'));
     }
