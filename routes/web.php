@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
@@ -35,7 +36,7 @@ Route::post('/submitbuynow', [HomePageController::class,'submitBuyProduct']);
 
 Route::middleware(['authCustomCheck'])->group(function(){
 
-Route::get('/admindashboard', [ProductController::class,'dashboardtest']);
+Route::get('/admindashboard', [DashboardController::class,'dashboard']);
 Route::get('/adminorders', [OrderController::class,'index']);
 Route::get('/adminproducts', [ProductController::class,'showUserProducts']);
 Route::get('/admincustomers', [UserController::class,'showUserCustomers']);

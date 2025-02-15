@@ -10,11 +10,11 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-primary">35</div>
+                  <div class="fs-2 fw-semibold text-primary">{{$processingorders}}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Pending Orders
+                     Orders Prdcessing
                   </p>
                 </div>
               </a>
@@ -22,11 +22,11 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-success">33%</div>
+                  <div class="fs-2 fw-semibold text-success">{{ $processingpayments }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Pending Earnings
+                    Pending Payments
                   </p>
                 </div>
               </a>
@@ -34,7 +34,7 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">109</div>
+                  <div class="fs-2 fw-semibold text-dark">{{ $allorders }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
@@ -46,11 +46,11 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">$8920</div>
+                  <div class="fs-2 fw-semibold text-dark">{{ $allpayments }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Total Earnings
+                    All Payments 
                   </p>
                 </div>
               </a>

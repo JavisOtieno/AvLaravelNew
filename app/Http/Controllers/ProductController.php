@@ -16,12 +16,7 @@ class ProductController extends Controller
         $categories = Category::all();
         return view('index',compact('products','categories'));
     }
-    public function dashboardtest(){
-        $orders = Order::orderBy('id', 'desc')->take(5)->get();
-        $products = Product::orderBy('id', 'desc')->take(5)->get();
-        $categories = Category::all();
-        return view('admin.dashboard',compact('products','categories','orders'));
-    }
+
     public function showUserProducts(){
         $products = Product::all();
         $categories = Category::all();
