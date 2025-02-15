@@ -120,6 +120,7 @@ class HomePageController extends Controller
             $incomingFieldsCustomer['name']=$incomingFields['name'];
             $incomingFieldsCustomer['phone']=$incomingFields['phone'];
             $incomingFieldsCustomer['email']='';
+            $incomingFieldsCustomer['user_id']=request()->get('user')->id;
     
             $customer = Customer::create($incomingFieldsCustomer);
             $customer_id = $customer->id;
