@@ -15,7 +15,7 @@
                             </div><!-- /.info -->
                         </figcaption>
 
-                         <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/1.png')}}" class="img-responsive" alt="">
+                         <img src="{{asset('assets/images/blank.gif')}}" data-echo="{{asset('assets/images/brands/apple.jpg')}}" class="img-responsive" alt="">
 
                     </figure>
                 </a>
