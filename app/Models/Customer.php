@@ -13,5 +13,6 @@ class Customer extends Model
         'name',
         'phone',
         'email',
+        'user_id'
     ];
 }
