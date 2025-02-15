@@ -15,7 +15,7 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="be_pages_ecom_orders.html">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-primary">{{ allpayments }}</div>
+                  <div class="fs-2 fw-semibold text-primary">{{ $allpayments }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
