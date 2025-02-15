@@ -13,7 +13,7 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="be_pages_ecom_orders.html">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-primary">35</div>
+                  <div class="fs-2 fw-semibold text-primary">{{ $allorders }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
@@ -25,11 +25,11 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">120</div>
+                  <div class="fs-2 fw-semibold text-dark">{{$processingorders }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
-                    Pending
+                    Processing
                   </p>
                 </div>
               </a>
@@ -37,7 +37,7 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">260</div>
+                  <div class="fs-2 fw-semibold text-dark">{{ $completeorders }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
@@ -49,7 +49,7 @@
             <div class="col-6 col-lg-3">
               <a class="block block-rounded block-link-shadow text-center" href="javascript:void(0)">
                 <div class="block-content block-content-full">
-                  <div class="fs-2 fw-semibold text-dark">69,841</div>
+                  <div class="fs-2 fw-semibold text-dark">{{ $cancelledorders }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                   <p class="fw-medium fs-sm text-muted mb-0">
