@@ -39,7 +39,7 @@ class HomePageController extends Controller
             $products = Product::paginate($perPage);
         }
 
-    $firstcategories = Category::where('parent_category_id', '1')->where('type', 'child')->get();
+    $firstcategories = Category::where('parent_category_id', '1')->where('type', 'sub')->get();
     $maincategories = Category::where('type', 'main')->get();
     $categories = Category::where('type', 'main')
     ->with('children')

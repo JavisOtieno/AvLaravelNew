@@ -291,9 +291,19 @@
                             </section> --}}
 
                             <header class="page-header">
-                                <h1 class="page-title">Phones</h1>
+                                <h1 class="page-title">All Products</h1>
                                 {{-- Smart Phones &amp; Tablets --}}
-                                <p class="woocommerce-result-count">Showing 1&ndash;15 of 20 results</p>
+                                @php
+                                $from = ($products->currentPage() - 1) * $products->perPage() + 1;
+                                $to   = ($products->currentPage() * $products->perPage() > $products->total())
+                                        ? $products->total()
+                                        : $products->currentPage() * $products->perPage();
+                            @endphp
+                            
+                            <p class="woocommerce-result-count">
+                                Showing {{ $from }}&ndash;{{ $to }} of {{ $products->total() }} results
+                            </p>
+                                
                             </header>
 
                             <div class="shop-control-bar">
@@ -303,7 +313,7 @@
                                     <li class="nav-item"><a class="nav-link " data-toggle="tab" title="List View" href="#list-view"><i class="fa fa-list"></i></a></li>
                                     <li class="nav-item"><a class="nav-link " data-toggle="tab" title="List View Small" href="#list-view-small"><i class="fa fa-th-list"></i></a></li>
                                 </ul>
-                                <form class="woocommerce-ordering" method="get">
+                                {{-- <form class="woocommerce-ordering" method="get">
                                     <select name="orderby" class="orderby">
                                         <option value="menu_order"  selected='selected'>Default sorting</option>
                                         <option value="popularity" >Sort by popularity</option>
@@ -312,7 +322,7 @@
                                         <option value="price" >Sort by price: low to high</option>
                                         <option value="price-desc" >Sort by price: high to low</option>
                                     </select>
-                                </form>
+                                </form> --}}
                                 <form class="form-electro-wc-ppp"><select name="ppp" onchange="this.form.submit()" class="electro-wc-wppp-select c-select"><option value="15"  selected='selected'>Show 15</option><option value="-1" >Show All</option></select></form>
                                 <nav class="electro-advanced-pagination">
                                     <form method="post" class="form-adv-pagination"><input id="goto-page" size="2" min="1" max="2" step="1" type="number" class="form-control" value="1" /></form> of 2<a class="next page-numbers" href="#">&rarr;</a>			<script>
