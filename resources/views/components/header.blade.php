@@ -242,7 +242,7 @@
             <li class="nav-item dropdown ">
 
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
-                    id="departments-menu-toggle">Shop by Department</a>
+                    id="departments-menu-toggle">Main Categories</a>
                 <ul id="menu-vertical-menu" class="dropdown-menu yamm departments-menu-dropdown">
                     {{-- <li class="highlight menu-item animate-dropdown active"><a title="Value of the Day" href="product-category.html">Value of the Day</a></li>
                                 <li class="highlight menu-item animate-dropdown"><a title="Top 100 Offers" href="home-v3.html">Top 100 Offers</a></li>
