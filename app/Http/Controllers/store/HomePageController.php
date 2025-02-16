@@ -72,17 +72,17 @@ class HomePageController extends Controller
             
             if($categorySelected->type=='main'){
                 $products = Product::orderBy('created_at', 'desc')
-                ->where('category_id', $category)
+                ->where('category_id', $categorySelected->id)
                 ->paginate($totalProducts); 
-                return "main";
+                // return "main";
             }else if($categorySelected->type=='sub'){
                 $products = Product::orderBy('created_at', 'desc')
-                ->where('sub_category_id', $category)
+                ->where('sub_category_id', $categorySelected->id)
                 ->paginate($totalProducts); 
-                return "sub";
+                // return "sub";
             }else if($categorySelected->type=='subsub'){
                 $products = Product::orderBy('created_at', 'desc')
-                ->where('sub_sub_category_id', $category)
+                ->where('sub_sub_category_id', $categorySelected->id)
                 ->paginate($totalProducts); 
                 return "sub sub";
             }
@@ -92,17 +92,17 @@ class HomePageController extends Controller
            
             if($categorySelected->type=='main'){
                 $products = Product::orderBy('created_at', 'desc')
-                ->where('category_id', $category)
+                ->where('category_id', $categorySelected->id)
                 ->paginate($perPage); 
                 return "main";
             }else if($categorySelected->type=='sub'){
                 $products = Product::orderBy('created_at', 'desc')
-                ->where('sub_category_id', $category)
+                ->where('sub_category_id', $categorySelected->id)
                 ->paginate($perPage); 
                 return "sub";
             }else if($categorySelected->type=='subsub'){
                 $products = Product::orderBy('created_at', 'desc')
-                ->where('sub_sub_category_id', $category)
+                ->where('sub_sub_category_id', $categorySelected->id)
                 ->paginate($perPage); 
                 return "sub sub";
             }
