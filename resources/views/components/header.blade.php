@@ -199,7 +199,14 @@
                                 {{-- <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li> --}}
                                 {{-- <span class="count">(0)</span> --}}
                                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown menu-item-2584 dropdown">
-                                    <a title="{{ucfirst($category['name'])}}" href="/category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['title'])}}</a>
+                                    <a href="/category/{{ $category['name'] }}">
+                                        {{ ucfirst($category['title']) }}
+                                      </a>
+                                      <!-- A separate element to toggle the dropdown -->
+                                      <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+                                        <span class="caret"></span>
+                                      </button>
+                                    {{-- <a titlete="{{ucfirst($category['name'])}}" href="/category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['title'])}}</a> --}}
                                     <ul role="menu" class=" dropdown-menu">
                                         <li class="menu-item animate-dropdown menu-item-object-static_block">
                                             <div class="yamm-content">
@@ -871,7 +878,7 @@
 });
 
                 </script> --}}
-                <script>
+                {{-- <script>
                     $(document).ready(function() {
     if ($(window).width() < 768) { // Mobile breakpoint
         $('.dropdown a').on('click', function(e) {
@@ -888,4 +895,4 @@
     }
 });
 
-                    </script>
+                    </script> --}}
