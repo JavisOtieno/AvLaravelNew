@@ -86,7 +86,9 @@
                                                                         <div class="widget widget_nav_menu">
                                                                             <div class="menu-pages-menu-1-container">
                                                                                 <ul id="menu-pages-menu-1" class="menu">
+                                                                                    @if ($loop->first)
                                                                                     <li class="nav-title menu-item"><a href="/">All Products</a></li>
+                                                                                    @endif
                                                                                     @foreach ($chunk as $category)
                                                                                     {{-- <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li> --}}
                                                                                     {{-- <span class="count">(0)</span> --}}
