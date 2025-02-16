@@ -65,8 +65,14 @@ class HomePageController extends Controller
 
         // If a search term is provided, add a where clause with wildcards for partial matching.
         if ($search) {
-            $searchTerm = '%' . $search . '%';
-            $query->where('name', 'like', $searchTerm);
+            // $searchTerm = '%' . $search . '%';
+            // $query->where('name', 'like', $searchTerm);
+            $words = preg_split('/\s+/', $search);
+
+            // For each word, add a where clause that checks if the product name contains the word.
+            foreach ($words as $word) {
+                $query->where('name', 'like', '%' . $word . '%');
+            }
         }
 
         if ($perPage == -1) {
