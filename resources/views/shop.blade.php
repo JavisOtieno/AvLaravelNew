@@ -3174,7 +3174,7 @@
                                         </li>
                                     </ul>
                                     <ul>
-                                        <li class="cat-item current-cat"><a href="product-category.html">{{ ucfirst($category)}}</a> 
+                                        <li class="cat-item current-cat"><a href="product-category.html">{{ ucfirst($categorySelectedName)}}</a> 
                                             {{-- Laptops &amp; Computers --}}
                                             {{-- <span class="count">(13)</span> --}}
                                             <ul class='children'>

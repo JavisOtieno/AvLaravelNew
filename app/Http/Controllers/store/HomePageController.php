@@ -44,9 +44,9 @@ class HomePageController extends Controller
     $categories = Category::where('type', 'main')
     ->with('children')
     ->get();
-    $category = 'phones';
+    $categorySelectedName = 'phones';
     // return $firstcategories[0]['mame'];
-    return view('shop', compact('category','products','firstcategories','maincategories','categories'));
+    return view('shop', compact('categorySelectedName','products','firstcategories','maincategories','categories'));
     }
 
     public function showCategory($category,Request $request){
@@ -93,9 +93,9 @@ class HomePageController extends Controller
     $categories = Category::where('type', 'main')
     ->with('children')
     ->get();
-    $category = $categorySelected->name;
+    $categorySelectedName = $categorySelected->name;
     // return $firstcategories[0]['mame'];
-    return view('shop', compact('category','products','firstcategories','maincategories','categories'));
+    return view('shop', compact('categorySelectedName','products','firstcategories','maincategories','categories'));
     }
 
     //store functions
