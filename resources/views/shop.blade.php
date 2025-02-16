@@ -3174,12 +3174,12 @@
                                         </li>
                                     </ul>
                                     <ul>
-                                        <li class="cat-item current-cat"><a href="product-category.html">{{ ucfirst($categorySelectedName)}}</a> 
+                                        <li class="cat-item current-cat"><a href="/category/{{$category['name']}}">{{ ucfirst($categorySelectedName)}}</a> 
                                             {{-- Laptops &amp; Computers --}}
                                             {{-- <span class="count">(13)</span> --}}
                                             <ul class='children'>
                                                 @foreach ($firstcategories as $category)
-                                                <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['title'])}}</a> 
+                                                <li class="cat-item"><a href="/category/{{$category['name']}}">{{ucfirst($category['title'])}}</a> 
                                                     {{-- <span class="count">(6)</span> --}}
                                                 </li>
                                                 @endforeach
