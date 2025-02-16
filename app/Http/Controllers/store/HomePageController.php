@@ -84,7 +84,7 @@ class HomePageController extends Controller
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('sub_sub_category_id', $categorySelected->id)
                 ->paginate($totalProducts); 
-                return "sub sub";
+                // return "sub sub";
             }
 
         } else {
@@ -94,17 +94,17 @@ class HomePageController extends Controller
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('category_id', $categorySelected->id)
                 ->paginate($perPage); 
-                return "main";
+                // return "main";
             }else if($categorySelected->type=='sub'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('sub_category_id', $categorySelected->id)
                 ->paginate($perPage); 
-                return "sub";
+                // return "sub";
             }else if($categorySelected->type=='subsub'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('sub_sub_category_id', $categorySelected->id)
                 ->paginate($perPage); 
-                return "sub sub";
+                // return "sub sub";
             }
         }
 
