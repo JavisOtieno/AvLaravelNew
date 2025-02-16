@@ -26,7 +26,7 @@ class HomePageController extends Controller
 
         // ,'websiteName'
     // $products = Product::all();
-    $products = Product::orderBy('created_at', 'desc')->paginate(30); 
+    // $products = Product::orderBy('created_at', 'desc')->paginate(30); 
 
         // Get the per-page value from the request, default to 30 if not provided.
         $perPage = $request->get('ppp', 30);
@@ -57,19 +57,7 @@ class HomePageController extends Controller
         // ,'websiteName'
     // $products = Product::all();
     $categorySelected = Category::where('name', $category)->first();
-    if($categorySelected->type=='main'){
-        $products = Product::orderBy('created_at', 'desc')
-        ->where('category_id', $category)
-        ->paginate(30); 
-    }else if($categorySelected->type=='sub'){
-        $products = Product::orderBy('created_at', 'desc')
-        ->where('sub_category_id', $category)
-        ->paginate(30); 
-    }else if($categorySelected->type=='subsub'){
-        $products = Product::orderBy('created_at', 'desc')
-        ->where('sub_sub_category_id', $category)
-        ->paginate(30); 
-    }
+
 
 
 
@@ -81,9 +69,36 @@ class HomePageController extends Controller
         if ($perPage == -1) {
             // If "Show All" is selected, paginate with the total count so that links() still works
             $totalProducts = Product::count();
-            $products = Product::paginate($totalProducts);
+            
+            if($categorySelected->type=='main'){
+                $products = Product::orderBy('created_at', 'desc')
+                ->where('category_id', $category)
+                ->paginate($totalProducts); 
+            }else if($categorySelected->type=='sub'){
+                $products = Product::orderBy('created_at', 'desc')
+                ->where('sub_category_id', $category)
+                ->paginate($totalProducts); 
+            }else if($categorySelected->type=='subsub'){
+                $products = Product::orderBy('created_at', 'desc')
+                ->where('sub_sub_category_id', $category)
+                ->paginate($totalProducts); 
+            }
+
         } else {
-            $products = Product::paginate($perPage);
+           
+            if($categorySelected->type=='main'){
+                $products = Product::orderBy('created_at', 'desc')
+                ->where('category_id', $category)
+                ->paginate($perPage); 
+            }else if($categorySelected->type=='sub'){
+                $products = Product::orderBy('created_at', 'desc')
+                ->where('sub_category_id', $category)
+                ->paginate($perPage); 
+            }else if($categorySelected->type=='subsub'){
+                $products = Product::orderBy('created_at', 'desc')
+                ->where('sub_sub_category_id', $category)
+                ->paginate($perPage); 
+            }
         }
 
   
