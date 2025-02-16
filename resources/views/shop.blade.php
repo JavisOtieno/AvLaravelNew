@@ -5,7 +5,7 @@
             <div id="content" class="site-content" tabindex="-1">
                 <div class="container">
 
-                    <nav class="woocommerce-breadcrumb" ><a href="home.html">Home</a><span class="delimiter"><i class="fa fa-angle-right"></i></span>Phones</nav>
+                    <nav class="woocommerce-breadcrumb" ><a href="home.html">Home</a><span class="delimiter"><i class="fa fa-angle-right"></i></span>{{ $categorySelectedName }}</nav>
 
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main">
