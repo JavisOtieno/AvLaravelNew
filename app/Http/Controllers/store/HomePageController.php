@@ -58,7 +58,7 @@ class HomePageController extends Controller
     // $products = Product::all();
     $categorySelected = Category::where('name', $category)->first();
 
-    return $categorySelected;
+    // return $categorySelected;
 
         // Get the per-page value from the request, default to 30 if not provided.
         $perPage = $request->get('ppp', 30);
@@ -68,35 +68,43 @@ class HomePageController extends Controller
         if ($perPage == -1) {
             // If "Show All" is selected, paginate with the total count so that links() still works
             $totalProducts = Product::count();
+            return "-1 per page";
             
             if($categorySelected->type=='main'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('category_id', $category)
                 ->paginate($totalProducts); 
+                return "main";
             }else if($categorySelected->type=='sub'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('sub_category_id', $category)
                 ->paginate($totalProducts); 
+                return "sub";
             }else if($categorySelected->type=='subsub'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('sub_sub_category_id', $category)
                 ->paginate($totalProducts); 
+                return "sub sub";
             }
 
         } else {
+            return "no per page";
            
             if($categorySelected->type=='main'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('category_id', $category)
                 ->paginate($perPage); 
+                return "main";
             }else if($categorySelected->type=='sub'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('sub_category_id', $category)
                 ->paginate($perPage); 
+                return "sub";
             }else if($categorySelected->type=='subsub'){
                 $products = Product::orderBy('created_at', 'desc')
                 ->where('sub_sub_category_id', $category)
                 ->paginate($perPage); 
+                return "sub sub";
             }
         }
 
