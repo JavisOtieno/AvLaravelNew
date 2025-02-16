@@ -744,10 +744,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="navbar-search" method="get" action="/">
+                    <form class="navbar-search" method="post" action="/search">
                         <label class="sr-only screen-reader-text" for="search">Search for:</label>
                         <div class="input-group">
-                            <input type="text" id="search" class="form-control search-field" dir="ltr" value="" name="s" placeholder="Search for products" />
+                            <input type="text" id="search" class="form-control search-field" dir="ltr" value="" name="search" placeholder="Search for products" />
                             {{-- <div class="input-group-addon search-categories">
                                 <select name='product_cat' id='product_cat' class='postform resizeselect' >
                                     <option value='0' selected='selected'>All Categories</option>

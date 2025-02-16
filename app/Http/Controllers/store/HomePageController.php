@@ -49,6 +49,36 @@ class HomePageController extends Controller
     return view('shop', compact('categorySelectedName','products','firstcategories','maincategories','categories'));
     }
 
+    public function searchProducts(Request $request){
+        $search = $request->get('search');
+        // $user = User::find(1);
+        // $products = Product::all();
+
+        // ,'websiteName'
+    // $products = Product::all();
+    // $products = Product::orderBy('created_at', 'desc')->paginate(30); 
+
+        // Get the per-page value from the request, default to 30 if not provided.
+        $perPage = $request->get('ppp', 30);
+
+        if ($perPage == -1) {
+            // If "Show All" is selected, paginate with the total count so that links() still works
+            $totalProducts = Product::count();
+            $products = Product::where('name', 'like', $search)->paginate($totalProducts);
+        } else {
+            $products = Product::where('name', 'like', $search)->paginate($perPage);
+        }
+
+    $firstcategories = Category::where('parent_category_id', '0')->where('type', 'sub')->get();
+    $maincategories = Category::where('type', 'main')->get();
+    $categories = Category::where('type', 'main')
+    ->with('children')
+    ->get();
+    $categorySelectedName = 'search';
+    // return $firstcategories[0]['mame'];
+    return view('shop', compact('categorySelectedName','products','firstcategories','maincategories','categories'));
+    }
+
     public function showCategory($category,Request $request){
         // $websiteName = $request->get('websiteName');
         // $user = User::find(1);
