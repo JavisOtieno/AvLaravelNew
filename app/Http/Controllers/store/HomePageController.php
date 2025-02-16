@@ -68,7 +68,7 @@ class HomePageController extends Controller
         if ($perPage == -1) {
             // If "Show All" is selected, paginate with the total count so that links() still works
             $totalProducts = Product::count();
-            return "-1 per page";
+            
             
             if($categorySelected->type=='main'){
                 $products = Product::orderBy('created_at', 'desc')
@@ -88,7 +88,7 @@ class HomePageController extends Controller
             }
 
         } else {
-            return "no per page";
+            
            
             if($categorySelected->type=='main'){
                 $products = Product::orderBy('created_at', 'desc')
