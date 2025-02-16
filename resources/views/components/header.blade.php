@@ -862,3 +862,12 @@
 
                 </div>
             </nav>
+
+            <script>
+                $(document).ready(function() {
+    if ($(window).width() < 768) { // adjust the breakpoint as needed
+        $('[data-toggle="dropdown"]').removeAttr('data-toggle');
+    }
+});
+
+                </script>
