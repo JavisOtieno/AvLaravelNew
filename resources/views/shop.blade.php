@@ -291,7 +291,7 @@
                             </section> --}}
 
                             <header class="page-header">
-                                <h1 class="page-title">All Products</h1>
+                                <h1 class="page-title">Products</h1>
                                 {{-- Smart Phones &amp; Tablets --}}
                                 @php
                                 $from = ($products->currentPage() - 1) * $products->perPage() + 1;
