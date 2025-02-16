@@ -67,8 +67,8 @@
 
                                         
                                         
-                                        {{-- <li class="yamm-fw menu-item menu-item-has-children animate-dropdown dropdown">
-                                            <a title="Pages" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Pages</a>
+                                        <li class="yamm-fw menu-item menu-item-has-children animate-dropdown dropdown">
+                                            <a title="Pages" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">Shop</a>
                                             <ul role="menu" class=" dropdown-menu">
                                                 <li class="menu-item animate-dropdown">
                                                     <div class="yamm-content" style="display:inline-block; width: 100%;">
@@ -80,11 +80,51 @@
                                                                             <div class="widget widget_nav_menu">
                                                                                 <div class="menu-pages-menu-1-container">
                                                                                     <ul id="menu-pages-menu-1" class="menu">
-                                                                                        <li class="nav-title menu-item"><a href="#">Home &#038; Static Pages</a></li>
-                                                                                        <li class="menu-item"><a href="home.html">Home v1</a></li>
+                                                                                        <li class="nav-title menu-item"><a href="/">All Products</a></li>
+                                                                                        @foreach ($categories as $category)
+                                                                                        {{-- <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li> --}}
+                                                                                        {{-- <span class="count">(0)</span> --}}
+                                                                                        <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown menu-item-2584 dropdown">
+                                                                                            
+                                                                                              <li class="nav-title menu-item"><a href="/category/{{ $category['name'] }}">{{ ucfirst($category['title']) }}</a></li>
+
+
+                                                                                                        
+                                                                                                                                    @if($category->children->isNotEmpty())
+                                                                                                                                    @foreach($category->children as $child)
+                                                                                                                                    
+                                                                                                                                    @if($child->children->isNotEmpty())
+                                                                                                                                    <li class="menu-item"><a href="/category/{{$child['name']}}">{{$child['title']}}</a></li>
+                                                                                                                                    
+                                                                                                                                    {{-- <li><a class="nav-title" >/a></li> --}}
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                        <ul>
+                                                                                                                                            @foreach($child->children as $grandChild)
+                                                                                                                                                <li><a >{{ $grandChild->title }}</a></li>
+                                                                                                                                                <li class="menu-item"><a href="/category/{{$child['name']}}">{{ $grandChild->title }}<</a></li>
+                                                                                                                                            @endforeach
+                                                                                                                                        </ul>
+                                                                                                                                        <br/>
+                                                                                                                                    @else
+                                                                                                                                    
+                                                                                                                                    {{-- <li><a href=""></a></li> --}}
+                                                                                                                                    <li class="menu-item"><a href="/category/{{$child['name']}}">{{$child['title']}}<</a></li>
+                                                                                                                                    @endif
+                                                                                                                                    @endforeach
+                                                                                                                                    {{-- @else --}}
+                                                                                                                                    {{-- <p>No sub-categories available.</p> --}}
+                                                                                                                                    @endif
+                                                                                                                                    
+                                                                                                         
+                                                                                                         
+                                                                                           
+                                                                                        
+                                                                                        @endforeach
+                                                                                        <li class="menu-item"><a href="home.html"></a></li>
                                                                                         <li class="menu-item current-menu-item current_page_item"><a href="home-v2.html">Home v2</a></li>
                                                                                         <li class="menu-item"><a href="home-v3.html">Home v3</a></li>
-                                                                                        <li class="menu-item"><a href="about.html">About</a></li>
+                                                                                        {{-- <li class="menu-item"><a href="about.html">About</a></li>
                                                                                         <li class="menu-item"><a href="contact-v2.html">Contact v2</a></li>
                                                                                         <li class="menu-item"><a href="contact-v1.html">Contact v1</a></li>
                                                                                         <li class="menu-item"><a href="faq.html">FAQ</a></li>
@@ -95,7 +135,7 @@
                                                                                         <li class="menu-item"><a href="cat-3-col.html">3 Column Sidebar</a></li>
                                                                                         <li class="menu-item"><a href="cat-4-col.html">4 Column Sidebar</a></li>
                                                                                         <li class="menu-item"><a href="cat-4-fw.html">4 Column Full width</a></li>
-                                                                                        <li class="menu-item"><a href="product-category-6-column.html">6 Columns Full width</a></li>
+                                                                                        <li class="menu-item"><a href="product-category-6-column.html">6 Columns Full width</a></li> --}}
                                                                                     </ul>
                                                                                 </div>
                                                                             </div>
@@ -164,7 +204,7 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                        </li> --}}
+                                        </li>
                                         
                                    </nav>
                             </div>
