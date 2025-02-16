@@ -61,12 +61,20 @@ class HomePageController extends Controller
         // Get the per-page value from the request, default to 30 if not provided.
         $perPage = $request->get('ppp', 30);
 
+        $query = Product::query();
+
+        // If a search term is provided, add a where clause with wildcards for partial matching.
+        if ($search) {
+            $searchTerm = '%' . $search . '%';
+            $query->where('name', 'like', $searchTerm);
+        }
+
         if ($perPage == -1) {
             // If "Show All" is selected, paginate with the total count so that links() still works
             $totalProducts = Product::count();
-            $products = Product::where('name', 'like', $search)->paginate($totalProducts);
+            $products = $query->paginate($totalProducts);
         } else {
-            $products = Product::where('name', 'like', $search)->paginate($perPage);
+            $products = $query->paginate($perPage);
         }
 
     $firstcategories = Category::where('parent_category_id', '0')->where('type', 'sub')->get();
