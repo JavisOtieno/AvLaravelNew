@@ -199,7 +199,7 @@
                                 {{-- <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a> </li> --}}
                                 {{-- <span class="count">(0)</span> --}}
                                 <li class="yamm-tfw menu-item menu-item-has-children animate-dropdown menu-item-2584 dropdown">
-                                    <a title="{{ucfirst($category['name'])}}" href="category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['title'])}}</a>
+                                    <a title="{{ucfirst($category['name'])}}" href="/category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['title'])}}</a>
                                     <ul role="menu" class=" dropdown-menu">
                                         <li class="menu-item animate-dropdown menu-item-object-static_block">
                                             <div class="yamm-content">
@@ -224,7 +224,7 @@
                                                                     <div class="wpb_wrapper">
                                                                         <ul>
                                                                             <li class="nav-title">{{$category['title']}}</li>
-                                                                            <li><a href="category/{{$category['name']}}">All {{$category['title']}}</a></li>
+                                                                            <li><a href="/category/{{$category['name']}}">All {{$category['title']}}</a></li>
                                                                             {{-- @foreach ($firstcategories as $category)
                                                                             <li><a href="category/{{$category['name']}}">{{ucfirst($category['name'])}}</a></li>
                                                                             @endforeach --}}
@@ -232,15 +232,15 @@
                                                                             @foreach($category->children as $child)
                                                                             
                                                                             @if($child->children->isNotEmpty())
-                                                                            <li><a class="nav-title" href="category/{{$child['name']}}">{{$child['title']}}</a></li>
+                                                                            <li><a class="nav-title" href="/category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                                 <ul>
                                                                                     @foreach($child->children as $grandChild)
-                                                                                        <li><a href="category/{{$child['name']}}">{{ $grandChild->title }}</a></li>
+                                                                                        <li><a href="/category/{{$child['name']}}">{{ $grandChild->title }}</a></li>
                                                                                     @endforeach
                                                                                 </ul>
                                                                                 <br/>
                                                                             @else
-                                                                            <li><a href="category/{{$child['name']}}">{{$child['title']}}</a></li>
+                                                                            <li><a href="/category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                             @endif
                                                                             @endforeach
                                                                             {{-- @else --}}
@@ -266,11 +266,11 @@
                                                             <div class="wpb_wrapper">
                                                                 <div class="wpb_text_column wpb_content_element ">
                                                                     <div class="wpb_wrapper">
-                                                                        <ul>
+                                                                        {{-- <ul>
                                                                             <li class="nav-title">Office &amp; Stationery</li>
                                                                             <li><a href="#">All Office &amp; Stationery</a></li>
                                                                             <li><a href="#">Pens &amp; Writing</a></li>
-                                                                        </ul>
+                                                                        </ul> --}}
                                                                     </div>
                                                                 </div>
                                                             </div>
