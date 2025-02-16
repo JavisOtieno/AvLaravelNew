@@ -203,10 +203,10 @@
                                         {{ ucfirst($category['title']) }}
                                       </a>
                                       <!-- A separate element to toggle the dropdown -->
-                                      <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+                                      {{-- <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
                                         <span class="caret"></span>
-                                      </button>
-                                    {{-- <a titlete="{{ucfirst($category['name'])}}" href="/category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['title'])}}</a> --}}
+                                      </button> --}}
+                                    {{-- <a title="{{ucfirst($category['name'])}}" href="/category/{{$category['name']}}" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">{{ucfirst($category['title'])}}</a> --}}
                                     <ul role="menu" class=" dropdown-menu">
                                         <li class="menu-item animate-dropdown menu-item-object-static_block">
                                             <div class="yamm-content">
@@ -896,3 +896,19 @@
 });
 
                     </script> --}}
+
+                    <script>
+                        $(document).ready(function() {
+    if ($(window).width() < 768) { // Adjust the breakpoint as needed
+        $('.dropdown-menu .dropdown-toggle').on('click', function(e) {
+            e.stopPropagation();
+            var $submenu = $(this).next('.dropdown-menu');
+            if (!$submenu.hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+            }
+            $submenu.toggleClass('show');
+        });
+    }
+});
+
+                        </script>
