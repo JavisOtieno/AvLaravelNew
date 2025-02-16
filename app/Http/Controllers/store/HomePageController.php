@@ -56,7 +56,7 @@ class HomePageController extends Controller
 
         // ,'websiteName'
     // $products = Product::all();
-    $categorySelected = Category::where('name', $category)->get();
+    $categorySelected = Category::where('name', $category)->first();
     if($categorySelected->type=='main'){
         $products = Product::orderBy('created_at', 'desc')
         ->where('category_id', $category)
