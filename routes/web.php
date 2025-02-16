@@ -25,6 +25,7 @@ Route::middleware(['extract.website.name'])->group(function () {
 // Route::get('/shop', [HomePageController::class,'shop']);
 
 Route::get('/', [HomePageController::class,'shop']);
+Route::get('/category/{category}', [HomePageController::class,'showCategory']);
 Route::get('/account', [HomePageController::class,'showCustomerAccount']);
 Route::get('/contact', [HomePageController::class,'contact']);
 // Route::get('/trackyourorder', [OrderController::class,'trackOrder']);

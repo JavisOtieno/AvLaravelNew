@@ -44,8 +44,58 @@ class HomePageController extends Controller
     $categories = Category::where('type', 'main')
     ->with('children')
     ->get();
+    $category = 'phones';
     // return $firstcategories[0]['mame'];
-    return view('shop', compact('products','firstcategories','maincategories','categories'));
+    return view('shop', compact('category','products','firstcategories','maincategories','categories'));
+    }
+
+    public function showCategory($category,Request $request){
+        // $websiteName = $request->get('websiteName');
+        // $user = User::find(1);
+        // $products = Product::all();
+
+        // ,'websiteName'
+    // $products = Product::all();
+    $categorySelected = Category::where('name', $category)->get();
+    if($categorySelected->type=='main'){
+        $products = Product::orderBy('created_at', 'desc')
+        ->where('category_id', $category)
+        ->paginate(30); 
+    }else if($categorySelected->type=='sub'){
+        $products = Product::orderBy('created_at', 'desc')
+        ->where('sub_category_id', $category)
+        ->paginate(30); 
+    }else if($categorySelected->type=='subsub'){
+        $products = Product::orderBy('created_at', 'desc')
+        ->where('sub_sub_category_id', $category)
+        ->paginate(30); 
+    }
+
+
+
+        // Get the per-page value from the request, default to 30 if not provided.
+        $perPage = $request->get('ppp', 30);
+
+        
+
+        if ($perPage == -1) {
+            // If "Show All" is selected, paginate with the total count so that links() still works
+            $totalProducts = Product::count();
+            $products = Product::paginate($totalProducts);
+        } else {
+            $products = Product::paginate($perPage);
+        }
+
+  
+
+    $firstcategories = Category::where('parent_category_id', $categorySelected->id)->where('type', 'sub')->get();
+    $maincategories = Category::where('type', 'main')->get();
+    $categories = Category::where('type', 'main')
+    ->with('children')
+    ->get();
+    $category = $categorySelected->name;
+    // return $firstcategories[0]['mame'];
+    return view('shop', compact('category','products','firstcategories','maincategories','categories'));
     }
 
     //store functions
