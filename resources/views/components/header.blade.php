@@ -101,7 +101,7 @@
                                                                                                                                     
                                                                                                                                         <ul>
                                                                                                                                             @foreach($child->children as $grandChild)
-                                                                                                                                                <li><a >{{ $grandChild->title }}</a></li>
+                                                                                                                                                {{-- <li><a >{{ $grandChild->title }}</a></li> --}}
                                                                                                                                                 <li class="menu-item"><a href="/category/{{$child['name']}}">{{ $grandChild->title }}</a></li>
                                                                                                                                             @endforeach
                                                                                                                                         </ul>
@@ -121,9 +121,9 @@
                                                                                            
                                                                                         
                                                                                         @endforeach
-                                                                                        <li class="menu-item"><a href="home.html"></a></li>
+                                                                                        {{-- <li class="menu-item"><a href="home.html"></a></li>
                                                                                         <li class="menu-item current-menu-item current_page_item"><a href="home-v2.html">Home v2</a></li>
-                                                                                        <li class="menu-item"><a href="home-v3.html">Home v3</a></li>
+                                                                                        <li class="menu-item"><a href="home-v3.html">Home v3</a></li> --}}
                                                                                         {{-- <li class="menu-item"><a href="about.html">About</a></li>
                                                                                         <li class="menu-item"><a href="contact-v2.html">Contact v2</a></li>
                                                                                         <li class="menu-item"><a href="contact-v1.html">Contact v1</a></li>
@@ -143,7 +143,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="wpb_column vc_column_container col-sm-4">
+                                                            {{-- <div class="wpb_column vc_column_container col-sm-4">
                                                                 <div class="vc_column-inner ">
                                                                     <div class="wpb_wrapper">
                                                                         <div class="vc_wp_custommenu wpb_content_element">
@@ -199,7 +199,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                     </div>
                                                 </li>
