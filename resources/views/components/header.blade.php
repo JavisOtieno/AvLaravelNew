@@ -747,6 +747,7 @@
                     <form class="navbar-search" method="post" action="/search">
                         <label class="sr-only screen-reader-text" for="search">Search for:</label>
                         <div class="input-group">
+                            @csrf
                             <input type="text" id="search" class="form-control search-field" dir="ltr" value="" name="search" placeholder="Search for products" />
                             {{-- <div class="input-group-addon search-categories">
                                 <select name='product_cat' id='product_cat' class='postform resizeselect' >
