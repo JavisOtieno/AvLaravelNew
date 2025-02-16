@@ -863,11 +863,29 @@
                 </div>
             </nav>
 
-            <script>
+            {{-- <script>
                 $(document).ready(function() {
     if ($(window).width() < 768) { // adjust the breakpoint as needed
         $('[data-toggle="dropdown"]').removeAttr('data-toggle');
     }
 });
 
-                </script>
+                </script> --}}
+                <script>
+                    $(document).ready(function() {
+    if ($(window).width() < 768) { // Mobile breakpoint
+        $('.dropdown a').on('click', function(e) {
+            var target = $(e.target);
+            // If the clicked element is inside a dropdown and has a valid href
+            if (target.attr('href') && target.attr('href') !== '#') {
+                // Allow the navigation to proceed
+                return;
+            }
+            // Otherwise, handle the dropdown toggle
+            e.preventDefault();
+            $(this).next('.dropdown-menu').toggleClass('show');
+        });
+    }
+});
+
+                    </script>
