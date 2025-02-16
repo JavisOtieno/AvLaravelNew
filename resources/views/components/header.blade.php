@@ -77,9 +77,9 @@
                                     <li class="menu-item animate-dropdown">
                                         <div class="yamm-content" style="display:inline-block; width: 100%;">
                                             <div class="row">
-                                                @foreach ($categories->chunk(3) as $chunk)
+                                                
                                                     <div class="row">
-                                                        @foreach ($chunk as $category)
+                                                        @foreach ($categories->chunk(3) as $chunk)
                                                         <div class="wpb_column vc_column_container col-sm-4">
                                                             <div class="vc_column-inner ">
                                                                 <div class="wpb_wrapper">
@@ -152,7 +152,7 @@
                                                         </div>
                                                         @endforeach
                                                     </div>
-                                                @endforeach
+                                                
 
                                                 {{-- <div class="wpb_column vc_column_container col-sm-4">
                                                                 <div class="vc_column-inner ">
