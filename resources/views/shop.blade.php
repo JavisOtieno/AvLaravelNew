@@ -3150,7 +3150,7 @@
                                         <li class="product_cat"><span class="show-all-cat-dropdown">Show All Categories</span>
                                             <ul>
                                                 @foreach ($maincategories as $category)
-                                                <li class="cat-item"><a href="category/{{$category['name']}}">{{ucfirst($category['title'])}}</a> </li>
+                                                <li class="cat-item"><a href="/category/{{$category['name']}}">{{ucfirst($category['title'])}}</a> </li>
                                                 {{-- <span class="count">(0)</span> --}}
 
                                                 
