@@ -58,8 +58,7 @@ class HomePageController extends Controller
     // $products = Product::all();
     $categorySelected = Category::where('name', $category)->first();
 
-
-
+    return $categorySelected;
 
         // Get the per-page value from the request, default to 30 if not provided.
         $perPage = $request->get('ppp', 30);
