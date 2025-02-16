@@ -64,9 +64,8 @@
                     <nav>
                         <ul id="menu-main-menu" class="nav nav-inline yamm">
                             <li class="menu-item"><a title="Home" href="/">Home</a></li>
-                            <li class="menu-item"><a title="Shop" href="/">Shop</a></li>
+                            {{-- <li class="menu-item"><a title="Shop" href="/">Shop</a></li> --}}
                             {{-- <li class="menu-item"><a title="About" href="/about">About Us</a></li> --}}
-                            <li class="menu-item"><a title="Contact" href="/contact">Contact Us</a></li>
 
 
 
@@ -216,6 +215,8 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="menu-item"><a title="Contact" href="/contact">Contact Us</a></li>
+
 
                     </nav>
                 </div>
