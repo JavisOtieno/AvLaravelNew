@@ -102,14 +102,14 @@
                                                                                                                                         <ul>
                                                                                                                                             @foreach($child->children as $grandChild)
                                                                                                                                                 <li><a >{{ $grandChild->title }}</a></li>
-                                                                                                                                                <li class="menu-item"><a href="/category/{{$child['name']}}">{{ $grandChild->title }}<</a></li>
+                                                                                                                                                <li class="menu-item"><a href="/category/{{$child['name']}}">{{ $grandChild->title }}</a></li>
                                                                                                                                             @endforeach
                                                                                                                                         </ul>
                                                                                                                                         <br/>
                                                                                                                                     @else
                                                                                                                                     
                                                                                                                                     {{-- <li><a href=""></a></li> --}}
-                                                                                                                                    <li class="menu-item"><a href="/category/{{$child['name']}}">{{$child['title']}}<</a></li>
+                                                                                                                                    <li class="menu-item"><a href="/category/{{$child['name']}}">{{$child['title']}}</a></li>
                                                                                                                                     @endif
                                                                                                                                     @endforeach
                                                                                                                                     {{-- @else --}}
