@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('websites', function (Blueprint $table) {
             $table->id();
-            $table->name();
-            $table->link();
-            $table->lastpagescanned();
+            $table->string('name');
+            $table->string('link');
+            $table->unsignedBigInteger('lastpagescanned');
             $table->timestamps();
         });
     }
