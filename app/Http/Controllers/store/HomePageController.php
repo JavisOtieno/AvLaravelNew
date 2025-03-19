@@ -34,9 +34,10 @@ class HomePageController extends Controller
         if ($perPage == -1) {
             // If "Show All" is selected, paginate with the total count so that links() still works
             $totalProducts = Product::count();
-            $products = Product::paginate($totalProducts);
+            // $products = Product::paginate($totalProducts);
+            $products = Product::orderBy('id', 'desc')->paginate($totalProducts);
         } else {
-            $products = Product::paginate($perPage);
+            $products = Product::orderBy('id', 'desc')->paginate($perPage);
         }
 
     $firstcategories = Category::where('parent_category_id', '42')->where('type', 'sub')->get();
@@ -78,9 +79,9 @@ class HomePageController extends Controller
         if ($perPage == -1) {
             // If "Show All" is selected, paginate with the total count so that links() still works
             $totalProducts = Product::count();
-            $products = $query->paginate($totalProducts);
+            $products = $query->orderBy('id', 'desc')->paginate($totalProducts);
         } else {
-            $products = $query->paginate($perPage);
+            $products = $query->orderBy('id', 'desc')->paginate($perPage);
         }
 
     $firstcategories = Category::where('parent_category_id', '0')->where('type', 'sub')->get();
