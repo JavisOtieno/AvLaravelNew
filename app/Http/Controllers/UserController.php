@@ -56,7 +56,9 @@ class UserController extends Controller
 
         if ($user === null) {
             // Handle the case where the user is not set
-            return response()->json(['error' => 'User not found'], 404);
+            $incomingFields['user_id'] = null;
+        }else{
+            $incomingFields['user_id'] = $user['id'];
         }
 
         //return "hello";
