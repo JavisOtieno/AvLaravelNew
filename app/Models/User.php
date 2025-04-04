@@ -24,6 +24,7 @@ class User extends Authenticatable
         'websitename',
         'websitevisits',
         'password',
+        'user_id'
     ];
 
     /**
