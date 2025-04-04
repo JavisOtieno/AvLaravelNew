@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('productlinks', function (Blueprint $table) {
-            $table->string('website_id')->nullable()->after('id');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('user_id')->nullable()->after('id');
         });
     
 
@@ -23,9 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('productlinks', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
-            $table->dropColumn('website_id');
+            $table->dropColumn('user_id');
         });
     }
 };
