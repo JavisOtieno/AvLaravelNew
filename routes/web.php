@@ -51,9 +51,14 @@ Route::get('/logout', [UserController::class,'logout']);
 
 });
 
+Route::middleware(['extract.website.name'])->group(function () {
+
 Route::post('/attemptlogin', [UserController::class,'doLogin']);
 Route::post('/attemptsignup', [UserController::class,'doSignup']);
 
 Route::get('/adminsignup', [UserController::class,'showSignup']);
 Route::get('/adminlogin', [UserController::class,'showLogin'])->name('login');
+
+});
+
 
