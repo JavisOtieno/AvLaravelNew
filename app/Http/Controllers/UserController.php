@@ -36,8 +36,9 @@ class UserController extends Controller
     return view('admin.signup',compact('user'));
     }
     public function showProfile(){
-        $user= User::find(auth()->user()->id);
-        return view('admin.profile', compact('user'));
+        // $user= User::find(auth()->user()->id);
+        // return view('admin.profile', compact('user'));
+        return view('admin.profile');
     }
 
 
@@ -50,7 +51,7 @@ class UserController extends Controller
             'name'=>'required|string|max:255',
             'phone'=>['required','min:10','string','max:255', new PhoneNumber],
             'email'=>'required|email|unique:users|max:255',
-            'user_id'=>'required|numeric|digits_between:1,20', 
+            // 'user_id'=>'required|numeric|digits_between:1,20', 
             //'password'=>'required|string|max:255|min:8|confirmed',
             'password' => ['required','string','max:255','min:8','confirmed',Password::min(8)->letters()->numbers()],
         ]);
@@ -62,16 +63,16 @@ class UserController extends Controller
         $incomingFields['websitevisits']=0;
         $incomingFields['email']=strip_tags($credentials['email']);
         $incomingFields['password']=strip_tags($credentials['password']);
-        $incomingFields['user_id']=strip_tags($credentials['user_id']);
+        // $incomingFields['user_id']=strip_tags($credentials['user_id']);
 
-        // $user = $request->attributes->get('user', null); // Default to null if not set
+        $user = $request->attributes->get('user', null); // Default to null if not set
 
-        // if ($user === null) {
-        //     // Handle the case where the user is not set
-        //     $incomingFields['user_id'] = null;
-        // }else{
-        //     $incomingFields['user_id'] = $user['id'];
-        // }
+        if ($user === null) {
+            // Handle the case where the user is not set
+            $incomingFields['user_id'] = null;
+        }else{
+            $incomingFields['user_id'] = $user['id'];
+        }
 
         //return "hello";
 

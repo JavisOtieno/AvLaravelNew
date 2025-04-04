@@ -127,7 +127,7 @@
                         @csrf
                         <div class="py-3">
                         <div class="mb-4">
-                          <input type="text" name="user_id" value="{{$user['id']}}"/>
+                          {{-- <input type="text" name="user_id" value="{{$user['id']}}"/> --}}
                             <input type="text" class="form-control form-control-lg form-control-alt" id="signup-name" name="name" placeholder="Name">
                             </div>
                           <div class="mb-4">
