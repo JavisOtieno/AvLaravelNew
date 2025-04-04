@@ -22,8 +22,18 @@ class UserController extends Controller
         Auth::logout();
         return redirect('/adminlogin');
     }
-    public function showSignup(){
-        return view('admin.signup');
+    public function showSignup(Request $request){
+        $user = $request->attributes->get('user', null); // Default to null if not set
+
+        if ($user === null) {
+            // Handle the case where the user is not set
+            $incomingFields['user_id'] = null;
+            return 'null';
+        }else{
+            $incomingFields['user_id'] = $user['id'];
+            return 'not null '.$user['id'];
+        }
+    // return view('admin.signup');
     }
     public function showProfile(){
         $user= User::find(auth()->user()->id);
