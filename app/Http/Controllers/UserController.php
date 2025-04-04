@@ -52,6 +52,13 @@ class UserController extends Controller
         $incomingFields['email']=strip_tags($credentials['email']);
         $incomingFields['password']=strip_tags($credentials['password']);
 
+        $user = $request->attributes->get('user', null); // Default to null if not set
+
+        if ($user === null) {
+            // Handle the case where the user is not set
+            return response()->json(['error' => 'User not found'], 404);
+        }
+
         //return "hello";
 
         // return $incomingFields;
