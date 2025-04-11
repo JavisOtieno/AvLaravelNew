@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('websites', function (Blueprint $table) {
             //
-            $table->string(column: 'top_user_id')->nullable()->after('id');
+            $table->string(column: 'user_id')->nullable()->after('id');
         });
     }
 
@@ -24,7 +24,7 @@ return new class extends Migration
     {
         Schema::table('websites', function (Blueprint $table) {
             //
-            $table->dropColumn('top_user_id');
+            $table->dropColumn('user_id');
         });
     }
 };
