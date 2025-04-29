@@ -198,31 +198,31 @@
                  <input type="hidden" name="token" value="{{ $token }}">
                 
                 {{-- <p class="text-muted">Enter the email address registered on your account</p> --}}
-                <div class="wrap-input100 validate-input input-group" data-bs-validate="Valid email is required: ex@abc.xyz">
-                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                <div style="margin-top:10px" class="wrap-input100 validate-input input-group" data-bs-validate="Valid email is required: ex@abc.xyz">
+                    {{-- <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                         <i class="zmdi zmdi-email" aria-hidden="true"></i>
-                    </a>
+                    </a> --}}
                     <input id="email_address" name="email" class="input100 border-start-0 ms-0 form-control" type="email" placeholder="Email" required autofocus value="{{old('email')}}">
                     
                 </div>
-                <div class="wrap-input100 validate-input input-group" data-bs-validate="Valid password required" id="Password-toggle">
-                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                <div style="margin-top:10px" class="wrap-input100 validate-input input-group" data-bs-validate="Valid password required" id="Password-toggle">
+                    {{-- <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                         <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
-                    </a>
+                    </a> --}}
                     <input id="password" name="password" class="input100 border-start-0 ms-0 form-control" type="password" placeholder="Password" required autofocus>
                     
                 </div>
-                <div class="wrap-input100 validate-input input-group" data-bs-validate="Valid password required" id="Password-toggle">
-                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                <div style="margin-top:10px" class="wrap-input100 validate-input input-group" data-bs-validate="Valid password required" id="Password-toggle">
+                    {{-- <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                         <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
-                    </a>
+                    </a> --}}
                     <input id="password-confirm" name="password_confirmation" class="input100 border-start-0 ms-0 form-control" type="password" placeholder="Password" required autofocus>
                     
                 </div>
                 {{-- @if ($errors->has('email'))
                         <span class="text-danger" style="margin-bottom: 20px;">{{ $errors->first('email') }}</span>
                     @endif --}}
-                <div class="submit">
+                <div style="margin-top:10px" class="submit">
                     <button class="btn btn-primary d-grid" style="width: 100%" type="submit">Submit</button>
                 </div>
                 {{-- <div class="text-center mt-4">
