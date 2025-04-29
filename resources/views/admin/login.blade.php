@@ -112,6 +112,11 @@
                       <!-- jQuery Validation (.js-validation-signin class is initialized in js/pages/op_auth_signin.min.js which was auto compiled from _js/pages/op_auth_signin.js) -->
                       <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
                       <form class="js-validation-signin" action="/attemptlogin" method="POST">
+                        @if (Session::has('message'))
+                        <div class="alert alert-success" role="alert">
+                           {{ Session::get('message') }}
+                       </div>
+                       @endif
                         @if ($errors->any())
                         <div class="alert alert-danger alert-dismissible">
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
