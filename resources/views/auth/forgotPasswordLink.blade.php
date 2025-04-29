@@ -216,7 +216,7 @@
                     {{-- <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                         <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
                     </a> --}}
-                    <input id="password-confirm" name="password_confirmation" class="input100 border-start-0 ms-0 form-control" type="password" placeholder="Password" required autofocus>
+                    <input id="password-confirm" name="password_confirmation" class="input100 border-start-0 ms-0 form-control" type="password" placeholder="Confirm Password" required autofocus>
                     
                 </div>
                 {{-- @if ($errors->has('email'))
