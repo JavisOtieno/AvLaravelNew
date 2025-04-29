@@ -7,6 +7,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\store\HomePageController;
 
 /*
@@ -58,6 +59,13 @@ Route::post('/attemptsignup', [UserController::class,'doSignup']);
 
 Route::get('/adminsignup', [UserController::class,'showSignup']);
 Route::get('/adminlogin', [UserController::class,'showLogin'])->name('login');
+
+Route::get('/forgot-password', [ForgotPasswordController::class, 'showForgotPasswordForm'])->name('forgot.password.get');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'submitForgotPasswordForm'])->name('forgot.password.post'); 
+Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('/reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
+Route::get('/successpasswordreset', [ForgotPasswordController::class, 'showSuccessForgotPassword'])->name('forgot.password.success');
+
 
 });
 
