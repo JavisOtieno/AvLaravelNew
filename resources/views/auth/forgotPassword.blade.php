@@ -163,9 +163,11 @@
                 
                 <p class="text-muted">Enter the email address registered on your account</p>
                 <div class="wrap-input100 validate-input input-group" data-bs-validate="Valid email is required: ex@abc.xyz">
-                    <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
+                    {{-- <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
                         <i class="zmdi zmdi-email" aria-hidden="true"></i>
-                    </a>
+                    </a> --}}
+                    
+
                     <input id="email_address" name="email" class="input100 border-start-0 ms-0 form-control" value="{{old('email')}}" type="email" placeholder="Email" required autofocus>
                     
                 </div>
@@ -173,7 +175,7 @@
                         <span class="text-danger" style="margin-bottom: 20px;">{{ $errors->first('email') }}</span>
                     @endif --}}
                 <div class="submit">
-                    <button class="btn btn-primary d-grid" style="width: 100%" type="submit">Submit</button>
+                    <button class="btn btn-primary d-grid" style="width: 100%;margin-top:20px;" type="submit">Submit</button>
                 </div>
                 <div class="text-center mt-4">
                     <p class="text-dark mb-0 d-inline-flex"> Sign In Instead ?<a class="text-primary ms-1" href="/adminlogin">Sign In</a></p>

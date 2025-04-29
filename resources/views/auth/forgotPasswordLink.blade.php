@@ -86,6 +86,14 @@
     -->
     <div id="page-container">
 
+                 <!-- Main Container -->
+      <main id="main-container">
+        <!-- Page Content -->
+        <div class="hero-static d-flex align-items-center">
+          <div class="content">
+            <div class="row justify-content-center push">
+              <div class="col-md-8 col-lg-6 col-xl-4">
+
 {{-- <main class="login-form">
   <div class="cotainer">
       <div class="row justify-content-center">
@@ -243,6 +251,16 @@
     </div>
 </div>
 {{-- @endsection --}}
+
+</div>
+</div>
+<div class="fs-sm text-muted text-center">
+  <strong>Fave</strong> &copy; <span data-toggle="year-copy"></span>
+</div>
+</div>
+</div>
+<!-- END Page Content -->
+</main>
 
     <!-- END Main Container -->
 </div>
