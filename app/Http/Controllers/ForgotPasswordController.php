@@ -104,7 +104,7 @@ class ForgotPasswordController extends Controller
         if($useraccount->usertype=='seller'){
             return redirect('/successpasswordreset')->with('message', 'Your password has been changed!');
         }else{
-            return redirect('/login')->with('message', 'Your password has been changed!');
+            return redirect('/adminlogin')->with('message', 'Your password has been changed!');
         }
 
     }
