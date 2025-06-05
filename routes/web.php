@@ -10,6 +10,13 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\store\HomePageController;
 
+//video convert test
+use FFMpeg\FFMpeg;
+use FFMpeg\Format\Video\X264;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
