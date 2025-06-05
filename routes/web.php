@@ -66,6 +66,18 @@ Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'showRes
 Route::post('/reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 Route::get('/successpasswordreset', [ForgotPasswordController::class, 'showSuccessForgotPassword'])->name('forgot.password.success');
 
+Route::get('/convertvideo', function () {
+    $ffmpeg = app(FFMpeg::class);
+
+    $inputPath = storage_path('app/public/input.mov');
+    $outputPath = storage_path('app/public/output.mp4');
+
+    // Open and convert video
+    $video = $ffmpeg->open($inputPath);
+    $video->save(new X264(), $outputPath);
+
+    return Response::download($outputPath);
+});
 
 });
 
