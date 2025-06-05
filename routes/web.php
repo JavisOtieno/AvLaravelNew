@@ -74,16 +74,28 @@ Route::post('/reset-password', [ForgotPasswordController::class, 'submitResetPas
 Route::get('/successpasswordreset', [ForgotPasswordController::class, 'showSuccessForgotPassword'])->name('forgot.password.success');
 
 Route::get('/convertvideo', function () {
-    $ffmpeg = app(FFMpeg::class);
+    // $ffmpeg = app(FFMpeg::class);
 
-    $inputPath = storage_path('app/public/input.mov');
-    $outputPath = storage_path('app/public/output.mp4');
+    // $inputPath = storage_path('app/public/input.mov');
+    // $outputPath = storage_path('app/public/output.mp4');
 
-    // Open and convert video
-    $video = $ffmpeg->open($inputPath);
-    $video->save(new X264(), $outputPath);
+    // // Open and convert video
+    // $video = $ffmpeg->open($inputPath);
+    // $video->save(new X264(), $outputPath);
 
-    return Response::download($outputPath);
+    // return Response::download($outputPath);
+    // Optional config (adjust binary paths if needed)
+$ffmpeg = FFMpeg::create([
+    'ffmpeg.binaries'  => '/usr/bin/ffmpeg',
+    'ffprobe.binaries' => '/usr/bin/ffprobe',
+    'timeout'          => 3600, // optional
+    'ffmpeg.threads'   => 12,   // optional
+]);
+
+$video = $ffmpeg->open(storage_path('app/public/input.mov'));
+
+$video->save(new X264(), storage_path('app/public/output.mp4'));
+
 });
 
 });
