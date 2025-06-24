@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\api;
 
-use App\Http\Controllers\Controller;
+use App\Models\Customer;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CustomerController extends Controller
 {
@@ -11,6 +12,7 @@ class CustomerController extends Controller
 
         public function index()
     {
+        $userid = auth()->user()->id;
         $customers = Customer::where('user_id', $userid)->get();
 
         //return $users;

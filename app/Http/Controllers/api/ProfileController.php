@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Models\Trip;
 use App\Models\User;
+use App\Models\Order;
 use App\Models\Location;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

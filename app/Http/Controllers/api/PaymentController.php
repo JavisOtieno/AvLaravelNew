@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\api;
 
-use App\Http\Controllers\Controller;
+use App\Models\Payment;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PaymentController extends Controller
 {
