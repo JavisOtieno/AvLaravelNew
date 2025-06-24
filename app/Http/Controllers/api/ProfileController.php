@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Controllers\api;
+
+use App\Models\Trip;
+use App\Models\User;
+use App\Models\Location;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class ProfileController extends Controller
+{
+    //
+    public function index(){
+
+        $userid = auth()->user()->id;
+
+        $user = User::where('id', $userid)->orderBy('created_at', 'desc')->first();
+        $orderscount = Order::where('user_id', $userid) -> count();
+        // $locationscount = Location::where('user_id', $userid) -> count();
+        // $tripsamount = Trip::where('user_id', $userid)->sum('amount');
+
+        return response()->json(compact('user','orderscount'));
+        
+    }
+
+
+    
+}

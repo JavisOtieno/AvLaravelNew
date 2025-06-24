@@ -18,4 +18,22 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/adminorders', [OrderController::class,'index']);
+Route::middleware(['auth:sanctum'])->group(function(){
+
+Route::get('/profile', [ProfileController::class, 'index']);
+
+Route::get('/orders', [TripController::class, 'index']);
+Route::get('/order/{id}', [TripController::class, 'show']);
+
+Route::get('/customers', [CustomerController::class, 'index']);
+Route::post('/addcustomer', [CustomerController::class, 'saveCustomer']);
+
+Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+
+Route::get('/payments', [CustomerController::class, 'index']);
+
+});
+
+
+Route::post('/login', [LoginController::class,'doLogin']);
+Route::post('/signup', [LoginController::class,'doSignup']);
