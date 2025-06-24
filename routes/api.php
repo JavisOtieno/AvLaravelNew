@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\LoginController;
+use App\Http\Controllers\api\OrderController;
 use App\Http\Controllers\api\PaymentController;
 use App\Http\Controllers\api\ProfileController;
 use App\Http\Controllers\api\CustomerController;
@@ -26,6 +27,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware(['auth:sanctum'])->group(function(){
 
 Route::get('/profile', [ProfileController::class, 'index']);
+
+Route::get('/orders', [OrderController::class, 'index']);
 
 Route::get('/customers', [CustomerController::class, 'index']);
 Route::post('/addcustomer', [CustomerController::class, 'saveCustomer']);
