@@ -2,6 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\api\LoginController;
+use App\Http\Controllers\api\PaymentController;
+use App\Http\Controllers\api\ProfileController;
+use App\Http\Controllers\api\CustomerController;
+use App\Http\Controllers\api\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,15 +27,12 @@ Route::middleware(['auth:sanctum'])->group(function(){
 
 Route::get('/profile', [ProfileController::class, 'index']);
 
-Route::get('/orders', [TripController::class, 'index']);
-Route::get('/order/{id}', [TripController::class, 'show']);
-
 Route::get('/customers', [CustomerController::class, 'index']);
 Route::post('/addcustomer', [CustomerController::class, 'saveCustomer']);
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 
-Route::get('/payments', [CustomerController::class, 'index']);
+Route::get('/payments', [PaymentController::class, 'index']);
 
 });
 
