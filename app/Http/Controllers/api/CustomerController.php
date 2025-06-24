@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\api;
 
 use App\Models\Customer;
+use App\Rules\PhoneNumber;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class CustomerController extends Controller
 {
