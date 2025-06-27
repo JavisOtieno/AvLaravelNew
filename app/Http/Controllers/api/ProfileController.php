@@ -19,9 +19,9 @@ class ProfileController extends Controller
         $user = User::where('id', $userid)->orderBy('created_at', 'desc')->first();
         $orderscount = Order::where('user_id', $userid) -> count();
         // $locationscount = Location::where('user_id', $userid) -> count();
-        // $tripsamount = Trip::where('user_id', $userid)->sum('amount');
+        $ordersamount = Order::where('user_id', $userid)->sum('value');
 
-        return response()->json(compact('user','orderscount'));
+        return response()->json(compact('user','orderscount','ordersamount'));
         
     }
 
