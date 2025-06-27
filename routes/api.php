@@ -30,6 +30,7 @@ Route::middleware(['auth:sanctum'])->group(function(){
 Route::get('/profile', [ProfileController::class, 'index']);
 
 Route::get('/orders', [OrderController::class, 'index']);
+Route::get('/order/{id}', [OrderController::class, 'showOrder']);
 
 Route::get('/products', [ProductController::class, 'index']);
 
@@ -39,6 +40,7 @@ Route::post('/addcustomer', [CustomerController::class, 'saveCustomer']);
 Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 
 Route::get('/payments', [PaymentController::class, 'index']);
+
 
 });
 

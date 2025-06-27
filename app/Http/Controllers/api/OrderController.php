@@ -20,5 +20,12 @@ class OrderController extends Controller
         return response()->json(['orders'=>$orders]);     
     }
 
+        public function showOrder($id){
+        $trip = Order::with('customer')->find($id);
+        return response()->json(['trip'=>$trip]);
+    }
+
+
+
     
 }
