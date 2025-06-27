@@ -21,8 +21,8 @@ class OrderController extends Controller
     }
 
         public function showOrder($id){
-        $trip = Order::with('customer')->find($id);
-        return response()->json(['trip'=>$trip]);
+        $order = Order::with('customer')->find($id);
+        return response()->json(['order'=>$order]);
     }
 
 
