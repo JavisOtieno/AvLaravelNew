@@ -23,7 +23,7 @@ class ProductController extends Controller
         }
 
         public function showProduct($id){
-            $product = Product::find($id);
+            $product = Product::with('category')->find($id);
             return response()->json(['product'=>$product]);   
         }
 }
