@@ -15,7 +15,7 @@ class ProductController extends Controller
 
         $userid = auth()->user()->id;
 
-        $products = Product::orderBy('created_at', 'desc')->take(20);
+        $products = Product::with('category')->orderBy('created_at', 'desc')->take(20);
 
         return response()->json(['products'=>$products]); 
 
