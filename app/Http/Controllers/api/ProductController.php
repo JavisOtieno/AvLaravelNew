@@ -17,7 +17,7 @@ class ProductController extends Controller
 
         $products = Product::with('category')->orderBy('created_at', 'desc')->take(20);
 
-        return response()->json(['products'=>$products]); 
+        return response()->json($products); 
 
         }
 }
