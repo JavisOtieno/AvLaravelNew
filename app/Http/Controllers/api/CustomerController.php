@@ -25,6 +25,11 @@ class CustomerController extends Controller
         return response()->json(['customers' => $customers]);
     }
 
+    public function showCustomer($id){
+        $customer = Customer::find($id);
+        return response()->json(['customer'=>$customer]);
+    }
+
 
     public function saveCustomer(Request $request)
     {

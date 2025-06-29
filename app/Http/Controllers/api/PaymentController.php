@@ -22,5 +22,10 @@ class PaymentController extends Controller
             return response()->json(compact('payments'
             // , 'allpayments','completepayments','processingpayments','cancelledpayments'
         ));
+    }
+            
+        public function showPayment($id){
+            $payment = Payment::find($id);
+            return response()->json(['payment'=>$payment]);   
         }
 }
