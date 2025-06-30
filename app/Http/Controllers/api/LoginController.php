@@ -86,6 +86,7 @@ class LoginController extends Controller
                     "status" => "failed",
                     "username" => null,
                     // "test" => "test",
+                    //test
                     'authToken' =>  null,
                     "userId"=>null);
 
