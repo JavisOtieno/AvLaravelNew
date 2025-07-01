@@ -57,7 +57,7 @@ class LoginController extends Controller
             $loginStatus=array(
                 "message" => "Signup Successful",
                 "status" => "success",
-                "username" => $user->username,
+                "username" => $user->websitename,
                 'authToken' =>  $user->createToken('AuthToken')->plainTextToken,
                 "userId"=>$userId);
 
@@ -162,7 +162,7 @@ class LoginController extends Controller
                 "message" => "Login Successful",
                 "status" => "success",
                 // "test" => "test",
-                "username"=>$user->username,
+                "username"=>$user->websitename,
                 'authToken' =>  $user->createToken('AuthToken')->plainTextToken,
                 "userId"=>$userId);
 
