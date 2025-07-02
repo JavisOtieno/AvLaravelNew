@@ -667,7 +667,7 @@
                 </a>
               </li>
                 <li class="nav-main-item">
-                <a class="nav-main-link" target="_blank" href="{{ 'https://'.auth()->user()->websitename.'.av.ke' }}">
+                <a class="nav-main-link" target="_blank" href="/contact">
                   <i class="nav-main-link-icon si si-address-book"></i>
                   <span class="nav-main-link-name">Contact</span>
                 </a>
