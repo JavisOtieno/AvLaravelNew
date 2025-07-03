@@ -28,22 +28,22 @@
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-name">Name</label>
-                      <input type="text" class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Enter your name.." value="{{$user['name']}}">
+                      <input type="text" readonly class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Enter your name.." value="{{$user['name']}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-email">Email Address</label>
-                      <input type="email" class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Enter your email.." value="{{$user['email']}}">
+                      <input type="email" readonly class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Enter your email.." value="{{$user['email']}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-phone">Phone</label>
-                      <input type="tel" class="form-control" id="one-profile-edit-phone" name="one-profile-edit-phone" placeholder="Enter your phone" value="{{$user['phone']}}">
+                      <input type="tel" readonly class="form-control" id="one-profile-edit-phone" name="one-profile-edit-phone" placeholder="Enter your phone" value="{{$user['phone']}}">
                     </div>
                    
-                    <div class="mb-4">
+                    {{-- <div class="mb-4">
                       <button type="submit" class="btn btn-alt-primary">
                         Update
                       </button>
-                    </div>
+                    </div> --}}
                   </div>
                 </div>
               </form>
