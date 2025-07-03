@@ -41,9 +41,12 @@ class UserController extends Controller
         // return view('admin.profile');
     }
     public function showContact(){
-        // $user= User::find(auth()->user()->id);
-        // return view('admin.profile', compact('user'));
-        return view('admin.contact');
+        if(auth()->user()->top_user_id){
+            $user= User::find(auth()->user()->top_user_id);
+        }else{
+            $user= User::find(4135);
+        }
+        return view('admin.contact', compact('user'));
     }
 
 
