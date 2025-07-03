@@ -668,7 +668,7 @@
               </li>
                 <li class="nav-main-item">
                 <a class="nav-main-link"  href="/admincontact">
-                  <i class="nav-main-link-icon si si-circle-user"></i>
+                  <i class="nav-main-link-icon si si-user"></i>
                   <span class="nav-main-link-name">Contact</span>
                 </a>
               </li>
