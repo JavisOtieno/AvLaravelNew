@@ -36,9 +36,9 @@ class UserController extends Controller
     return view('admin.signup',compact('user'));
     }
     public function showProfile(){
-        $user= User::find(auth()->user()->id);
-        // return view('admin.profile', compact('user'));
-        return view('admin.profile');
+        $user= auth()->user();
+        return view('admin.profile', compact('user'));
+        // return view('admin.profile');
     }
     public function showContact(){
         // $user= User::find(auth()->user()->id);
