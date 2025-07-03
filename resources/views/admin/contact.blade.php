@@ -24,7 +24,7 @@
                   <div class="col-lg-8 col-xl-5">
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-username">Website name</label>
-                      <input type="text" class="form-control" id="one-profile-edit-username" name="one-profile-edit-username" placeholder="Enter your username.." value="{{$user['websitename']}}">
+                      <input type="text" readonly class="form-control" id="one-profile-edit-username" name="one-profile-edit-username" placeholder="Enter your username.." value="{{$user['websitename']}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-name">Name</label>
