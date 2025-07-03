@@ -667,7 +667,7 @@
                 </a>
               </li>
                 <li class="nav-main-item">
-                <a class="nav-main-link" target="_blank" href="/contact">
+                <a class="nav-main-link"  href="/admincontact">
                   <i class="nav-main-link-icon si si-address-book"></i>
                   <span class="nav-main-link-name">Contact</span>
                 </a>
