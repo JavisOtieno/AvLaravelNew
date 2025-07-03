@@ -54,6 +54,7 @@ Route::get('/admincustomers', [CustomerController::class,'index']);
 Route::get('/adminpayments', [PaymentController::class,'showUserPayments']);
 
 Route::get('/adminprofile', [UserController::class,'showProfile']);
+Route::get('/admincontact', [UserController::class,'showContact']);
 
 Route::get('/logout', [UserController::class,'logout']);
 
