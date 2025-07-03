@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ContactController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\LoginController;
@@ -28,6 +29,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware(['auth:sanctum'])->group(function(){
 
 Route::get('/profile', [ProfileController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'showContact']);
 
 Route::get('/orders', [OrderController::class, 'index']);
 Route::get('/order/{id}', [OrderController::class, 'showOrder']);
