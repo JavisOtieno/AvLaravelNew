@@ -26,7 +26,7 @@ class ProductController extends Controller
 
     public function updateProductPrices(){
         // $products = Product::all();
-        $productlinks = Productlink::with('product')->take(10)->get(); // Eager load to optimize performance
+        $productlinks = Productlink::with('product')->take(20)->get(); // Eager load to optimize performance
 
         foreach ($productlinks as $productlink) {
             $product = $productlink->product;
