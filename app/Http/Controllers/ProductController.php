@@ -29,7 +29,7 @@ class ProductController extends Controller
         $productlinks =  Productlink::with('product')
             ->whereNotNull('product_id')
             ->orderBy('id', 'desc')
-            ->take(20)
+            // ->take(20)
             ->get(); // Eager load to optimize performance
 
         foreach ($productlinks as $productlink) {
