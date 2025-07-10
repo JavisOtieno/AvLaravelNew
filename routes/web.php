@@ -43,6 +43,11 @@ Route::get('/buynow/{id}', [HomePageController::class,'buyProduct']);
 Route::get('/ordersuccess/{id}', [HomePageController::class,'orderSuccess']);
 Route::post('/submitbuynow', [HomePageController::class,'submitBuyProduct']);
 
+
+//temporary admin bound links
+Route::post('/updateprices', [ProductController::class,'updateProductPrices']);
+//temporary admin bound links
+
 });
 
 Route::middleware(['authCustomCheck'])->group(function(){
