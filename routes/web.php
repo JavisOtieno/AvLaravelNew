@@ -44,9 +44,7 @@ Route::get('/ordersuccess/{id}', [HomePageController::class,'orderSuccess']);
 Route::post('/submitbuynow', [HomePageController::class,'submitBuyProduct']);
 
 
-//temporary admin bound links
-Route::get('/updateprices', [ProductController::class,'updateProductPrices']);
-//temporary admin bound links
+
 
 });
 

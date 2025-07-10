@@ -49,6 +49,10 @@ Route::get('/payment/{id}', [PaymentController::class, 'showPayment']);
 
 });
 
+//temporary admin bound links
+Route::get('/updateprices', [ProductController::class,'updateProductPrices']);
+//temporary admin bound links
+
 
 Route::post('/login', [LoginController::class,'doLogin']);
 Route::post('/signup', [LoginController::class,'doSignup']);
