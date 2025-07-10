@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Productlink;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -25,16 +26,16 @@ class ProductController extends Controller
 
     public function updateProductPrices(){
         // $products = Product::all();
-        $products = Product::with('productLink')->take(10)->get(); // Eager load to optimize performance
+        $productlinks = Productlink::with('product')->take(10)->get(); // Eager load to optimize performance
 
-        foreach ($products as $product) {
-            $link = $product->productLink;
+        foreach ($productlinks as $productlink) {
+            $product = $productlink->product;
 
-            if ($link && isset($link->price)) {
-                $product->price = $link->price;
+            if ($product && isset($productlink->price)) {
+                $product->price = $productlink->price;
                 $product->save();
 
-                echo "✅ Updated Product ID {$product->id} with Price {$link->price}\n";
+                echo "✅ Updated Product ID {$product->id} with Price {$productlink->price}\n";
             } else {
                 echo "❌ No valid productLink or missing price for Product ID {$product->id}\n";
             }
