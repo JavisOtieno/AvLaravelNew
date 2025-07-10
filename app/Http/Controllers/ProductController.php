@@ -23,6 +23,25 @@ class ProductController extends Controller
         return view('admin.products',compact('products','categories'));
     }
 
+    public function updateProductPrices(){
+        // $products = Product::all();
+        $products = Product::with('productLink')->get(); // Eager load to optimize performance
+
+        foreach ($products as $product) {
+            $link = $product->productLink;
+
+            if ($link && isset($link->price)) {
+                $product->price = $link->price;
+                $product->save();
+
+                echo "✅ Updated Product ID {$product->id} with Price {$link->price}\n";
+            } else {
+                echo "❌ No valid productLink or missing price for Product ID {$product->id}\n";
+            }
+        }
+        
+    }
+
 
 
 }
