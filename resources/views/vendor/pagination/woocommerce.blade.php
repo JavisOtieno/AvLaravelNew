@@ -25,7 +25,13 @@
                         @if ($page == $paginator->currentPage())
                             <li><span class="page-numbers current">{{ $page }}</span></li>
                         @else
-                            <li><a class="page-numbers" href="{{ $url }}">{{ $page }}</a></li>
+                        <li>
+                            <a class="page-numbers" href="{{ $url }}{{ http_build_query(request()->except('page')) ? (Str::contains($url, '?') ? '&' : '?') . http_build_query(request()->except('page')) : '' }}">
+                                {{ $page }}
+                            </a>
+                        </li>
+
+                            {{-- <li><a class="page-numbers" href="{{ $url }}">{{ $page }}</a></li> --}}
                         @endif
                     @endforeach
                 @endif
