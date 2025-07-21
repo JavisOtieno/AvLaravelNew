@@ -34,7 +34,7 @@ Route::get('/contact', [ContactController::class, 'showContact']);
 Route::get('/orders', [OrderController::class, 'index']);
 Route::get('/order/{id}', [OrderController::class, 'showOrder']);
 
-Route::get('/products', [ProductController::class, 'index']);
+// Route::get('/products', [ProductController::class, 'index']);
 Route::get('/product/{id}', [ProductController::class, 'showProduct']);
 
 Route::get('/customers', [CustomerController::class, 'index']);
@@ -48,6 +48,10 @@ Route::get('/payment/{id}', [PaymentController::class, 'showPayment']);
 
 
 });
+
+//products outside for openai responses
+Route::get('/products', [ProductController::class, 'index']);
+
 
 //temporary admin bound links
 Route::get('/updateprices', [ProductController::class,'updateProductPrices']);
