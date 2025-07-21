@@ -6,9 +6,13 @@
                 <li><span class="page-numbers disabled" aria-disabled="true">@lang('pagination.previous')</span></li>
             @else
                 <li>
-                    <a class="page-numbers" href="{{ $paginator->previousPageUrl() }}" rel="prev">
+                    {{-- <a class="page-numbers" href="{{ $paginator->previousPageUrl() }}" rel="prev">
+                        @lang('pagination.previous')
+                    </a> --}}
+                    <a class="page-numbers" href="{{ $paginator->previousPageUrl() }}{{ http_build_query(request()->except('page')) ? (Str::contains($paginator->previousPageUrl(), '?') ? '&' : '?') . http_build_query(request()->except('page')) : '' }}" rel="prev">
                         @lang('pagination.previous')
                     </a>
+
                 </li>
             @endif
 
@@ -40,9 +44,13 @@
             {{-- Next Page Link --}}
             @if ($paginator->hasMorePages())
             <li>
-                <a class="page-numbers" href="{{ $paginator->nextPageUrl() }}" rel="next">
+                {{-- <a class="page-numbers" href="{{ $paginator->nextPageUrl() }}" rel="next">
+                    @lang('pagination.next')
+                </a> --}}
+                <a class="page-numbers" href="{{ $paginator->nextPageUrl() }}{{ http_build_query(request()->except('page')) ? (Str::contains($paginator->nextPageUrl(), '?') ? '&' : '?') . http_build_query(request()->except('page')) : '' }}" rel="next">
                     @lang('pagination.next')
                 </a>
+
             </li>
             @else
             <li><span class="page-numbers disabled" aria-disabled="true">@lang('pagination.next')</span></li>
