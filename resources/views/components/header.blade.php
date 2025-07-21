@@ -816,7 +816,7 @@
                 </ul>
             </li>
         </ul>
-        <form class="navbar-search" method="post" action="/search">
+        <form class="navbar-search" method="get" action="/search">
             <label class="sr-only screen-reader-text" for="search">Search for:</label>
             <div class="input-group">
                 @csrf
