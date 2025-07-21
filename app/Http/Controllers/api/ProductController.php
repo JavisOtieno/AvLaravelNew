@@ -14,7 +14,7 @@ class ProductController extends Controller
     
         public function index(){
 
-        $userid = auth()->user()->id;
+        // $userid = auth()->user()->id;
 
         $products = Product::with('category')->orderBy('created_at', 'desc')->get();
 
