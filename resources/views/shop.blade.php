@@ -384,7 +384,7 @@
                                                                 {{-- <del><span class="amount">&#036;2,299.00</span></del> --}}
                                                             </span>
                                                         </span>
-                                                        <a rel="nofollow" href="single-product.html" class="button add_to_cart_button">Add to cart</a>
+                                                        <a rel="nofollow" href="/product/{{$product['id']}}" class="button add_to_cart_button">Add to cart</a>
                                                     </div><!-- /.price-add-to-cart -->
 
                                                     <div class="hover-area">
