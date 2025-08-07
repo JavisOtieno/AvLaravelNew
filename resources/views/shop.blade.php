@@ -360,7 +360,7 @@
                                             <div class="product-outer">
                                                 <div class="product-inner">
                                                     <span class="loop-product-categories"><a href="product-category.html" rel="tag">{{$product['category']['title']}}</a></span>
-                                                    <a href="product/{{$product['id']}}">
+                                                    <a href="/product/{{$product['id']}}">
                                                         <h3>{{$product['name']}}</h3>
                                                         <div class="product-thumbnail">
                                                             @php
@@ -408,7 +408,7 @@
                                             <div class="product-outer">
                                                 <div class="product-inner">
                                                     <span class="loop-product-categories"><a href="product-category.html" rel="tag">Smartphones</a></span>
-                                                    <a href="product/1">
+                                                    <a href="/product/1">
                                                         <h3>Notebook Black Spire V Nitro  VN7-591G</h3>
                                                         <div class="product-thumbnail">
 
