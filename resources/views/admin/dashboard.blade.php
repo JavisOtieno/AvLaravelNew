@@ -148,7 +148,7 @@
           <!-- END Top Products and Latest Orders -->
 
                     <!-- Orders Overview -->
-                    <div class="block block-rounded">
+                    {{-- <div class="block block-rounded">
                       <div class="block-header block-header-default">
                         <h3 class="block-title">Orders Overview</h3>
                         <div class="block-options">
@@ -162,7 +162,7 @@
                         <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
                         <div style="height: 400px;"><canvas id="js-chartjs-overview"></canvas></div>
                       </div>
-                    </div>
+                    </div> --}}
                     <!-- END Orders Overview -->
         </div>
         <!-- END Page Content -->
