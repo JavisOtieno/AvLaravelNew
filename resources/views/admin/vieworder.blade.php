@@ -17,9 +17,9 @@
               <form action="be_pages_projects_edit.html" method="POST" enctype="multipart/form-data" onsubmit="return false;">
                 <div class="row push">
                   <div class="col-lg-4">
-                    <p class="fs-sm text-muted">
+                    {{-- <p class="fs-sm text-muted">
                         View the details of your order below.
-                    </p>
+                    </p> --}}
                   </div>
                   <div class="col-lg-8 col-xl-5">
                     {{-- <div class="mb-4">
