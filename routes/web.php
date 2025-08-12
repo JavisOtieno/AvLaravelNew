@@ -58,8 +58,11 @@ Route::get('/adminpayments', [PaymentController::class,'showUserPayments']);
 
 Route::get('/adminprofile', [UserController::class,'showProfile']);
 Route::get('/admincontact', [UserController::class,'showContact']);
-Route::get('/vieworder/{id}', [OrderController::class,'viewOrder']);
 
+Route::get('/vieworder/{id}', [OrderController::class,'viewOrder']);
+Route::get('/viewpayment/{id}', [PaymentController::class,'viewPayment']);
+Route::get('/viewproduct/{id}', [ProductController::class,'viewProduct']);
+Route::get('/viewcustomer/{id}', [CustomerController::class,'viewCustomer']);
 
 Route::get('/logout', [UserController::class,'logout']);
 

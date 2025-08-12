@@ -13,4 +13,13 @@ class CustomerController extends Controller
         $customers = Customer::where('user_id', $user_id)->orderBy('created_at', 'desc')->get();
         return view('admin.customers',compact('customers'));
     }
+
+    public function viewCustomer($id){
+        $customer = Customer::find($id);
+        if(!$customer){
+            return redirect()->back()->with('error', 'Customer not found');
+        }
+        return view('admin.viewcustomer',compact('customer'));
+    }
+    
 }

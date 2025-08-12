@@ -24,7 +24,13 @@ class ProductController extends Controller
         return view('admin.products',compact('products','categories'));
     }
 
-   
+    public function viewProduct($id){
+        $product = Product::find($id);
+        if(!$product){
+            return redirect()->back()->with('error', 'Product not found');
+        }
+        return view('admin.viewproduct',compact('product'));
+    }
 
 
 

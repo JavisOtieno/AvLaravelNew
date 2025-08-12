@@ -21,5 +21,13 @@ class PaymentController extends Controller
             $cancelledpayments = Payment::where('user_id', $user_id)->where('status','cancelled')->count();
             return view('admin.payments',compact('payments', 'allpayments','completepayments','processingpayments','cancelledpayments'));
         }
+
+    public function viewPayment($id){
+        $payment = Payment::find($id);
+        if(!$payment){
+            return redirect()->back()->with('error', 'Payment not found');
+        }
+        return view('admin.viewpayment',compact('payment'));
+    }
     
 }
