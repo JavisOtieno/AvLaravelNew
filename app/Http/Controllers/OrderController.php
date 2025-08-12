@@ -25,4 +25,13 @@ class OrderController extends Controller
         $user = User::find(1);
         return view('trackyourorder',compact('user'));
     }
+
+    public function viewOrder($id){
+        $order = Order::find($id);
+        if(!$order){
+            return redirect()->back()->with('error', 'Order not found');
+        }
+        return view('admin.vieworder',compact('order'));
+    }
+
 }

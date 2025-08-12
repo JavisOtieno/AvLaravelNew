@@ -109,7 +109,7 @@
                       <span class="text-muted fs-sm">{{$order['created_at']}}</span>
                     </td>
                     <td class="text-center">
-                      <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
+                      <a class="btn btn-sm btn-alt-secondary" href="/vieworder/{{$order['id']}}" data-bs-toggle="tooltip" title="View">
                         <i class="fa fa-fw fa-eye"></i>
                       </a>
                       {{-- <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
