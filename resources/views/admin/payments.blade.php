@@ -106,9 +106,9 @@
                       <a class="btn btn-sm btn-alt-secondary" href="be_pages_ecom_order.html" data-bs-toggle="tooltip" title="View">
                         <i class="fa fa-fw fa-eye"></i>
                       </a>
-                      <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
+                      {{-- <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)" data-bs-toggle="tooltip" title="Delete">
                         <i class="fa fa-fw fa-times text-danger"></i>
-                      </a>
+                      </a> --}}
                     </td>
                   </tr>
                   @endforeach
