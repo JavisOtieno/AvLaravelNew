@@ -36,7 +36,7 @@
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-phone">Status</label>
-                      <input type="text" readonly class="form-control" id="one-profile-edit-phone" name="one-profile-edit-phone" placeholder="Status" value="{{$order['status']}}">
+                      <input type="text" readonly class="form-control" id="one-profile-edit-phone" name="one-profile-edit-phone" placeholder="Status" value="{{ucfirst($order['status'])}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-phone">Date and Time</label>

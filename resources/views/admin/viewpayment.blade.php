@@ -26,17 +26,17 @@
                       <label class="form-label" for="one-profile-edit-username">Website name</label>
                       <input type="text" readonly class="form-control" id="one-profile-edit-username" name="one-profile-edit-username" placeholder="Enter your username.." value="{{$user['websitename']}}">
                     </div> --}}
-                    <div class="mb-4">
+                    {{-- <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-name">Payment Name</label>
                       <input type="text" readonly class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Name" value="{{$payment['name']}}">
-                    </div>
+                    </div> --}}
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-email">Payment Total</label>
                       <input type="text" readonly class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Total" value="{{$payment['total']}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-email">Payment Status</label>
-                      <input type="text" readonly class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Status" value="{{$payment['status']}}">
+                      <input type="text" readonly class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Status" value="{{ucfirst($payment['status'])}}">
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-phone">Date and Time</label>
