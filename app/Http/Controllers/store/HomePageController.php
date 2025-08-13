@@ -213,7 +213,7 @@ class HomePageController extends Controller
         $categories = Category::where('type', 'main')
         ->with('children')
         ->get();
-        return view('contact','firstcategories','maincategories','categories');
+        return view('contact',compact('firstcategories','maincategories','categories'));
         }
 
 

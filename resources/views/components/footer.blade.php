@@ -408,8 +408,9 @@
                                 <h4 class="widget-title">Customer Care</h4>
                                 <div class="menu-footer-menu-3-container">
                                     <ul id="menu-footer-menu-3" class="menu">
-                                        <li class="menu-item"><a href="single-product.html">My Account</a></li>
-                                        <li class="menu-item"><a href="single-product.html">Track your Order</a></li>
+                                        <li class="menu-item"><a href="#">Contact Us</a></li>
+                                        <li class="menu-item"><a href="#">My Account</a></li>
+                                        <li class="menu-item"><a href="#">Track your Order</a></li>
                                         {{-- <li class="menu-item"><a href="single-product.html">Wishlist</a></li>
                                         <li class="menu-item"><a href="single-product.html">Customer Service</a></li>
                                         <li class="menu-item"><a href="single-product.html">Returns/Exchange</a></li>
