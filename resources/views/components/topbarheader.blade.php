@@ -56,7 +56,7 @@
                             {{-- {{ $websiteName}} --}}
                             {{-- <li class="menu-item animate-dropdown"><a title="Track Your Order" href="/trackyourorder"><i class="ec ec-transport"></i>Track Your Order</a></li> --}}
                             <li class="menu-item animate-dropdown"><a title="Shop" href="/"><i class="ec ec-shopping-bag"></i>Shop</a></li>
-                            <li class="menu-item animate-dropdown"><a title="My Account" href="/account"><i class="ec ec-user"></i>My Account</a></li>
+                            {{-- <li class="menu-item animate-dropdown"><a title="My Account" href="/account"><i class="ec ec-user"></i>My Account</a></li> --}}
                         </ul>
                     </nav>
                 </div>
