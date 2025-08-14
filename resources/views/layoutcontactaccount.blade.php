@@ -1,7 +1,13 @@
 @include('components/topbarheader')
 
 <header id="masthead" class="site-header header-v1">
-  
+    <div class="container">
+        <div class="row">
+
+       
+
+        </div><!-- /.row -->
+    </div>
 </header><!-- #masthead -->
 
 <nav class="navbar navbar-primary navbar-full">
