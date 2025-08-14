@@ -28,7 +28,7 @@
     @if(Str::contains(request()->path(),'product'))
     <body class="single-product full-width">
     @elseif (Str::contains(request()->path(),'contact'))
-    <body class=" page-template-default contact-v1">
+    <body class="left-sidebar">
     @elseif (Str::contains(request()->path(),'account'))
     <body class="page home page-template-default">
     @else
