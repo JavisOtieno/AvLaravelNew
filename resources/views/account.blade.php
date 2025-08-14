@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouthome')
 @section('content')
 
 <div id="content" class="site-content" tabindex="-1">
