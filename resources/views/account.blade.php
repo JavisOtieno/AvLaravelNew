@@ -71,6 +71,7 @@
                                                                 <li>Keep a record of all your purchases</li>
                                                             </ul>
                                                         </div>
+                                                        </div>
 
                                                     </form>
 
