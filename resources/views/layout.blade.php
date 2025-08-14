@@ -2,5 +2,5 @@
 
 @yield('content')
 
-@include('components/footer')
+
 {{-- test --}}
