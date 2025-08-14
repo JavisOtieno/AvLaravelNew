@@ -78,7 +78,7 @@
                                             <div class="row">
                                                 
                                                     <div class="row">
-                                                        @foreach ($categories->chunk(3) as $chunk)
+                                                        @foreach ($categories->chunk(2) as $chunk)
                                                         <div class="wpb_column vc_column_container col-sm-4">
                                                             <div class="vc_column-inner ">
                                                                 <div class="wpb_wrapper">
