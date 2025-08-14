@@ -1,7 +1,5 @@
 {{-- @include('components/header') --}}
-@include('components/topbarheader')
-
-{{-- <body class="left-sidebar"> --}}
+@include('components/header')
 
 @yield('content')
 
