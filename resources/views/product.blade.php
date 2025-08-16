@@ -712,7 +712,7 @@
                                     </div>
                                 </div><!-- /.woocommerce-tabs -->
 
-                                <div class="related products">
+                                {{-- <div class="related products">
                                     <h2>Related Products</h2>
 
                                     <ul class="products columns-5">
@@ -838,7 +838,7 @@
                                             </div><!-- /.product-outer -->
                                         </li>
                                     </ul><!-- /.products -->
-                                </div><!-- /.related -->
+                                </div><!-- /.related --> --}}
                             </div><!-- /.product -->
 
                         </main><!-- /.site-main -->
