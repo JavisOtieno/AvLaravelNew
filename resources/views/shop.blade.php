@@ -380,7 +380,13 @@
                                                     <div class="price-add-to-cart">
                                                         <span class="price">
                                                             <span class="electro-price">
-                                                                <ins><span class="amount">{{"KSh ".number_format($product['price'])}}</span></ins>
+                                                                <ins>
+                                                                    <span class="amount">
+                                                                        {{ $product['price'] > 0 ? 'KSh '.number_format($product['price']) : '' }}
+                                                                    </span>
+                                                                </ins>
+
+                                                                {{-- <ins><span class="amount">{{"KSh ".number_format($product['price'])}}</span></ins> --}}
                                                                 {{-- <del><span class="amount">&#036;2,299.00</span></del> --}}
                                                             </span>
                                                         </span>
