@@ -58,6 +58,7 @@ Route::get('/adminpayments', [PaymentController::class,'showUserPayments']);
 
 Route::get('/adminprofile', [UserController::class,'showProfile']);
 Route::get('/admincontact', [UserController::class,'showContact']);
+Route::get('/adminwebsite', [UserController::class,'showWebsite']);
 
 Route::get('/vieworder/{id}', [OrderController::class,'viewOrder']);
 Route::get('/viewpayment/{id}', [PaymentController::class,'viewPayment']);

@@ -49,6 +49,15 @@ class UserController extends Controller
         return view('admin.contact', compact('user'));
     }
 
+    public function showWebsite(){
+        
+            $user= User::find(auth()->user()->id);
+
+    
+       
+        return view('admin.website', compact('user'));
+    }
+
 
 
     public function doSignup(Request $request){

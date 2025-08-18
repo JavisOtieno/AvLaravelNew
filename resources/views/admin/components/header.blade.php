@@ -661,7 +661,7 @@
                 </a>
               </li>
                <li class="nav-main-item">
-                <a class="nav-main-link" target="_blank" href="{{ 'https://'.auth()->user()->websitename.'.av.ke' }}">
+                <a class="nav-main-link" target="_blank" href="/adminwebsite">
                   <i class="nav-main-link-icon si si-screen-desktop"></i>
                   <span class="nav-main-link-name">Website</span>
                 </a>
