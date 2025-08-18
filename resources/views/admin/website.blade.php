@@ -41,10 +41,10 @@
                    
                     <div class="mb-4"
                     >
-                    <a href="{{'https://'.auth()->user()->websitename.'.av.ke'}}" target="_blank" >
-                      <button type="submit" class="btn btn-alt-primary">
+                    <a href="{{'https://'.auth()->user()->websitename.'.av.ke'}}" target="_blank" class="btn btn-alt-primary">
+                      {{-- <button type="submit" class="btn btn-alt-primary"> --}}
                         Open
-                      </button>
+                      {{-- </button> --}}
                     </a>
                     </div>
                   </div>
