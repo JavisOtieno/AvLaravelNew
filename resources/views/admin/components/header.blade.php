@@ -663,7 +663,7 @@
                <li class="nav-main-item">
                 <a class="nav-main-link" href="/adminwebsite">
                   <i class="nav-main-link-icon si si-screen-desktop"></i>
-                  <span class="nav-main-link-name">Website</span>
+                  <span class="nav-main-link-name">Website Link</span>
                 </a>
               </li>
                 <li class="nav-main-item">

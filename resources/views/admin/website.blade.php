@@ -30,6 +30,16 @@
                       <label class="form-label" for="one-profile-edit-name">Link</label>
                       <input type="text" readonly class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Enter your name.." value="{{'https://'.auth()->user()->websitename.'.av.ke'}}">
                     </div>
+                    <div class="mb-4">
+                <label class="form-label" for="one-profile-edit-name">Link</label>
+                <div class="input-group">
+                  <input type="text" readonly class="form-control" id="website-link" 
+                        value="{{'https://'.auth()->user()->websitename.'.av.ke'}}">
+                  <button type="button" class="btn btn-alt-success" onclick="copyLink()">
+                    Copy
+                  </button>
+                </div>
+              </div>
                     {{-- <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-email">Email Address</label>
                       <input type="email" readonly class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Enter your email.." value="{{$user['email']}}">
@@ -184,5 +194,22 @@
         <!-- END Page Content -->
       </main>
       <!-- END Main Container -->
+
+      @push('scripts')
+<script>
+  document.getElementById("copy-btn").addEventListener("click", function() {
+    let copyText = document.getElementById("website-link");
+    navigator.clipboard.writeText(copyText.value)
+      .then(() => {
+        // replace alert with nicer UI if you want
+        alert("Link copied: " + copyText.value);
+      })
+      .catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+  });
+</script>
+@endpush
+
 
 @endsection
