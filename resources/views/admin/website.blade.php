@@ -30,16 +30,17 @@
                       <label class="form-label" for="one-profile-edit-name">Link</label>
                       <input type="text" readonly class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Enter your name.." value="{{'https://'.auth()->user()->websitename.'.av.ke'}}">
                     </div>
-                    <div class="mb-4">
-                <label class="form-label" for="one-profile-edit-name">Link</label>
-                <div class="input-group">
-                  <input type="text" readonly class="form-control" id="website-link" 
-                        value="{{'https://'.auth()->user()->websitename.'.av.ke'}}">
-                  <button type="button" class="btn btn-alt-success" onclick="copyLink()">
-                    Copy
-                  </button>
-                </div>
-              </div>
+       <div class="mb-4">
+  <label class="form-label" for="one-profile-edit-name">Link</label>
+  <div class="input-group">
+    <input type="text" readonly class="form-control" id="website-link" 
+           value="{{ 'https://' . auth()->user()->websitename . '.av.ke' }}">
+    <button type="button" class="btn btn-alt-success" id="copy-btn">
+      Copy
+    </button>
+  </div>
+</div>
+
                     {{-- <div class="mb-4">
                       <label class="form-label" for="one-profile-edit-email">Email Address</label>
                       <input type="email" readonly class="form-control" id="one-profile-edit-email" name="one-profile-edit-email" placeholder="Enter your email.." value="{{$user['email']}}">
@@ -195,7 +196,7 @@
       </main>
       <!-- END Main Container -->
 
-      @push('scripts')
+      {{-- @push('scripts') --}}
 <script>
   document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("copy-btn").addEventListener("click", function() {
@@ -211,7 +212,7 @@
   });
 });
 </script>
-@endpush
+{{-- @endpush --}}
 
 
 @endsection
