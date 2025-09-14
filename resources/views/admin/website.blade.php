@@ -204,12 +204,36 @@
     navigator.clipboard.writeText(copyText.value)
       .then(() => {
         // replace alert with nicer UI if you want
-        alert("Link copied: " + copyText.value);
+        // alert("Link copied: " + copyText.value);
+      await navigator.clipboard.writeText(input.value);
+      // nice fallback: small transient message
+      showCopiedToast('Link copied to clipboard');
       })
       .catch(err => {
         console.error("Failed to copy: ", err);
+            
+        alert('Could not copy. Select and press Ctrl+C.');
       });
   });
+    function showCopiedToast(msg) {
+    // minimal toast without libs
+    const t = document.createElement('div');
+    t.textContent = msg;
+    Object.assign(t.style, {
+      position: 'fixed',
+      right: '20px',
+      bottom: '20px',
+      padding: '8px 12px',
+      background: '#111',
+      color: '#fff',
+      borderRadius: '6px',
+      zIndex: 9999,
+      opacity: '0.95'
+    });
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 2000);
+  }
+});
 });
 </script>
 {{-- @endpush --}}
