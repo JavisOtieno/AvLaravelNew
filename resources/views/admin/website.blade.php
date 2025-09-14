@@ -199,21 +199,19 @@
       {{-- @push('scripts') --}}
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById("copy-btn").addEventListener("click", function() {
-    let copyText = document.getElementById("website-link");
-    navigator.clipboard.writeText(copyText.value)
-      .then(() => {
-        // replace alert with nicer UI if you want
-        // alert("Link copied: " + copyText.value);
+  const btn = document.getElementById('copy-btn');
+  const input = document.getElementById('website-link');
+  if (!btn || !input) return;
+
+  btn.addEventListener('click', async function () {
+    try {
       await navigator.clipboard.writeText(input.value);
       // nice fallback: small transient message
       showCopiedToast('Link copied to clipboard');
-      })
-      .catch(err => {
-        console.error("Failed to copy: ", err);
-            
-        alert('Could not copy. Select and press Ctrl+C.');
-      });
+    } catch (err) {
+      console.error('Copy failed', err);
+      alert('Could not copy. Select and press Ctrl+C.');
+    }
   });
     function showCopiedToast(msg) {
     // minimal toast without libs
