@@ -197,6 +197,7 @@
 
       @push('scripts')
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
   document.getElementById("copy-btn").addEventListener("click", function() {
     let copyText = document.getElementById("website-link");
     navigator.clipboard.writeText(copyText.value)
@@ -208,6 +209,7 @@
         console.error("Failed to copy: ", err);
       });
   });
+});
 </script>
 @endpush
 
