@@ -232,7 +232,7 @@
     setTimeout(() => t.remove(), 2000);
   }
 });
-});
+
 </script>
 {{-- @endpush --}}
 
