@@ -26,10 +26,7 @@
                       <label class="form-label" for="one-profile-edit-username">Website name</label>
                       <input type="text" readonly class="form-control" id="one-profile-edit-username" name="one-profile-edit-username" placeholder="Enter your username.." value="{{$user['websitename']}}">
                     </div>
-                    <div class="mb-4">
-                      <label class="form-label" for="one-profile-edit-name">Link</label>
-                      <input type="text" readonly class="form-control" id="one-profile-edit-name" name="one-profile-edit-name" placeholder="Enter your name.." value="{{'https://'.auth()->user()->websitename.'.av.ke'}}">
-                    </div>
+                 
        <div class="mb-4">
   <label class="form-label" for="one-profile-edit-name">Link</label>
   <div class="input-group">
