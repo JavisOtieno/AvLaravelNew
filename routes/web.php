@@ -1,20 +1,21 @@
 <?php
 
+use FFMpeg\FFMpeg;
+use App\Models\Product;
+use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Response;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaymentController;
+
+//video convert test
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\store\HomePageController;
-
-//video convert test
-use FFMpeg\FFMpeg;
-use FFMpeg\Format\Video\X264;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Response;
 
 
 /*
@@ -42,6 +43,25 @@ Route::get('/product/{id}', [HomePageController::class,'showProduct']);
 Route::get('/buynow/{id}', [HomePageController::class,'buyProduct']);
 Route::get('/ordersuccess/{id}', [HomePageController::class,'orderSuccess']);
 Route::post('/submitbuynow', [HomePageController::class,'submitBuyProduct']);
+
+
+Route::get('/sitemap.xml', function() {
+    $products = Product::orderBy('updated_at','desc')->get();
+    $xml = new \SimpleXMLElement('<?xml version="1.0" encoding="UTF-8"?><urlset/>');
+    $xml->addAttribute('xmlns','http://www.sitemaps.org/schemas/sitemap/0.9');
+
+    $url = $xml->addChild('url');
+    $url->addChild('loc', route('home'));
+    $url->addChild('lastmod', now()->toAtomString());
+
+    foreach ($products as $post) {
+        $u = $xml->addChild('url');
+        $u->addChild('loc', route('product', $post->id));
+        $u->addChild('lastmod', $post->updated_at->toAtomString());
+    }
+
+    return response($xml->asXML(), 200, ['Content-Type' => 'application/xml']);
+});
 
 
 
