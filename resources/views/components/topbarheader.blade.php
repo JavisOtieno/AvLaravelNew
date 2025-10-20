@@ -6,6 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="XpV6vYmMapjchSESkrJQPe2KkiwCnx1U9loM81KHFaQ" />
 
         <title>{{ucfirst(request()->get('user')['websitename'])}} &#8211; Electronics Store</title>
 
