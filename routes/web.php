@@ -33,13 +33,13 @@ Route::middleware(['extract.website.name'])->group(function () {
 // Route::get('/', [HomePageController::class,'index']);
 // Route::get('/shop', [HomePageController::class,'shop']);
 
-Route::get('/', [HomePageController::class,'shop']);
+Route::get('/', [HomePageController::class,'shop'])->name('home');
 Route::get('/category/{category}', [HomePageController::class,'showCategory']);
 Route::get('/search', [HomePageController::class,'searchProducts']);
 Route::get('/account', [HomePageController::class,'showCustomerAccount']);
 Route::get('/contact', [HomePageController::class,'contact']);
 // Route::get('/trackyourorder', [OrderController::class,'trackOrder']);
-Route::get('/product/{id}', [HomePageController::class,'showProduct']);
+Route::get('/product/{id}', [HomePageController::class,'showProduct'])->name('product');
 Route::get('/buynow/{id}', [HomePageController::class,'buyProduct']);
 Route::get('/ordersuccess/{id}', [HomePageController::class,'orderSuccess']);
 Route::post('/submitbuynow', [HomePageController::class,'submitBuyProduct']);
