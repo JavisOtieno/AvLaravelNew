@@ -57,7 +57,10 @@ Route::get('/sitemap.xml', function() {
     foreach ($products as $post) {
         $u = $xml->addChild('url');
         $u->addChild('loc', route('product', $post->id));
-        $u->addChild('lastmod', $post->updated_at->toAtomString());
+        $u->addChild('lastmod', 
+        // $post->updated_at->toAtomString()
+        now()->toAtomString()
+    );
     }
 
     return response($xml->asXML(), 200, ['Content-Type' => 'application/xml']);
