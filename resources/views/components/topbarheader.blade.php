@@ -21,6 +21,7 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,700italic,800,800italic,600italic,400italic,300italic' rel='stylesheet' type='text/css'>
 
         <link rel="shortcut icon" href="/assets/images/fav-icon.png">
+        <meta name="msvalidate.01" content="404560BD8C88EAE98AC83FAB6879E5EC" />
     </head>
     {{-- {{"pathhere".request()->path()}} --}}
 
