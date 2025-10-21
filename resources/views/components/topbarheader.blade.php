@@ -23,6 +23,18 @@
 
         <link rel="shortcut icon" href="/assets/images/fav-icon.png">
         <meta name="msvalidate.01" content="404560BD8C88EAE98AC83FAB6879E5EC" />
+
+        @php
+    $websiteName = ucfirst(request()->get('user')['websitename'] ?? '');
+        @endphp
+
+        @if($websiteName === 'Javytech')
+            <meta name="description" content="Javy Technologies — your trusted source for Cameras, Phones, Audio devices, TVs, Tablets, Computers, Games, and a wide range of Electronics and Accessories.">
+            <meta name="keywords" content="Javy Technologies, Cameras, Phones, Audio, TVs, Tablets, Computers, Games, Electronics, Accessories, Networking Accessories">
+            <meta property="og:title" content="Javy Technologies | Electronics, Phones & Accessories">
+            <meta property="og:description" content="Discover quality Cameras, Phones, TVs, Tablets, and more at Javy Technologies — your one-stop shop for top tech and electronics.">
+        @endif
+
     </head>
     {{-- {{"pathhere".request()->path()}} --}}
 
