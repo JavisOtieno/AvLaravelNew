@@ -28,7 +28,7 @@
     $websiteName = ucfirst(request()->get('user')['websitename'] ?? '');
         @endphp
 
-        @if($websiteName === 'Javytech')
+        @if($websiteName === 'javytech')
             <meta name="description" content="Javy Technologies — your trusted source for Cameras, Phones, Audio devices, TVs, Tablets, Computers, Games, and a wide range of Electronics and Accessories.">
             <meta name="keywords" content="Javy Technologies, Cameras, Phones, Audio, TVs, Tablets, Computers, Games, Electronics, Accessories, Networking Accessories">
             <meta property="og:title" content="Javy Technologies | Electronics, Phones & Accessories">
