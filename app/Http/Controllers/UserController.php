@@ -100,6 +100,9 @@ class UserController extends Controller
 
         // Log the user in
         Auth::login($user);
+        // ✅ Update login_date to current timestamp
+        $user->login_date = now();
+        $user->save();
 
         // Redirect the user to a dashboard or home page
         return redirect('admindashboard')->with('success', 'User created successfully. You are now logged in.');
@@ -124,6 +127,12 @@ public function doLogin(Request $request){
     if (Auth::attempt($credentials)) {
 
         $request->session()->regenerate();
+                // ✅ Update login_date to current timestamp
+        $user = Auth::user();
+        $user = User::find($user->id);
+        $user->login_date = now();
+        $user->save();
+
         return redirect()->intended('admindashboard');
 
     }
