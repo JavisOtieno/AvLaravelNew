@@ -360,7 +360,8 @@
 
                                         <div class="tab-pane active in panel entry-content wc-tab" id="tab-description">
                                             <div class="electro-description">
-                                                {!! $product['description'] !!}
+                                                {{-- {!! $product['description'] !!} --}}
+                                                {!! '' !!}
 
                                                 {{-- <h3>Perfectly Done</h3>
                                                 <p>Praesent ornare, ex a interdum consectetur, lectus diam sodales elit, vitae egestas est enim ornare nisl. Nullam in lectus nec sem semper viverra. In lobortis egestas massa. Nam nec massa nisi. Suspendisse potenti. Quisque suscipit vulputate dui quis volutpat. Ut id elit facilisis, feugiat est in, tempus lacus. Ut ultrices dictum metus, a ultricies ex vulputate ac. Ut id cursus tellus, non tempor quam. Morbi porta diam nisi, id finibus nunc tincidunt eu.</p>
