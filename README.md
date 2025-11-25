@@ -1,66 +1,228 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Av Laravel — README
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🕸️ Overview
 
-## About Laravel
+Av Laravel is the full-stack web platform that complements the FaveAndroid affiliate app. It provides:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* A **Blade-powered dashboard** for affiliates to manage products, track leads, view commissions, and personalize their storefronts.
+* A **customer-facing e-commerce platform** where shoppers browse affiliate storefronts, place orders, and complete payments.
+* RESTful API endpoints to connect mobile apps (FaveAndroid) or other clients.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This README covers project layout, installation, key features, API contract highlights, database schema, deployment, and recommended workflows.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🚀 Key Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* Affiliate dashboard (Blade + Bootstrap/Tailwind)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+  * Manage products, variants, prices, promo codes
+  * View leads and customer contact details
+  * Track commission states: pending → approved → paid
+  * Link management and short link generation for social sharing
+  * Analytics: Views, clicks, conversions, top products
+* Customer storefronts
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+  * Each affiliate has a personalized sub-path or subdomain (e.g., `av.ke/affiliate/{username}`)
+  * Full checkout flow (cart, address, shipping, payment)
+  * Order tracking and receipts (email + in-app)
+* Admin panel
 
-## Laravel Sponsors
+  * Global product management, affiliate onboarding, payouts, dispute resolution
+* API for mobile/web clients
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+  * Authentication (Laravel Sanctum or Passport)
+  * Referral tracking and commission attribution
+  * Webhooks for payment providers
+* Background processing
 
-### Premium Partners
+  * Queued jobs for emails, reconciliation, commission calculations
+  * Scheduler for payouts and reconciliations
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## 🧰 Tech Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* PHP 8.1+ with Laravel 10+
+* Blade templating for server-rendered dashboard
+* MySQL / PostgreSQL
+* Laravel Sanctum (or Passport) for API auth
+* Redis for cache & queue
+* Horizon for queue monitoring (optional)
+* Cashier / third-party integrations for payments (Stripe, M-Pesa via third-party package)
+* Nginx / Apache for the web server
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📁 Project Structure
 
-## Security Vulnerabilities
+```
+project-root/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+│   ├── migrations/
+│   ├── seeders/
+│   └── factories/
+├── resources/
+│   ├── views/            # Blade views: affiliate dashboard, storefront, emails
+│   ├── css/
+│   └── js/
+├── routes/
+│   ├── web.php           # Blade routes
+│   └── api.php           # API routes for mobile/web clients
+├── public/
+├── tests/
+└── README.md
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## ⚙️ Installation & Local Setup
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clone repository
+
+```bash
+git clone https://github.com/yourname/av-laravel.git
+cd av-laravel
+```
+
+2. Install PHP dependencies
+
+```bash
+composer install
+```
+
+3. Node dependencies and assets
+
+```bash
+npm install
+npm run dev
+```
+
+4. Environment
+
+* Copy `.env.example` → `.env`
+* Set DB, cache, queue, and payment provider keys
+
+5. Generate app key & run migrations
+
+```bash
+php artisan key:generate
+php artisan migrate --seed
+```
+
+6. Start local server
+
+```bash
+php artisan serve
+```
+
+---
+
+## 🔗 API Highlights (Integration points)
+
+* Authentication
+
+  * `POST /api/auth/login` — returns Sanctum token
+  * `POST /api/auth/register` — affiliate/customer signup
+* Products & Storefront
+
+  * `GET /api/affiliates/{id}/products`
+  * `GET /api/storefront/{affiliate}/products`
+* Referrals & Commission
+
+  * `POST /api/referrals` — register a referral/lead (used by mobile app/share links)
+  * `POST /api/orders` — create order; associates referral to calculate commission
+* Webhooks
+
+  * `POST /api/webhooks/payments/{provider}` — payment confirmation
+
+**Note:** All API routes that change state should require authentication and CSRF protection where appropriate. Use `withCredentials` and Sanctum for SPA/mobile flows.
+
+---
+
+## 🗂️ Database Schema (high level)
+
+* users (id, name, email, role[affiliate,customer,admin], password, profile)
+* affiliates (id, user_id, slug, settings, payout_details)
+* products (id, affiliate_id, sku, title, description, price, stock, variants)
+* referrals (id, affiliate_id, customer_id?, source, short_code, metadata, created_at)
+* orders (id, affiliate_id, customer_id, total, status, payment_provider, created_at)
+* order_items (id, order_id, product_id, qty, price)
+* commissions (id, order_id, affiliate_id, amount, status[pending,approved,paid])
+* payouts (id, affiliate_id, amount, status, scheduled_at)
+
+---
+
+## 💸 Commission Flow (example)
+
+1. Affiliate shares a short link containing `ref` token: `av.ke/p/1234?ref=AFF123`.
+2. Customer visits store, places order; frontend records `ref` and sends it with the order.
+3. On successful payment webhook, server creates `order`, `order_items`, and then a `commission` record for affiliate.
+4. Commission moves from `pending` to `approved` after return/refund window or manual verification.
+5. Admin schedules payout; system marks `paid` when transfer completes.
+
+---
+
+## 🧪 Testing
+
+* Unit tests: `php artisan test`
+* Browser tests: Laravel Dusk (if UI flows are critical)
+* Use `php artisan queue:work --tries=3` for testing queued jobs locally
+
+---
+
+## 📦 Deployment Recommendations
+
+* Use a process manager for workers (Supervisor) and pm2 for node-based asset previews if used.
+* Use SSL (Let’s Encrypt) and force HTTPS.
+* Configure Redis for cache/session and queues.
+* Configure scheduled tasks: `php artisan schedule:run` (cron every minute)
+* Backups for DB and uploaded media
+
+---
+
+## 🧩 Connecting with FaveAndroid and Other Clients
+
+* Use Sanctum tokens for mobile authentication or issue API tokens per affiliate.
+* Provide endpoints the mobile app needs: referrals, product lists, order creation, commission status.
+* Consider rate-limiting and throttling for public endpoints to prevent abuse.
+
+---
+
+## 👥 Roles & Permissions
+
+* Admin: full access
+* Affiliate: manage own products, view leads & commissions
+* Customer: shop, view orders
+
+Use Laravel Policies and Gates to protect resources.
+
+---
+
+## 🔐 Security Notes
+
+* Validate/escape all user input in Blade views to prevent XSS
+* Use prepared statements / Eloquent ORM to avoid SQL injection
+* Use HTTPS and secure cookies
+* Rate-limit public endpoints
+
+---
+
+## 📚 Migration & Seeder Tips
+
+* Seed sample affiliates, products, and a test admin for local development
+* Keep seeder data idempotent where possible
+
+---
+
+## 📞 Support & Next Steps
+
+Would you like me to:
+
+* Add full API route definitions with request/response examples,
+* Create migration files + Eloquent models skeletons,
+* Draft blade templates for the affiliate dashboard (wireframes + markup),
+* Or generate deployment scripts for Ubuntu/Nginx + Supervisor?
