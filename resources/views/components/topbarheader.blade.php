@@ -4,6 +4,27 @@
 <!DOCTYPE html>
 <html lang="en-US" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <head>
+        <!-- Google tag (gtag.js) -->
+        {{@if(request()->get('user')['websitename']=='javytech')}}
+        <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSQQRW0DSZ"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BSQQRW0DSZ');
+            </script>
+        {{@else}}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HPLXY1YVZ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0HPLXY1YVZ');
+        </script>
+        {{@endif}}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="XpV6vYmMapjchSESkrJQPe2KkiwCnx1U9loM81KHFaQ" />
