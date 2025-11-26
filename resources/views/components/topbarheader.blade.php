@@ -5,7 +5,7 @@
 <html lang="en-US" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <head>
         <!-- Google tag (gtag.js) -->
-        {{@if(request()->get('user')['websitename']=='javytech')}}
+        @if(request()->get('user')['websitename']=='javytech')
         <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSQQRW0DSZ"></script>
             <script>
@@ -15,7 +15,7 @@
 
             gtag('config', 'G-BSQQRW0DSZ');
             </script>
-        {{@else}}
+        @else
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HPLXY1YVZ"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,7 +24,7 @@
 
         gtag('config', 'G-0HPLXY1YVZ');
         </script>
-        {{@endif}}
+        @endif
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="XpV6vYmMapjchSESkrJQPe2KkiwCnx1U9loM81KHFaQ" />
